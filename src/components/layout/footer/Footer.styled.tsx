@@ -2,8 +2,8 @@ import styled from "styled-components";
 
 export const Footer = styled.div`
   margin: 0 auto;
-  width: 100%;
+  width: 50vw;
   min-height: 200px;
   border: 2px solid yellow;
-    padding: 0 50px;
+  padding: 0 20px;
 `;
