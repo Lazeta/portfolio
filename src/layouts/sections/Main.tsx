@@ -1,9 +1,10 @@
 import styled from "styled-components";
+import { HeroSection } from "./herosection/HeroSection.styled";
 
 export const Main = () => {
     return (
         <StyledMain>
-            
+            <HeroSection/>
         </StyledMain>
     )
 }
