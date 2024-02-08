@@ -1,13 +1,12 @@
 import styled from "styled-components";
+import { Logo } from "../../components/logo/Logo";
+import { Menu } from "../../components/menu/Menu";
 
 export const Header = () => {
     return (
         <StyledHeader>
-            <a href="">
-                <img src="" alt="not find way to img" />
-            </a>
-
-            <Nav></Nav>
+            <Logo/>
+            <Menu/>
         </StyledHeader>
     )
 }
@@ -21,4 +20,7 @@ const StyledHeader = styled.div`
     min-height: 100px;
     border: 2px solid red;
     padding: 0 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 `
