@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import { myTheme } from "../../../styles/global/MyTheme.styled";
+import { myTheme } from "../../../components/styles/global/MyTheme.styled";
 
 export const AboutMe = styled.div`
     width: 50vw;
