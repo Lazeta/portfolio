@@ -1,12 +1,14 @@
 import styled from "styled-components";
-import { AboutMe } from "./aboutme/AboutMe.styled";
 import { HeroSection } from "./herosection/HeroSection.styled";
+import { AboutMe } from "./aboutme/AboutMe.styled";
+import { Projects } from "./projects/Projects";
 
 export const Main = () => {
     return (
         <StyledMain>
             <HeroSection/>
             <AboutMe/>
+            <Projects/>
         </StyledMain>
     )
 }

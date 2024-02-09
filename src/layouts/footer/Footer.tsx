@@ -9,7 +9,7 @@ export const Footer = () => {
 const StyledFooter = styled.div`
   margin: 0 auto;
   width: 50vw;
-  min-height: 200px;
+  min-height: 20vh;
   border: 2px solid yellow;
   padding: 0 20px;
 `;

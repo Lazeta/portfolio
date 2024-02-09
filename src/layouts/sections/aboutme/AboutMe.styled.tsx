@@ -4,12 +4,14 @@ export const AboutMe = () => {
   return (
     <StyledAboutMe>
       <h3>About me</h3>
-      <p>
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Similique
-        maiores consequuntur dolore quos in. Doloribus blanditiis aspernatur
-        dignissimos provident, vitae dicta placeat sint nemo repudiandae ex,
-        mollitia quaerat aperiam temporibus.
-      </p>
+      <StyledVerticalLine>
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Similique
+          maiores consequuntur dolore quos in. Doloribus blanditiis aspernatur
+          dignissimos provident, vitae dicta placeat sint nemo repudiandae ex,
+          mollitia quaerat aperiam temporibus.
+        </p>
+      </StyledVerticalLine>
     </StyledAboutMe>
   );
 };
@@ -19,3 +21,7 @@ const StyledAboutMe = styled.div`
   min-height: 150px;
   border: 2px solid pink;
 `;
+
+const StyledVerticalLine = styled.span`
+  
+`
