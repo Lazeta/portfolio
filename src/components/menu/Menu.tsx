@@ -1,5 +1,7 @@
 import React from "react";
 import styled from "styled-components";
+import { myTheme } from "../global/MyTheme.styled";
+
 
 export const Menu = () => {
   return (
@@ -29,5 +31,10 @@ const StyledMenu = styled.div`
   ul {
     display: flex;
     gap: 30px;
+    list-style-type: none;
+    a {
+      color: ${myTheme.colors.secondary};
+      text-decoration: none;
+    }
   }
 `;
