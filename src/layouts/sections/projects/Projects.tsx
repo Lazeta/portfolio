@@ -13,12 +13,15 @@ export const Projects = () => {
         <Project />
         <Project />
       </FlexWrapper>
+
+      <button>See All Projects</button>
     </StyledProjects>
+
   );
 };
 
 const StyledProjects = styled.div`
-    width: 100%;
-    height: 100%;
-    border: 1px solid purple;
+    max-width: 100%;
+    max-height: 100%;
+    padding: 20px 0;
 `

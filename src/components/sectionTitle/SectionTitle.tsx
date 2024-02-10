@@ -14,7 +14,7 @@ export const SectionTitle = ({title}: SectionTitlePropsType) => {
   )
 }
 
-const StyledSectionTitle = styled.h3`
+const StyledSectionTitle = styled.h2`
   color: ${myTheme.colors.secondary};
   letter-spacing: 2px;
   font-size: 1.3rem;

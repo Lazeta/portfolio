@@ -10,9 +10,11 @@ export const Contacts = () => {
 };
 
 const StyledContacts = styled.div`
-  min-width: 600px;
-  min-height: 200px;
+  border: 1px solid red;
+  
+  max-width: 100%;
+  max-height: 100%;
+  padding: 20px 0;
   width: 100%;
   height: 100%;
-  border: 1px solid red;
 `;
