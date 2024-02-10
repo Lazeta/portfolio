@@ -2,6 +2,8 @@ import styled from "styled-components";
 import { HeroSection } from "./herosection/HeroSection.styled";
 import { AboutMe } from "./aboutme/AboutMe.styled";
 import { Projects } from "./projects/Projects";
+import { Skills } from "./skills/Skills.styled";
+import { Contacts } from "./contacts/Contacts.styled";
 
 export const Main = () => {
     return (
@@ -9,6 +11,8 @@ export const Main = () => {
             <HeroSection/>
             <AboutMe/>
             <Projects/>
+            <Skills/>
+            <Contacts/>
         </StyledMain>
     )
 }

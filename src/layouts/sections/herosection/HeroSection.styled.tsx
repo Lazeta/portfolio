@@ -29,7 +29,7 @@ export const HeroSection = () => {
 const StyledHeroSection = styled.div`
   width: auto;
   min-height: 250px;
-  border: 2px solid green;
+  border: 1px solid green;
 `;
 
 const StyledTitle = styled.h1``;

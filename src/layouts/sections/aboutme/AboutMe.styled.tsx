@@ -1,9 +1,10 @@
 import styled from "styled-components";
+import { SectionTitle } from "../../../components/sectionTitle/SectionTitle";
 
 export const AboutMe = () => {
   return (
     <StyledAboutMe>
-      <h3>About me</h3>
+      <SectionTitle title="About me"/>
       <StyledVerticalLine>
         <p>
           Lorem ipsum dolor sit amet consectetur adipisicing elit. Similique
@@ -19,7 +20,7 @@ export const AboutMe = () => {
 const StyledAboutMe = styled.div`
   width: auto;
   min-height: 150px;
-  border: 2px solid pink;
+  border: 1px solid pink;
 `;
 
 const StyledVerticalLine = styled.span`

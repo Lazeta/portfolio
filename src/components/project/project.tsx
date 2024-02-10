@@ -11,5 +11,5 @@ export const Project = () => {
 const StyledProject = styled.div`
   width: 24.2vw;
   min-height: 30vh;
-  border: 2px solid blue;
+  border: 1px solid blue;
 `;
