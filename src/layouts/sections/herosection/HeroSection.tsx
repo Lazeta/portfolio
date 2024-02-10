@@ -29,7 +29,11 @@ export const HeroSection = () => {
 const StyledHeroSection = styled.div`
   width: auto;
   min-height: 250px;
-  border: 1px solid green;
+  > * > img {
+    object-fit: cover;
+    border-radius: 20px;
+    box-shadow: 5px 5px 10px 2px;
+  }
 `;
 
 const StyledTitle = styled.h1``;

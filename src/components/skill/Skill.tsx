@@ -11,24 +11,17 @@ type SkillPropsType = {
 
 export const Skill = (props: SkillPropsType) => {
   return (
-    <StyledSkill>
+    <div>
       <Icon iconId={props.iconId} width="auto" height="100px" />
       <SkillTitle>{props.title}</SkillTitle>
-    </StyledSkill>
+    </div>
   );
 };
 
-const StyledSkill = styled.div`
-  
-`;
-
 const SkillTitle = styled.div`
-  /* border: 1px solid blue; */
   max-width: 100px;
   min-height: 40px;
   text-align: center;
   color: ${myTheme.colors.secondary};
   padding: 10px 0 0 0;
-  /* word-wrap: break-word; */
-  /* overflow-wrap: break-word; */
-`
+`;

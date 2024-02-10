@@ -11,10 +11,10 @@ export const Project = () => {
       <StyledProjectDescription>
         <h3>Title Project</h3>
         <UseTechnologys>
-          <button>JAVASCRIPT</button>
-          <button>REACT</button>
-          <button>WEBPACK</button>
-          <button>TYPESCRIPT</button>
+          <Link>JAVASCRIPT</Link>
+          <Link>REACT</Link>
+          <Link>WEBPACK</Link>
+          <Link>TYPESCRIPT</Link>
         </UseTechnologys>
         <p>
           Lorem ipsum dolor sit amet consectetur, adipisicing elit. Facilis
@@ -26,3 +26,7 @@ export const Project = () => {
     </StyledProject>
   );
 };
+
+const Link = styled.button`
+  
+`

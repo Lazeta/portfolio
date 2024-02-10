@@ -20,7 +20,6 @@ export const AboutMe = () => {
 const StyledAboutMe = styled.div`
   width: auto;
   min-height: 150px;
-  border: 1px solid pink;
 `;
 
 const StyledVerticalLine = styled.span`

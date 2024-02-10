@@ -15,16 +15,11 @@ export const UseTechnologys = styled.span`
   gap: 10px;
 `
 
-export const StyledTitleProject = styled.div``;
-
 export const StyledProjectDescription = styled.div`
   display: flex;
   flex-wrap: wrap;
   gap: 10px;
   padding: 0 20px;
-  .StyledTitleProject {
-    color: ${myTheme.colors.secondary}
-  }
 `
 
 export const StyledImage = styled.img`
