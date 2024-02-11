@@ -1,20 +1,45 @@
-import styled from "styled-components";
-import { myTheme } from "../global/MyTheme.styled";
-import project1 from "../../assets/images/library_project-min.webp";
+import {
+  StyledImage,
+  StyledProject,
+  StyledProjectDescription,
+  UseTechnologys,
+} from "./project.styled";
+import { Link } from "../link/Link";
 import { FlexWrapper } from "../menu/FlexWrapper";
-import { StyledImage, StyledProject, StyledProjectDescription, UseTechnologys } from "./project.styled";
+import styled from "styled-components";
+import { StyledSectionTitle } from "../sectionTitle/SectionTitle";
 
-export const Project = () => {
+type ProjectPropsType = {
+  src: string
+  title: string
+  skill?: string
+  text?: string
+
+}
+
+const links = [
+  { href: "/demo", title: "demo" },
+  { href: "/github.io", title: "code" },
+];
+
+export const Project = (props: ProjectPropsType) => {
   return (
     <StyledProject>
-      <StyledImage src={project1} alt="library" />
+      <StyledImage src={props.src} alt="bad way"/>
       <StyledProjectDescription>
-        <h3>Title Project</h3>
+        <FlexWrapper justify="space-between" wrap="wrap" align="center" gapItem="20px">
+          <Title>{props.title}</Title>
+          <ul>
+            {links.map((link) => (
+              <Link key={link.href} href={link.href} title={link.title} />
+            ))}
+          </ul>
+        </FlexWrapper>
         <UseTechnologys>
-          <Link>JAVASCRIPT</Link>
-          <Link>REACT</Link>
-          <Link>WEBPACK</Link>
-          <Link>TYPESCRIPT</Link>
+          <span>JAVASCRIPT</span>
+          <span>REACT</span>
+          <span>WEBPACK</span>
+          <span>TYPESCRIPT</span>
         </UseTechnologys>
         <p>
           Lorem ipsum dolor sit amet consectetur, adipisicing elit. Facilis
@@ -25,8 +50,8 @@ export const Project = () => {
       </StyledProjectDescription>
     </StyledProject>
   );
-};
+}
 
-const Link = styled.button`
-  
+const Title = styled(StyledSectionTitle)`
+    /* color: black; */
 `

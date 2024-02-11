@@ -18,9 +18,8 @@ export const Menu = (props: { menuItems: Array<string> }) => {
             <li key={index}>
               <a href="#">{item}</a>
             </li>
-          );
+          )
         })}
-        ;
       </ul>
     </StyledMenu>
   );
