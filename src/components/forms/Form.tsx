@@ -1,3 +1,4 @@
+import { ButtonSubmit } from "../buttons/ButtonSubmit";
 import { FlexWrapper } from "../menu/FlexWrapper";
 import { InputEmail } from "./TextField/InputEmail";
 import { InputName } from "./TextField/InputName";
@@ -9,7 +10,7 @@ export const Form = () => {
       <InputName />
       <InputEmail />
       <InputText />
-      {/* button submit */}
+      <ButtonSubmit />
     </FlexWrapper>
   );
 };
