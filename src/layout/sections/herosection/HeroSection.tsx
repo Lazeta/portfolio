@@ -30,7 +30,7 @@ const StyledHeroSection = styled.section`
   width: auto;
   min-height: 250px;
   > * > * p,.Button {
-    padding: 0 50px 20px 0;
+    padding: 0 0px 20px 0;
   }
 
   > * > img {

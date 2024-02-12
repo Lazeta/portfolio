@@ -7,7 +7,7 @@ import libraryImage from "../../../assets/images/library_project-min.webp";
 import plantsImage from "../../../assets/images/plants_project-min.webp";
 import travelImage from "../../../assets/images/travel_project-min.webp";
 import audioPlayerImage from "../../../assets/images/audio-player_project-min.webp";
-
+import { myTheme } from "../../../components/global/MyTheme.styled";
 
 const SortItems = ["All", "Landing page", "React", "SPA"];
 const projects = [
@@ -48,7 +48,7 @@ export const Projects = () => {
         direction="row"
         wrap="wrap"
         justify="space-between"
-        content="space-between"
+        content="center"
         gapItem="20px"
       >
         {projects.map((item, index) => (
@@ -73,4 +73,9 @@ const StyledProjects = styled.section`
   padding: 20px 0;
 `;
 
-const StyledSort = styled.div``;
+const StyledSort = styled.div`
+  width: 30%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+`;

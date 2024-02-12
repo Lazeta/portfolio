@@ -18,9 +18,7 @@ export const Main = () => {
 }
 
 const StyledMain = styled.main`
-    margin: 0 auto;
-    width: 50vw;
-    min-height: 617px;
-    /* border: 4px solid black; */
-    padding: 0 20px;
+  max-width: 1300px;
+  width: 100%;
+  margin: 0 auto;
 `;

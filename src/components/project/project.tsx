@@ -7,7 +7,7 @@ import {
 import { Link } from "../link/Link";
 import { FlexWrapper } from "../menu/FlexWrapper";
 import styled from "styled-components";
-import { StyledSectionTitle } from "../sectionTitle/SectionTitle";
+import { SectionTitle, StyledSectionTitle } from "../sectionTitle/SectionTitle";
 
 type ProjectPropsType = {
   src: string
@@ -28,7 +28,7 @@ export const Project = (props: ProjectPropsType) => {
       <StyledImage src={props.src} alt="bad way"/>
       <StyledProjectDescription>
         <FlexWrapper justify="space-between" wrap="wrap" align="center" gapItem="20px">
-          <Title>{props.title}</Title>
+          <SectionTitle title={"Projects"}></SectionTitle>
           <ul>
             {links.map((link) => (
               <Link key={link.href} href={link.href} title={link.title} />
@@ -51,5 +51,3 @@ export const Project = (props: ProjectPropsType) => {
     </StyledProject>
   );
 }
-
-const Title = styled(StyledSectionTitle)``

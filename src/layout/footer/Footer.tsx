@@ -10,22 +10,42 @@ export const Footer = () => {
         <SocialList>
           <SocialItem>
             <SocialLink>
-              <Icon height="40px" width="40px" viewBox="0 0 40px 40px" iconId={"telegram"} />
+              <Icon
+                height="40px"
+                width="40px"
+                viewBox="0 0 40px 40px"
+                iconId={"telegram"}
+              />
             </SocialLink>
           </SocialItem>
           <SocialItem>
             <SocialLink>
-              <Icon height="40px" width="40px" viewBox="0 0 40px 40px" iconId={"linkedinSvg"} />
+              <Icon
+                height="40px"
+                width="40px"
+                viewBox="0 0 40px 40px"
+                iconId={"linkedinSvg"}
+              />
             </SocialLink>
           </SocialItem>
           <SocialItem>
             <SocialLink>
-              <Icon height="40px" width="40px" viewBox="0 0 40px 40px" iconId={"githubSvg"} />
+              <Icon
+                height="40px"
+                width="40px"
+                viewBox="0 0 40px 40px"
+                iconId={"githubSvg"}
+              />
             </SocialLink>
           </SocialItem>
           <SocialItem>
             <SocialLink>
-              <Icon height="40px" width="40px" viewBox="0 0 40px 40px" iconId={"gmailSvg"} />
+              <Icon
+                height="40px"
+                width="40px"
+                viewBox="0 0 40px 40px"
+                iconId={"gmailSvg"}
+              />
             </SocialLink>
           </SocialItem>
         </SocialList>
@@ -36,7 +56,7 @@ export const Footer = () => {
 };
 
 const StyledFooter = styled.footer`
-  max-width: 800px;
+  max-width: 1300px;
   width: 100%;
   margin: 0 auto;
   min-height: 20vh;
