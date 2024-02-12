@@ -17,7 +17,7 @@ export const Main = () => {
     )
 }
 
-const StyledMain = styled.div`
+const StyledMain = styled.main`
     margin: 0 auto;
     width: 50vw;
     min-height: 617px;

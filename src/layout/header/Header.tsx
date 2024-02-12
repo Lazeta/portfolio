@@ -17,7 +17,7 @@ export const Header = () => {
 
 
 
-const StyledHeader = styled.div`
+const StyledHeader = styled.header`
     margin: 0 auto;
     width: 50vw;
     min-height: 100px;

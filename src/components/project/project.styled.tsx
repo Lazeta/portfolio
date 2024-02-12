@@ -5,7 +5,7 @@ export const StyledProject = styled.div`
   max-width: 100%;
   width: 460px;
   max-height: 100%;
-  background-color: ${myTheme.colors.font};
+  background-color: ${myTheme.colors.lightFont};
 `;
 
 export const UseTechnologys = styled.span`

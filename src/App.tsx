@@ -1,9 +1,9 @@
 import { myTheme } from './components/global/MyTheme.styled';
 import { ThemeProvider } from 'styled-components';
-import { Wrapper } from './layouts/Wrapper.styled';
-import { Header } from './layouts/header/Header';
-import { Main } from './layouts/sections/Main';
-import { Footer } from './layouts/footer/Footer';
+import { Wrapper } from './layout/Wrapper.styled';
+import { Header } from './layout/header/Header';
+import { Main } from './layout/sections/Main';
+import { Footer } from './layout/footer/Footer';
 
 
 const App = () => {

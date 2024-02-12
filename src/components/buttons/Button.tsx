@@ -14,7 +14,7 @@ type StyledButtonPropsType = {
 }
 
 export const Button = (props: ButtonPropsType) => {
-  const { title, width, font } = props; // Извлекаем title из props
+  const { title} = props; // Извлекаем title из props
   return (
     <>
       <StyledButton width={props.width} font={props.font}>
