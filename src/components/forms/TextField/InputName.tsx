@@ -31,7 +31,7 @@ export const StyledInputName = styled.div`
     background-color: transparent;
   }
   ::placeholder {
-    color: ${myTheme.colors.lightTheme};
+    color: ${myTheme.colors.font};
     font-size: 1rem;
     padding: 5px 10px 0 10px;
     vertical-align: top;

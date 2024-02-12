@@ -31,7 +31,6 @@ const StyledInputText = styled(StyledInputName)`
     /* line-height: 1; */
   }
   ::placeholder {
-    /* vertical-align: top;
-    line-height: 5; */
+    
   }
 `;

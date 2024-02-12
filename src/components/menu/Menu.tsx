@@ -25,7 +25,7 @@ export const Menu = (props: { menuItems: Array<string> }) => {
   );
 };
 
-const StyledMenu = styled.div`
+const StyledMenu = styled.nav`
   ul {
     display: flex;
     gap: 30px;

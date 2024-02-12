@@ -7,13 +7,19 @@ type LinkPropsType = {
 };
 
 export const Link: React.FC<LinkPropsType> = ({ href, title }) => {
-  return <StyledLink href={href}>{title}</StyledLink>;
+  return (
+    <>
+      <StyledLink href={href}>
+        {title}
+      </StyledLink>
+    </>
+  );
 };
 
 const StyledLink = styled.a`
-  background-color: ${myTheme.colors.darkPrimary};
+  background-color: ${myTheme.colors.primary};
   padding: 5px 10px;
   font-size: 0.9rem;
   border-radius: 5px;
-  color: ${myTheme.colors.secondary}
+  color: ${myTheme.colors.secondary};
 `;

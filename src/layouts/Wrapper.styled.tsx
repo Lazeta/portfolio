@@ -2,10 +2,10 @@ import styled from "styled-components";
 import { myTheme } from "../components/global/MyTheme.styled";
 
 export const Wrapper = styled.div`
-  width: 100vw;
+  max-width: 100vw;
+  width: 100%;
   display: flex;
   flex-direction: column;
-  height: 100%;
-  background-color: ${myTheme.colors.darkTheme};
+  background-color: ${myTheme.colors.theme};
   margin: 0 auto;
 `;

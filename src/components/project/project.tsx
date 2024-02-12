@@ -52,6 +52,4 @@ export const Project = (props: ProjectPropsType) => {
   );
 }
 
-const Title = styled(StyledSectionTitle)`
-    /* color: black; */
-`
+const Title = styled(StyledSectionTitle)``
