@@ -3,19 +3,21 @@ import { myTheme } from "../global/MyTheme.styled";
 
 type ButtonPropsType = {
   title: string
+  width?: string
+  font?: string
 };
 type StyledButtonPropsType = {
   height?: string
-  width?: string
+  width?: string | undefined
   font?: string
   color?: string
 }
 
 export const Button = (props: ButtonPropsType) => {
-  const { title } = props; // Извлекаем title из props
+  const { title, width, font } = props; // Извлекаем title из props
   return (
     <>
-      <StyledButton font="1.3rem">
+      <StyledButton width={props.width} font={props.font}>
         {title}
       </StyledButton>
     </>

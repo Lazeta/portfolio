@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import { myTheme } from "../../../components/global/MyTheme.styled";
 import { SectionTitle } from "../../../components/sectionTitle/SectionTitle";
 
 export const AboutMe = () => {
@@ -17,11 +18,13 @@ export const AboutMe = () => {
   );
 };
 
-const StyledAboutMe = styled.div`
-  width: auto;
-  min-height: 150px;
+const StyledAboutMe = styled.section`
+  max-width: 700px;
+  width: 100%;
 `;
 
-const StyledVerticalLine = styled.span`
-  
+const StyledVerticalLine = styled.div`
+  p {
+    color: ${myTheme.colors.secondary}
+  }
 `

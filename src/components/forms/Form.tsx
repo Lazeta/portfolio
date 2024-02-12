@@ -1,7 +1,6 @@
 import styled from "styled-components";
 import { Button } from "../buttons/Button";
 import { myTheme } from "../global/MyTheme.styled";
-import { FlexWrapper } from "../menu/FlexWrapper";
 
 type FieldPropsType = {
   height?: string;
