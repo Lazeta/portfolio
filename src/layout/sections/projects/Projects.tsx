@@ -1,14 +1,12 @@
 import styled from "styled-components";
 import { FlexWrapper } from "../../../components/menu/FlexWrapper";
 import { Menu } from "../../../components/menu/Menu";
-import { Project } from "../../../components/project/project";
-import { SectionTitle } from "../../../components/sectionTitle/SectionTitle";
-import libraryImage from "../../../assets/images/library_project-min.webp";
-import plantsImage from "../../../assets/images/plants_project-min.webp";
-import travelImage from "../../../assets/images/travel_project-min.webp";
-import audioPlayerImage from "../../../assets/images/audio-player_project-min.webp";
-import { myTheme } from "../../../components/global/MyTheme.styled";
-import React from "react";
+import { Project } from "../../../components/project/Project";
+import { SectionTitle } from "../../../components/sectiontitle/SectionTitle";
+import libraryImage from "../../../components/assets/images/library_project-min.webp";
+import plantsImage from "../../../components/assets/images/plants_project-min.webp";
+import travelImage from "../../../components/assets/images/travel_project-min.webp";
+import audioPlayerImage from "../../../components/assets/images/audio-player_project-min.webp";
 
 const SortItems = ["All", "Landing page", "React", "SPA"];
 const projects = [
