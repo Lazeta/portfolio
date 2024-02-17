@@ -13,7 +13,7 @@ export const StyledProject = styled.div`
 export const UseTechnologys = styled.ul`
   display: flex;
   gap: 10px;
-  flex-wrap: wrap;
+  flex-wrap: nowrap;
   list-style-type: none;
   padding: 0;
 `;
