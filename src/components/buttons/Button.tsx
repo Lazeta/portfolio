@@ -1,5 +1,3 @@
-import styled from "styled-components";
-import { myTheme } from "../global/MyTheme.styled";
 import { StyledButton } from "./Button.styled";
 
 type ButtonPropsType = {

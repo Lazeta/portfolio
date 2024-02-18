@@ -1,6 +1,4 @@
 import styled from "styled-components";
-import { Button } from "../buttons/Button";
-import { ButtonHover } from "../buttons/hovers/ButtonHover";
 import { myTheme } from "../global/MyTheme.styled";
 
 // классический способ типизации одного значения
