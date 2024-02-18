@@ -1,5 +1,3 @@
-import styled from "styled-components";
-import { Button } from "../../../components/buttons/Button";
 import { FlexWrapper } from "../../../components/menu/FlexWrapper";
 import { Menu } from "../../../components/menu/Menu";
 import { SectionTitle } from "../../../components/sectiontitle/SectionTitle";

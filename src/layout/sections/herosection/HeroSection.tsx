@@ -3,8 +3,7 @@ import { myTheme } from "../../../components/global/MyTheme.styled";
 import logo from "../../../components/assets/images/logo.jpg";
 import { FlexWrapper } from "../../../components/menu/FlexWrapper";
 import { Button } from "../../../components/buttons/Button";
-import { ButtonHover } from "../../../components/buttons/hovers/ButtonHover";
-import { title } from "process";
+
 
 export const HeroSection = () => {
   return (
