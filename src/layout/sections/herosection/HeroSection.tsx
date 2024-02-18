@@ -3,7 +3,8 @@ import { myTheme } from "../../../components/global/MyTheme.styled";
 import logo from "../../../components/assets/images/logo.jpg";
 import { FlexWrapper } from "../../../components/menu/FlexWrapper";
 import { Button } from "../../../components/buttons/Button";
-
+import { ButtonHover } from "../../../components/buttons/hovers/ButtonHover";
+import { title } from "process";
 
 export const HeroSection = () => {
   return (
@@ -18,7 +19,7 @@ export const HeroSection = () => {
             temporibus ipsa? Sint quas facilis eum sequi laborum ad nobis nulla
             vitae perspiciatis!
           </p>
-          <Button title={"Contact Me"} width={"150px"} font={"1.2rem"}/>
+          <Button title={"Contact Me"} width={"150px"} font={"1.2rem"} />
         </div>
         <img src={logo} alt="#" />
       </FlexWrapper>
@@ -29,7 +30,8 @@ export const HeroSection = () => {
 const StyledHeroSection = styled.section`
   width: auto;
   min-height: 250px;
-  > * > * p,.Button {
+  > * > * p,
+  .Button {
     padding: 0 0px 20px 0;
   }
 

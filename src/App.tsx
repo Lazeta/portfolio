@@ -14,7 +14,7 @@ const App = () => {
           <Header/>
           <Main/>
           <Footer/>
-        </Wrapper>
+          </Wrapper>
       </ThemeProvider>
     </div>
   );

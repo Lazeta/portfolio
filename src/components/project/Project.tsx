@@ -8,6 +8,7 @@ import {
   import { Link } from "../link/Link";
   import { FlexWrapper } from "../menu/FlexWrapper";
   import { SectionTitle, StyledSectionTitle } from "../sectiontitle/SectionTitle";
+import { Button } from "../buttons/Button";
   
   type ProjectPropsType = {
     src: string
@@ -36,10 +37,10 @@ import {
             </ul>
           </FlexWrapper>
           <UseTechnologys>
-            <span>JAVASCRIPT</span>
-            <span>REACT</span>
-            <span>WEBPACK</span>
-            <span>TYPESCRIPT</span>
+            <Button title="JAVASCRIPT"/>
+            <Button title="REACT"/>
+            <Button title="WEBPACK"/>
+            <Button title="TYPESCRIPT"/>
           </UseTechnologys>
           <p>
             Lorem ipsum dolor sit amet consectetur, adipisicing elit. Facilis

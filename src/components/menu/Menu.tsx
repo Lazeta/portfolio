@@ -16,8 +16,9 @@ export const Menu = (props: { menuItems: Array<string> }) => {
           return (
             <li key={index}>
               <a href="#">{item}</a>
+              {/* <a href="#"><ButtonHover text={item}/></a> */}
             </li>
-          )
+          );
         })}
       </ul>
     </StyledMenu>
@@ -29,9 +30,12 @@ const StyledMenu = styled.nav`
     display: flex;
     gap: 30px;
     list-style-type: none;
-    a {
-      color: ${myTheme.colors.secondary};
-      text-decoration: none;
+    li {
+      
+      a {
+        color: ${myTheme.colors.secondary};
+        text-decoration: none;
+      }
     }
   }
 `;
