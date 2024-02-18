@@ -1,0 +1,21 @@
+{
+  "files": {
+    "main.css": "/static/css/main.9032b167.css",
+    "main.js": "/static/js/main.247f55f7.js",
+    "static/js/453.1407b060.chunk.js": "/static/js/453.1407b060.chunk.js",
+    "static/media/travel_project-min.webp": "/static/media/travel_project-min.0b2d69adef3182468b7b.webp",
+    "static/media/library_project-min.webp": "/static/media/library_project-min.fde0aa301f071e1864df.webp",
+    "static/media/audio-player_project-min.webp": "/static/media/audio-player_project-min.cb7ada8052a1ebf20556.webp",
+    "static/media/icons-sprite.svg": "/static/media/icons-sprite.9adaa4db9b0e79835359936693c08e46.svg",
+    "static/media/plants_project-min.webp": "/static/media/plants_project-min.226ddde1e5480b0f0e24.webp",
+    "static/media/logo.jpg": "/static/media/logo.7b7d3cbe8326c647805c.jpg",
+    "index.html": "/index.html",
+    "main.9032b167.css.map": "/static/css/main.9032b167.css.map",
+    "main.247f55f7.js.map": "/static/js/main.247f55f7.js.map",
+    "453.1407b060.chunk.js.map": "/static/js/453.1407b060.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.9032b167.css",
+    "static/js/main.247f55f7.js"
+  ]
+}
