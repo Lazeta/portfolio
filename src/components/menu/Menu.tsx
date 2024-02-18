@@ -16,7 +16,7 @@ export const Menu = (props: { menuItems: Array<string> }) => {
           return (
             <ButtonBox>
               <li key={index}>
-                <a href="#">
+                <a>
                   <span>{item}</span>
                 </a>
               </li>
