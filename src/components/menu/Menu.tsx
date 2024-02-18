@@ -37,11 +37,12 @@ const StyledMenu = styled.nav`
     list-style-type: none;
     li {
       position: relative;
-      display: inline-flex;
+      display: inline-block;
       padding: 5px 15px;
       border: 1px solid ${myTheme.colors.secondary};
       color: ${myTheme.colors.secondary};
       text-decoration: none;
+      white-space: nowrap;
       a {
         font-size: 1rem;
         color: ${myTheme.colors.secondary};
