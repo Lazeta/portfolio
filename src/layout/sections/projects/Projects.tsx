@@ -42,6 +42,7 @@ export const Projects = () => {
       <SectionTitle title="Projects" />
       <StyledSort>
         <Menu menuItems={SortItems} />
+        {/* <ButtonHover text={`${SortItems}`}/> */}
       </StyledSort>
       <FlexWrapper
         direction="row"

@@ -1,8 +1,10 @@
 import styled from "styled-components";
+import { Button } from "../../../components/buttons/Button";
 import { FlexWrapper } from "../../../components/menu/FlexWrapper";
 import { Menu } from "../../../components/menu/Menu";
 import { SectionTitle } from "../../../components/sectiontitle/SectionTitle";
 import { Skill } from "../../../components/skill/Skill";
+import { StyledSkills, StyledSkillsMenu } from "./Skills.styled";
 
 const SkilsItems = [
   "Main stack",
@@ -49,21 +51,3 @@ export const Skills = () => {
     </StyledSkills>
   );
 };
-
-const StyledSkills = styled.section`
-  max-width: 100%;
-  max-height: 100%;
-  padding: 20px 0;
-`;
-
-const StyledSkillsMenu = styled.div`
-  ul {
-    display: flex;
-    gap: 30px;
-    padding: 20px 0;
-    max-width: 100%;
-    justify-content: center;
-    flex-wrap: wrap;
-    text-align: center;
-  }
-`;
