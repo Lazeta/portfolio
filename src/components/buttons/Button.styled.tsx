@@ -1,13 +1,12 @@
 import styled from "styled-components";
 import { myTheme } from "../global/MyTheme.styled";
 
-
 type StyledButtonPropsType = {
-    height?: string
-    width?: string | undefined
-    font?: string
-    color?: string
-  }
+  height?: string;
+  width?: string | undefined;
+  font?: string;
+  color?: string;
+};
 
 export const StyledButton = styled.button<StyledButtonPropsType>`
   width: ${(props) => props.width || "100%"};
@@ -19,4 +18,24 @@ export const StyledButton = styled.button<StyledButtonPropsType>`
   border-radius: 8px;
   background: ${myTheme.colors.primary};
   cursor: pointer;
+  &:hover {
+    background-position: right center;
+    background-size: 200% auto;
+    -webkit-animation: pulse 2s infinite;
+    animation: pulse512 1.5s infinite;
+  }
+  @keyframes pulse512 {
+  0% {
+   box-shadow: 0 0 0 0 #00d9ff66;
+  }
+ 
+  70% {
+   box-shadow: 0 0 0 10px rgb(218 103 68 / 0%);
+  }
+ 
+  100% {
+   box-shadow: 0 0 0 0 rgb(218 103 68 / 0%);
+  }
+ }
 `;
+
