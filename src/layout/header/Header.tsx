@@ -1,6 +1,6 @@
 import styled from "styled-components";
 import { Logo } from "../../components/logo/Logo";
-import { Menu } from "../../components/menu/Menu";
+import { HeaderMenu } from "./headerMenu/HeaderMenu";
 
 const headerItems = ["Home", "About me", "Projects", "Skills", "Contacts"];
 
@@ -8,7 +8,7 @@ export const Header = () => {
   return (
     <StyledHeader>
       <Logo />
-      <Menu menuItems={headerItems} />
+      <HeaderMenu menuItems={headerItems} />
     </StyledHeader>
   );
 };
