@@ -14,4 +14,9 @@ export const myTheme = {
     additionary: "rgba(82, 34, 208, 1)",
     any: "#3ce0af",
   },
+
+  media: {
+    tablet: "screen and (max-width: 768px)",
+    mobile: "screen and (max-width: 480px)",
+  }
 };
