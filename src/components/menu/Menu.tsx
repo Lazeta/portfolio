@@ -1,5 +1,6 @@
 import styled from "styled-components";
 import { myTheme } from "../global/MyTheme.styled";
+import { HoverBox } from "../hovers/HoverBox.styled";
 
 // классический способ типизации одного значения
 // type MenuPropsType = {
@@ -14,13 +15,13 @@ export const Menu = (props: { menuItems: Array<string> }) => {
       <ul>
         {props.menuItems.map((item, index) => {
           return (
-            <ButtonBox>
+            <HoverBox>
               <li key={index}>
-                <a href="#">
+                <a>
                   <span>{item}</span>
                 </a>
               </li>
-            </ButtonBox>
+            </HoverBox>
           );
         })}
       </ul>
@@ -85,10 +86,4 @@ const StyledMenu = styled.nav`
       }
     }
   }
-`;
-
-const ButtonBox = styled.button`
-  background-color: transparent;
-  border: none;
-  padding: 0;
 `;
