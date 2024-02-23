@@ -16,8 +16,8 @@ export const BurgerButton = () => {
 
 const StyledBurgerButton = styled.div`
     display: none;
-  /* position: fixed;
-  top: -100px;
+    position: relative;
+  /* top: -100px;
   right: -100px;
   width: 200px;
   height: 200px; */

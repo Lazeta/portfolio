@@ -1,58 +1,43 @@
+import React from "react";
 import styled from "styled-components";
 import { myTheme } from "../../../components/global/MyTheme.styled";
 import { HoverBox } from "../../../components/hovers/HoverBox.styled";
-import { BurgerButton } from "../../../components/menu/burger/BurgerButton";
 
-export const MobileMenu = (props: { menuItems: Array<string> }) => {
+export const HeaderMenu = (props: { menuItems: Array<string> }) => {
   return (
-    <StyledMobileMenu>
-      <BurgerButton />
-
-      <MobileMenuPopup>
-        <ul>
-          {props.menuItems.map((item, index) => {
-            return (
-              <HoverBox>
-                <ListItem key={index}>
-                  <Link href="">
-                    <span>{item}</span>
-                  </Link>
-                </ListItem>
-              </HoverBox>
-            );
-          })}
-        </ul>
-      </MobileMenuPopup>
-    </StyledMobileMenu>
+    <StyledHeaderMenu>
+      <ul>
+        {props.menuItems.map((item, index) => {
+          return (
+            <HoverBox>
+              <ListItem key={index}>
+                <Link href="">
+                  <span>{item}</span>
+                </Link>
+              </ListItem>
+            </HoverBox>
+          );
+        })}
+      </ul>
+    </StyledHeaderMenu>
   );
 };
 
-const StyledMobileMenu = styled.nav`
-
-`
-
-const MobileMenuPopup = styled.div`
-  /* position: fixed; */
-  left: 0;
-  right: 0;
-  top: 0;
-  bottom: 0;
-  /* z-index: 9999; */
-  background-color: ${myTheme.colors.lightPrimary}
-
+const StyledHeaderMenu = styled.nav`
   ul {
     display: flex;
     gap: 30px;
     list-style-type: none;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
   }
-`
+
+  @media ${myTheme.media.tablet} {
+    /* display: none; */
+  } 
+`;
 
 const ListItem = styled.li`
   position: relative;
-  display: none;
+  display: inline-block;
   padding: 5px 15px;
   border: 1px solid ${myTheme.colors.secondary};
   color: ${myTheme.colors.secondary};
@@ -95,7 +80,7 @@ const ListItem = styled.li`
 
   span {
     position: relative;
-    /* z-index: 3; */
+    z-index: 3;
   }
 `;
 
