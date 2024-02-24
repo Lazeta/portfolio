@@ -1,4 +1,5 @@
 import {
+  ButtonUseTechnologys,
   StyledImage,
   StyledProject,
   StyledProjectDescription,
@@ -30,7 +31,7 @@ export const Project = (props: ProjectPropsType) => {
           justify="space-between"
           wrap="wrap"
           align="center"
-          gapItem="20px"
+          gapItem="40px"
         >
           <SectionTitle title={"Projects"}></SectionTitle>
           <ul>
@@ -40,10 +41,18 @@ export const Project = (props: ProjectPropsType) => {
           </ul>
         </FlexWrapper>
         <UseTechnologys>
-          <Button title="JAVASCRIPT" />
-          <Button title="REACT" />
-          <Button title="WEBPACK" />
-          <Button title="TYPESCRIPT" />
+          <ButtonUseTechnologys>
+            <Button title="JAVASCRIPT" />
+          </ButtonUseTechnologys>
+          <ButtonUseTechnologys>
+            <Button title="REACT" />
+          </ButtonUseTechnologys>
+          <ButtonUseTechnologys>
+            <Button title="WEBPACK" />
+          </ButtonUseTechnologys>
+          <ButtonUseTechnologys>
+            <Button title="TYPESCRIPT" />
+          </ButtonUseTechnologys>
         </UseTechnologys>
         <p>
           Lorem ipsum dolor sit amet consectetur, adipisicing elit. Facilis
