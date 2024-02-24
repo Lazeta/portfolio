@@ -1,7 +1,7 @@
 import styled from "styled-components";
 import { myTheme } from "../../../components/global/MyTheme.styled";
 import logo from "../../../components/assets/images/logo.jpg";
-import { FlexWrapper } from "../../../components/menu/FlexWrapper";
+import { FlexWrapper } from "../../../components/wrapper/FlexWrapper";
 import { Button } from "../../../components/buttons/Button";
 
 

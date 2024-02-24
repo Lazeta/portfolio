@@ -1,4 +1,4 @@
-import { FlexWrapper } from "../../../components/menu/FlexWrapper";
+import { FlexWrapper } from "../../../components/wrapper/FlexWrapper";
 import { Menu } from "../../../components/menu/Menu";
 import { SectionTitle } from "../../../components/sectiontitle/SectionTitle";
 import { Skill } from "../../../components/skill/Skill";

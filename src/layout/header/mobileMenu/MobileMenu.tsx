@@ -28,17 +28,20 @@ export const MobileMenu = (props: { menuItems: Array<string> }) => {
 };
 
 const StyledMobileMenu = styled.nav`
-
+  margin: 0 auto;
+  position: relative;
+  display: flex;
 `
 
 const MobileMenuPopup = styled.div`
-  /* position: fixed; */
+  position: absolute;
   left: 0;
   right: 0;
   top: 0;
   bottom: 0;
-  /* z-index: 9999; */
-  background-color: ${myTheme.colors.lightPrimary}
+  z-index: 9999;
+  /* background-color: ${myTheme.colors.lightPrimary} */
+  background-color: ${myTheme.colors.any};
 
   ul {
     display: flex;
@@ -95,7 +98,7 @@ const ListItem = styled.li`
 
   span {
     position: relative;
-    /* z-index: 3; */
+    z-index: 3;
   }
 `;
 
