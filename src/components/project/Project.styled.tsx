@@ -21,13 +21,13 @@ export const UseTechnologys = styled.ul`
 `;
 
 export const ButtonUseTechnologys = styled.div`
-
+  
 `;
 
 export const StyledProjectDescription = styled.div`
   display: flex;
   gap: 0px;
-  padding: 0 20px;
+  padding: 0 15px;
   flex-wrap: wrap;
   span {
     color: ${myTheme.colors.secondary};

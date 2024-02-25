@@ -42,7 +42,6 @@ export const Projects = () => {
       <SectionTitle title="Projects" />
       <StyledSort>
         <Menu menuItems={SortItems} />
-        {/* <ButtonHover text={`${SortItems}`}/> */}
       </StyledSort>
       <FlexWrapper
         direction="row"
@@ -74,8 +73,8 @@ const StyledProjects = styled.section`
 `;
 
 const StyledSort = styled.div`
-  width: 30%;
+  width: 100%;
   display: flex;
   flex-wrap: wrap;
-  justify-content: center;
+  justify-content: flex-start;
 `;

@@ -19,7 +19,7 @@ export const Header = () => {
 const StyledHeader = styled.header`
   position: relative;
   right: 0;
-  max-width: 1300px;
+  max-width: 1550px;
   width: 100%;
   margin: 0;
   min-height: 100px;

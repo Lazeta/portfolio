@@ -15,14 +15,14 @@ export const BurgerButton = () => {
 };
 
 const StyledBurgerButton = styled.div`
-    display: none;
-    position: relative;
-  /* top: -100px;
+  display: none;
+  position: relative;
+  top: -100px;
   right: -100px;
   width: 200px;
-  height: 200px; */
+  height: 200px;
   #checkbox {
-    display: none;
+    display: flex;
   }
 
   .toggle {
