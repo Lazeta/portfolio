@@ -15,14 +15,17 @@ export const BurgerButton = () => {
 };
 
 const StyledBurgerButton = styled.div`
-  display: none;
-  position: relative;
-  top: -100px;
-  right: -100px;
+  display: flex;
+  position: fixed;
+  top: 30px;
+  right: -130px;
   width: 200px;
   height: 200px;
+  background-color: ${myTheme.colors.lightFont};
+  z-index: 100;
+
   #checkbox {
-    display: flex;
+    display: none;
   }
 
   .toggle {
@@ -41,7 +44,7 @@ const StyledBurgerButton = styled.div`
   .bars {
     width: 100%;
     height: 4px;
-    background-color: ${myTheme.colors.any};
+    background-color: ${myTheme.colors.secondary};
     border-radius: 4px;
   }
 

@@ -30,8 +30,10 @@ const StyledHeaderMenu = styled.nav`
     list-style-type: none;
   }
 
+
   @media ${myTheme.media.tablet} {
     display: none;
+    overflow: none;
   } 
 `;
 
