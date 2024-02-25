@@ -1,5 +1,6 @@
 import styled from "styled-components";
 import { Logo } from "../../components/logo/Logo";
+import { FlexWrapper } from "../../components/wrapper/FlexWrapper";
 import { HeaderMenu } from "./headerMenu/HeaderMenu";
 import { MobileMenu } from "./mobileMenu/MobileMenu";
 
@@ -17,12 +18,9 @@ export const Header = () => {
 
 const StyledHeader = styled.header`
   position: relative;
-  right: -30px;
-  max-width: 1300px;
+  right: 0;
+  max-width: 1550px;
   width: 100%;
-  margin: 0 auto;
+  margin: 0;
   min-height: 100px;
-  display: flex;
-  justify-content: flex-end;
-  align-items: center;
 `;

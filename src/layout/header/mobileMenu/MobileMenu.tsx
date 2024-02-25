@@ -27,18 +27,28 @@ export const MobileMenu = (props: { menuItems: Array<string> }) => {
   );
 };
 
-const StyledMobileMenu = styled.nav`
+const StyledMobileMenu = styled.div`
+  margin: 0 auto;
+  position: relative;
+  display: flex;
+  @media ${myTheme.media.desktop} {
+    display: none;
+  }
+`;
 
-`
-
-const MobileMenuPopup = styled.div`
-  /* position: fixed; */
+const MobileMenuPopup = styled.nav`
+  position: fixed;
+  width: 100vw;
   left: 0;
   right: 0;
   top: 0;
   bottom: 0;
-  /* z-index: 9999; */
-  background-color: ${myTheme.colors.lightPrimary}
+  z-index: 99;
+  background-color: ${myTheme.colors.lightFont};
+  transition-duration: 2s;
+  transition-delay: 1s;
+  transition-timing-function: ease-in-out;
+  transition-property: all;
 
   ul {
     display: flex;
@@ -48,15 +58,15 @@ const MobileMenuPopup = styled.div`
     align-items: center;
     flex-direction: column;
   }
-`
+`;
 
 const ListItem = styled.li`
   position: relative;
-  display: none;
+  display: flex;
   padding: 5px 15px;
   border: 1px solid ${myTheme.colors.secondary};
   color: ${myTheme.colors.secondary};
-  text-decoration: none;
+  text-decoration: column;
   white-space: nowrap;
   font-size: 0.9rem;
 
@@ -95,7 +105,7 @@ const ListItem = styled.li`
 
   span {
     position: relative;
-    /* z-index: 3; */
+    z-index: 3;
   }
 `;
 

@@ -34,6 +34,7 @@ const StyledMenu = styled.nav`
     display: flex;
     gap: 30px;
     list-style-type: none;
+
     li {
       position: relative;
       display: inline-block;
