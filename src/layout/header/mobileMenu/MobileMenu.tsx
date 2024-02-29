@@ -2,6 +2,7 @@ import styled from "styled-components";
 import { myTheme } from "../../../components/global/MyTheme.styled";
 import { HoverBox } from "../../../components/hovers/HoverBox.styled";
 import { BurgerButton } from "../../../components/menu/burger/BurgerButton";
+import { FlexWrapper } from "../../../components/wrapper/FlexWrapper";
 
 export const MobileMenu = (props: { menuItems: Array<string> }) => {
   return (
@@ -12,13 +13,11 @@ export const MobileMenu = (props: { menuItems: Array<string> }) => {
         <ul>
           {props.menuItems.map((item, index) => {
             return (
-              <HoverBox>
-                <ListItem key={index}>
-                  <Link href="">
-                    <span>{item}</span>
-                  </Link>
-                </ListItem>
-              </HoverBox>
+              <ListItem key={index}>
+                <Link href="">
+                  <span>{item}</span>
+                </Link>
+              </ListItem>
             );
           })}
         </ul>
@@ -45,20 +44,17 @@ const MobileMenuPopup = styled.nav`
   bottom: 0;
   z-index: 99;
   background-color: ${myTheme.colors.lightFont};
-  transition-duration: 2s;
-  transition-delay: 1s;
-  transition-timing-function: ease-in-out;
-  transition-property: all;
-
+  transition: all 2s ease-in-out 1s;
+  display: grid;
+  
   ul {
     display: flex;
-    gap: 30px;
-    list-style-type: none;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
-    flex-direction: column;
+    gap: 5rem;
   }
-`;
+  `;
 
 const ListItem = styled.li`
   position: relative;
@@ -68,7 +64,7 @@ const ListItem = styled.li`
   color: ${myTheme.colors.secondary};
   text-decoration: column;
   white-space: nowrap;
-  font-size: 0.9rem;
+  font-size: 1.5rem;
 
   &::before {
     content: "";
