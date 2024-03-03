@@ -26,7 +26,7 @@ export const MobileMenu = (props: { menuItems: Array<string> }) => {
   );
 };
 
-const StyledMobileMenu = styled.div`
+const StyledMobileMenu = styled.nav`
   margin: 0 auto;
   position: relative;
   display: flex;
@@ -35,7 +35,7 @@ const StyledMobileMenu = styled.div`
   }
 `;
 
-const MobileMenuPopup = styled.nav`
+const MobileMenuPopup = styled.div`
   position: fixed;
   width: 100vw;
   left: 0;
@@ -43,7 +43,7 @@ const MobileMenuPopup = styled.nav`
   top: 0;
   bottom: 0;
   z-index: 99;
-  background-color: ${myTheme.colors.lightFont};
+  background-color: rgba(31, 38, 38, 0.98);
   transition: all 2s ease-in-out 1s;
   display: grid;
   
