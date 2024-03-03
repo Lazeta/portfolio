@@ -12,16 +12,22 @@ export const StyledProject = styled.div`
 
 export const UseTechnologys = styled.ul`
   display: flex;
-  gap: 10px;
-  flex-wrap: nowrap;
   list-style-type: none;
-  padding: 0;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 10px;
+  padding-right: 40px;
+`;
+
+export const ButtonUseTechnologys = styled.div`
+  
 `;
 
 export const StyledProjectDescription = styled.div`
   display: flex;
   gap: 0px;
-  padding: 0 20px;
+  padding: 0 15px;
   flex-wrap: wrap;
   span {
     color: ${myTheme.colors.secondary};

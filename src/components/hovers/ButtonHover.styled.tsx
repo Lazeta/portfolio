@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import { myTheme } from '../../global/MyTheme.styled';
+import { myTheme } from '../global/MyTheme.styled';
 
 export const StyledButton = styled.button`
   margin: 0;
@@ -16,7 +16,7 @@ export const StyledButton = styled.button`
   letter-spacing: 2px;
   text-decoration: none;
   font-size: var(--fs-size);
-  /* font-family: "Monttserat"; */
+  /* font-family: "Montserrat", sans-serif; */
   position: relative;
   text-transform: uppercase;
   color: transparent;

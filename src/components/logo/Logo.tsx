@@ -2,7 +2,7 @@
 
 export const Logo = () => {
   return (
-    <a href="">
+    <a>
       {/* <Icon iconId={'css3SvgrepoCom'}/> */}
     </a>
   );
