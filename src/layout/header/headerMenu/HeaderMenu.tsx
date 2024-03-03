@@ -31,10 +31,12 @@ const StyledHeaderMenu = styled.nav`
   }
 
 
-  @media ${myTheme.media.tablet} {
+  /* @media ${myTheme.media.tablet} {
     display: none;
-    overflow: none;
-  } 
+  }  */
+  /* @media ${myTheme.media.mobile} {
+    display: none;
+  }  */
 `;
 
 const ListItem = styled.li`

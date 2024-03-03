@@ -16,8 +16,8 @@ export const myTheme = {
   },
 
   media: {
-    desktop: "screen and (min-width: 769px)",
-    tablet: "screen and (max-width: 768px)",
-    mobile: "screen and (max-width: 480px)",
+    desktop: "screen and (max-width: 5000px)",
+    tablet: "screen and (max-width: 1279px)",
+    mobile: "screen and (max-width: 600px)",
   }
 };

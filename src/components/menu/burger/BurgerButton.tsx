@@ -1,9 +1,9 @@
-import styled from "styled-components";
+import styled, { css } from "styled-components";
 import { myTheme } from "../../global/MyTheme.styled";
 
 export const BurgerButton = () => {
   return (
-    <StyledBurgerButton>
+    <StyledBurgerButton isOpen={true}>
       <input type="checkbox" id="checkbox" />
       <label htmlFor="checkbox" className="toggle">
         <div className="bars" id="bar1"></div>
@@ -14,7 +14,7 @@ export const BurgerButton = () => {
   );
 };
 
-const StyledBurgerButton = styled.div`
+const StyledBurgerButton = styled.div<{ isOpen: boolean }>`
   display: flex;
   position: fixed;
   top: 30px;
@@ -23,6 +23,10 @@ const StyledBurgerButton = styled.div`
   height: 200px;
   background-color: ${myTheme.colors.lightFont};
   z-index: 100;
+
+  /* ${(props) => props.isOpen && css<{ isOpen: boolean }>`
+    
+  `} */
 
   #checkbox {
     display: none;

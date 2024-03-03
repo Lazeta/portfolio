@@ -1,15 +1,13 @@
-import styled from "styled-components";
+import styled, { css } from "styled-components";
 import { myTheme } from "../../../components/global/MyTheme.styled";
-import { HoverBox } from "../../../components/hovers/HoverBox.styled";
 import { BurgerButton } from "../../../components/menu/burger/BurgerButton";
-import { FlexWrapper } from "../../../components/wrapper/FlexWrapper";
 
 export const MobileMenu = (props: { menuItems: Array<string> }) => {
   return (
     <StyledMobileMenu>
       <BurgerButton />
 
-      <MobileMenuPopup>
+      <MobileMenuPopup isOpen={true}>
         <ul>
           {props.menuItems.map((item, index) => {
             return (
@@ -30,12 +28,12 @@ const StyledMobileMenu = styled.nav`
   margin: 0 auto;
   position: relative;
   display: flex;
-  @media ${myTheme.media.desktop} {
-    display: none;
-  }
+  /* @media ${myTheme.media.tablet} {
+    display: grid;
+  } */
 `;
 
-const MobileMenuPopup = styled.div`
+const MobileMenuPopup = styled.div<{ isOpen: boolean }>`
   position: fixed;
   width: 100vw;
   left: 0;
@@ -46,15 +44,20 @@ const MobileMenuPopup = styled.div`
   background-color: rgba(31, 38, 38, 0.98);
   transition: all 2s ease-in-out 1s;
   display: grid;
-  
-  ul {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    gap: 5rem;
-  }
-  `;
+
+  ${(props) =>
+    props.isOpen &&
+    css<{ isOpen: boolean }>`
+      display: grid;
+      ul {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 5rem;
+      }
+    `}
+`;
 
 const ListItem = styled.li`
   position: relative;
