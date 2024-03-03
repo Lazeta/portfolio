@@ -27,8 +27,17 @@ const StyledForm = styled.form`
   flex-wrap: wrap;
   gap: 40px;
   margin: 0 auto;
+  font-family: "Montserrat", sans-serif;
+  font-size: 1rem;
+
   ::placeholder {
     color: ${myTheme.colors.lightTheme};
+    font-size: 1rem;
+  }
+
+  & > textarea {
+    resize: none;
+    font-family: "Montserrat", sans-serif;
     font-size: 1rem;
   }
 `;

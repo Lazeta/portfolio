@@ -1,6 +1,8 @@
 import styled from "styled-components";
 import { Logo } from "../../components/logo/Logo";
-import { Menu } from "../../components/menu/Menu";
+import { FlexWrapper } from "../../components/wrapper/FlexWrapper";
+import { HeaderMenu } from "./headerMenu/HeaderMenu";
+import { MobileMenu } from "./mobileMenu/MobileMenu";
 
 const headerItems = ["Home", "About me", "Projects", "Skills", "Contacts"];
 
@@ -8,17 +10,17 @@ export const Header = () => {
   return (
     <StyledHeader>
       <Logo />
-      <Menu menuItems={headerItems} />
+      <HeaderMenu menuItems={headerItems} />
+      <MobileMenu menuItems={headerItems} />
     </StyledHeader>
   );
 };
 
 const StyledHeader = styled.header`
-  max-width: 1300px;
+  position: relative;
+  right: 0;
+  max-width: 1550px;
   width: 100%;
-  margin: 0 auto;
+  margin: 0;
   min-height: 100px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
 `;

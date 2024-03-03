@@ -1,7 +1,7 @@
 import styled from "styled-components";
 import { myTheme } from "../../../components/global/MyTheme.styled";
 import logo from "../../../components/assets/images/logo.jpg";
-import { FlexWrapper } from "../../../components/menu/FlexWrapper";
+import { FlexWrapper } from "../../../components/wrapper/FlexWrapper";
 import { Button } from "../../../components/buttons/Button";
 
 
@@ -20,7 +20,9 @@ export const HeroSection = () => {
           </p>
           <Button title={"Contact Me"} width={"150px"} font={"1.2rem"} />
         </div>
-        <img src={logo} alt="#" />
+        <Logo>
+          <img src={logo} alt="#" />
+        </Logo>
       </FlexWrapper>
     </StyledHeroSection>
   );
@@ -32,13 +34,6 @@ const StyledHeroSection = styled.section`
   > * > * p,
   .Button {
     padding: 0 0px 20px 0;
-  }
-
-  > * > img {
-    width: 100%;
-    object-fit: cover;
-    border-radius: 20px;
-    box-shadow: 5px 5px 10px 2px;
   }
 
   > * > * h2 {
@@ -54,3 +49,13 @@ const StyledHeroSection = styled.section`
 const StyledTitle = styled.h1`
   color: ${myTheme.colors.secondary};
 `;
+
+const Logo = styled.div`
+  width: 50%;
+  img {
+    width: 100%;
+    object-fit: cover;
+    border-radius: 20px;
+    box-shadow: 5px 5px 10px 2px;
+  }
+`

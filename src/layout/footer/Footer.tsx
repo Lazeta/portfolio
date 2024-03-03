@@ -1,7 +1,7 @@
 import styled from "styled-components";
 import { myTheme } from "../../components/global/MyTheme.styled";
 import { Icon } from "../../components/icon/Icon";
-import { FlexWrapper } from "../../components/menu/FlexWrapper";
+import { FlexWrapper } from "../../components/wrapper/FlexWrapper";
 
 export const Footer = () => {
   return (
