@@ -30,11 +30,9 @@ const StyledHeaderMenu = styled.nav`
     list-style-type: none;
   }
 
-
-  @media ${myTheme.media.tablet} {
+  @media ${myTheme.media.mobile}{
     display: none;
-    overflow: none;
-  } 
+  }
 `;
 
 const ListItem = styled.li`
