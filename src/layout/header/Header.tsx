@@ -1,6 +1,5 @@
 import styled from "styled-components";
-import { Logo } from "../../components/logo/Logo";
-import { FlexWrapper } from "../../components/wrapper/FlexWrapper";
+import { BurgerButton } from "../../components/menu/burger/BurgerButton";
 import { HeaderMenu } from "./headerMenu/HeaderMenu";
 import { MobileMenu } from "./mobileMenu/MobileMenu";
 
@@ -9,8 +8,10 @@ const headerItems = ["Home", "About me", "Projects", "Skills", "Contacts"];
 export const Header = () => {
   return (
     <StyledHeader>
-      <Logo />
+      <BurgerButton />
+      {/* <Logo /> */}
       <HeaderMenu menuItems={headerItems} />
+      {/* <TabletMenu menuItems={headerItems} /> */}
       <MobileMenu menuItems={headerItems} />
     </StyledHeader>
   );

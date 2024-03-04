@@ -1,12 +1,9 @@
 import styled, { css } from "styled-components";
 import { myTheme } from "../../../components/global/MyTheme.styled";
-import { BurgerButton } from "../../../components/menu/burger/BurgerButton";
 
 export const MobileMenu = (props: { menuItems: Array<string> }) => {
   return (
     <StyledMobileMenu>
-      <BurgerButton />
-
       <MobileMenuPopup isOpen={true}>
         <ul>
           {props.menuItems.map((item, index) => {
@@ -27,28 +24,28 @@ export const MobileMenu = (props: { menuItems: Array<string> }) => {
 const StyledMobileMenu = styled.nav`
   margin: 0 auto;
   position: relative;
-  display: flex;
-  /* @media ${myTheme.media.tablet} {
-    display: grid;
-  } */
+  display: none;
+  @media ${myTheme.media.desktop} {
+    display: none;
+  }
+  @media ${myTheme.media.mobile} {
+    display: flex;
+  }
 `;
 
 const MobileMenuPopup = styled.div<{ isOpen: boolean }>`
-  position: fixed;
-  width: 100vw;
-  left: 0;
-  right: 0;
-  top: 0;
-  bottom: 0;
-  z-index: 99;
-  background-color: rgba(31, 38, 38, 0.98);
-  transition: all 2s ease-in-out 1s;
-  display: grid;
-
-  ${(props) =>
-    props.isOpen &&
-    css<{ isOpen: boolean }>`
+  ${(props) => props.isOpen && css<{ isOpen: boolean }>`
       display: grid;
+      position: fixed;
+      width: 100vw;
+      left: 0;
+      right: 0;
+      top: 0;
+      bottom: 0;
+      z-index: 99;
+      background-color: rgba(31, 38, 38, 0.98);
+      transition: all 2s ease-in-out 1s;
+
       ul {
         display: flex;
         flex-direction: column;
