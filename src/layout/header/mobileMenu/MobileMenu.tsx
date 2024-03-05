@@ -1,20 +1,25 @@
+import { useState } from "react";
 import styled, { css } from "styled-components";
 import { myTheme } from "../../../components/global/MyTheme.styled";
 
-export const MobileMenu = (props: { menuItems: Array<string> }) => {
+interface MobileMenuProps {
+  menuItems: string[];
+}
+
+const MobileMenu: React.FC<MobileMenuProps> = ({ menuItems }) => {
+  const [menuIsOpen, setMenuIsOpen] = useState(false);
+
   return (
     <StyledMobileMenu>
-      <MobileMenuPopup isOpen={true}>
+      <MobileMenuPopup isOpen={menuIsOpen}>
         <ul>
-          {props.menuItems.map((item, index) => {
-            return (
-              <ListItem key={index}>
-                <Link href="">
-                  <span>{item}</span>
-                </Link>
-              </ListItem>
-            );
-          })}
+          {menuItems.map((item, index) => (
+            <ListItem key={index}>
+              <Link href="">
+                <span>{item}</span>
+              </Link>
+            </ListItem>
+          ))}
         </ul>
       </MobileMenuPopup>
     </StyledMobileMenu>
@@ -25,35 +30,50 @@ const StyledMobileMenu = styled.nav`
   margin: 0 auto;
   position: relative;
   display: none;
+
   @media ${myTheme.media.desktop} {
-    display: none;
+    display: flex;
   }
   @media ${myTheme.media.mobile} {
-    display: flex;
+    display: none;
   }
 `;
 
-const MobileMenuPopup = styled.div<{ isOpen: boolean }>`
-  ${(props) => props.isOpen && css<{ isOpen: boolean }>`
-      display: grid;
-      position: fixed;
-      width: 100vw;
-      left: 0;
-      right: 0;
-      top: 0;
-      bottom: 0;
-      z-index: 99;
-      background-color: rgba(31, 38, 38, 0.98);
-      transition: all 2s ease-in-out 1s;
+interface MobileMenuPopupProps {
+  isOpen: boolean;
+}
 
-      ul {
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        gap: 5rem;
-      }
-    `}
+const MobileMenuPopup = styled.div<MobileMenuPopupProps>`
+  display: ${(props) => (props.isOpen ? "grid" : "none")};
+  position: fixed;
+  width: 100vw;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  z-index: 99;
+  background-color: rgba(31, 38, 38, 0.98);
+  animation: animate 1s;
+  grid-template-rows: auto;
+
+  ul {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 5rem;
+  }
+
+  @keyframes animate {
+    from {
+      top: -500px;
+      opacity: 0;
+    }
+    to {
+      top: 0;
+      opacity: 1;
+    }
+  }
 `;
 
 const ListItem = styled.li`
@@ -110,3 +130,5 @@ const Link = styled.a`
   text-decoration: none;
   text-align: center;
 `;
+
+export default MobileMenu;

@@ -1,18 +1,22 @@
+import { useState } from "react";
 import styled from "styled-components";
-import { BurgerButton } from "../../components/menu/burger/BurgerButton";
+import BurgerButton from "../../components/menu/burger/BurgerButton";
 import { HeaderMenu } from "./headerMenu/HeaderMenu";
-import { MobileMenu } from "./mobileMenu/MobileMenu";
+import MobileMenu from "./mobileMenu/MobileMenu";
 
 const headerItems = ["Home", "About me", "Projects", "Skills", "Contacts"];
 
 export const Header = () => {
+  const [menuIsOpen, setMenuIsOpen] = useState(false);
+  const onBurgerBtnClick = () => {
+    setMenuIsOpen(!menuIsOpen);
+  };
   return (
     <StyledHeader>
-      <BurgerButton />
+      <BurgerButton isOpen={menuIsOpen} onClick={onBurgerBtnClick} />
       {/* <Logo /> */}
       <HeaderMenu menuItems={headerItems} />
-      {/* <TabletMenu menuItems={headerItems} /> */}
-      <MobileMenu menuItems={headerItems} />
+      {menuIsOpen && <MobileMenu menuItems={headerItems} />}
     </StyledHeader>
   );
 };
