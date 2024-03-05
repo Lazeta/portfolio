@@ -23,11 +23,12 @@ export const HeaderMenu = (props: { menuItems: Array<string> }) => {
 };
 
 const StyledHeaderMenu = styled.nav`
-  ul {
-    display: flex;
-    justify-content:  flex-end;
-    gap: 30px;
-    list-style-type: none;
+
+ul {
+  display: flex;
+  justify-content:  flex-end;
+  gap: 30px;
+  list-style-type: none;
   }
 
   @media ${myTheme.media.mobile}{

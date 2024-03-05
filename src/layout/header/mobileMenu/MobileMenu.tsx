@@ -25,6 +25,7 @@ const StyledMobileMenu = styled.nav`
   margin: 0 auto;
   position: relative;
   display: none;
+  
   @media ${myTheme.media.desktop} {
     display: none;
   }
@@ -34,7 +35,9 @@ const StyledMobileMenu = styled.nav`
 `;
 
 const MobileMenuPopup = styled.div<{ isOpen: boolean }>`
-  ${(props) => props.isOpen && css<{ isOpen: boolean }>`
+  ${(props) =>
+    props.isOpen &&
+    css<{ isOpen: boolean }>`
       display: grid;
       position: fixed;
       width: 100vw;
@@ -44,7 +47,8 @@ const MobileMenuPopup = styled.div<{ isOpen: boolean }>`
       bottom: 0;
       z-index: 99;
       background-color: rgba(31, 38, 38, 0.98);
-      transition: all 2s ease-in-out 1s;
+      /* transition: all ease-in-out 1s; */
+      animation: animate 1s;
 
       ul {
         display: flex;
@@ -52,6 +56,17 @@ const MobileMenuPopup = styled.div<{ isOpen: boolean }>`
         justify-content: center;
         align-items: center;
         gap: 5rem;
+      }
+
+      @keyframes animate {
+        from {
+          top: -500px;
+          opacity: 0;
+        }
+        to {
+          top: 0;
+          opacity: 1;
+        }
       }
     `}
 `;

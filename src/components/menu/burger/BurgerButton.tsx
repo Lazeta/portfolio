@@ -15,21 +15,35 @@ export const BurgerButton = () => {
 };
 
 const StyledBurgerButton = styled.div<{ isOpen: boolean }>`
+  display: none;
+
   @media ${myTheme.media.mobile} {
+    padding-top: 40px;
     display: flex;
   }
-
   ${(props) =>
     props.isOpen &&
     css<{ isOpen: boolean }>`
-      display: none;
       position: fixed;
-      top: 30px;
+      top: 0px;
       right: -130px;
       width: 200px;
       height: 200px;
       background-color: rgba(31, 38, 38, 0);
       z-index: 100;
+      transition: all ease-in-out 1s;
+      animation: animate 1s;
+
+      @keyframes animate {
+        from {
+          /* top: -30px; */
+          opacity: 0;
+        }
+        to {
+          /* top: 0px; */
+          opacity: 1;
+        }
+      }
     `}
 
   #checkbox {
