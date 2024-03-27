@@ -12,6 +12,7 @@ const BurgerButton: React.FC<BurgerButtonProps> = ({ isOpen, onClick }) => {
     <StyledBurgerButton id="myBtn" isOpen={isOpen} onClick={onClick}>
       <input type="checkbox" id="checkbox" />
       <label htmlFor="checkbox" className="toggle">
+        {/* пустой текст */}
         <div className="bars" id="bar1"></div>
         <div className="bars" id="bar2"></div>
         <div className="bars" id="bar3"></div>
