@@ -10,7 +10,7 @@ export const HeaderMenu = (props: { menuItems: Array<string> }) => {
           return (
             <HoverBox>
               <ListItem key={index}>
-                <Link href="">
+                <Link href="/">
                   <span>{item}</span>
                 </Link>
               </ListItem>
@@ -26,7 +26,7 @@ const StyledHeaderMenu = styled.nav`
 
 ul {
   display: flex;
-  justify-content:  flex-end;
+  justify-content: flex-end;
   gap: 30px;
   list-style-type: none;
   }

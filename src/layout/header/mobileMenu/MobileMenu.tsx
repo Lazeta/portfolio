@@ -26,25 +26,26 @@ const MobileMenu: React.FC<MobileMenuProps> = ({ menuItems }) => {
   );
 };
 
-const StyledMobileMenu = styled.nav`
-  margin: 0 auto;
-  position: relative;
-  display: none;
-
-  @media ${myTheme.media.desktop} {
-    display: flex;
-  }
-  @media ${myTheme.media.mobile} {
-    display: none;
-  }
-`;
 
 interface MobileMenuPopupProps {
   isOpen: boolean;
 }
 
+const StyledMobileMenu = styled.nav`
+  margin: 0 auto;
+  position: relative;
+  display: flex;
+
+  @media ${myTheme.media.desktop} {
+    display: none;
+  }
+  @media ${myTheme.media.mobile} {
+    display: flex;
+  }
+`;
+
 const MobileMenuPopup = styled.div<MobileMenuPopupProps>`
-  display: ${(props) => (props.isOpen ? "grid" : "none")};
+  display: ${(props) => (props.isOpen ? "flex" : "none")};
   position: fixed;
   width: 100vw;
   left: 0;

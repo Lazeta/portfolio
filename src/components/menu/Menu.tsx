@@ -1,13 +1,6 @@
 import styled from "styled-components";
 import { myTheme } from "../global/MyTheme.styled";
-import { HoverBox } from "../hovers/HoverBox.styled";
 
-// классический способ типизации одного значения
-// type MenuPropsType = {
-//   menuItems: Array<string>
-// }
-// более лаконичный способ когда нужно лишь один пропс с одним значением передать
-// (props: {menuItems: Array<string>})
 
 export const Menu = (props: { menuItems: Array<string> }) => {
   return (
@@ -15,13 +8,11 @@ export const Menu = (props: { menuItems: Array<string> }) => {
       <ul>
         {props.menuItems.map((item, index) => {
           return (
-            <HoverBox>
               <li key={index}>
-                <a>
+                <a href="/">
                   <span>{item}</span>
                 </a>
               </li>
-            </HoverBox>
           );
         })}
       </ul>

@@ -13,19 +13,19 @@ export const Header = () => {
   };
   return (
     <StyledHeader>
-      <BurgerButton isOpen={menuIsOpen} onClick={onBurgerBtnClick} />
+      {/* <BurgerButton isOpen={menuIsOpen} onClick={onBurgerBtnClick} /> */}
       {/* <Logo /> */}
-      <HeaderMenu menuItems={headerItems} />
-      {menuIsOpen && <MobileMenu menuItems={headerItems} />}
+      {/* <HeaderMenu menuItems={headerItems} /> */}
+      {/* {menuIsOpen && <MobileMenu menuItems={headerItems} />} */}
     </StyledHeader>
   );
 };
 
 const StyledHeader = styled.header`
-  position: relative;
+  /* position: relative;
   right: 0;
   max-width: 1550px;
   width: 100%;
   margin: 0;
-  min-height: 100px;
+  min-height: 100px; */
 `;
