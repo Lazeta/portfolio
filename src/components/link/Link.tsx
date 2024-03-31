@@ -4,13 +4,14 @@ import { myTheme } from "../global/MyTheme.styled";
 type LinkPropsType = {
   href: string;
   title: string;
+  children: React.ReactNode;
 };
 
 export const Link: React.FC<LinkPropsType> = ({ href, title }) => {
   return (
     <>
-      <StyledLink href={href}>
-        {title}
+      <StyledLink>
+
       </StyledLink>
     </>
   );
@@ -22,4 +23,6 @@ const StyledLink = styled.a`
   font-size: 0.9rem;
   border-radius: 5px;
   color: ${myTheme.colors.secondary};
+  text-decoration: none;
+  text-align: center;
 `;

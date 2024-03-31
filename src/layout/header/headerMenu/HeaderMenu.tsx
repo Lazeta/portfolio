@@ -1,6 +1,8 @@
 import styled from "styled-components";
 import { myTheme } from "../../../components/global/MyTheme.styled";
 import { HoverBox } from "../../../components/hovers/HoverBox.styled";
+import { Link } from "../../../components/link/Link";
+
 
 export const HeaderMenu = (props: { menuItems: Array<string> }) => {
   return (
@@ -10,7 +12,7 @@ export const HeaderMenu = (props: { menuItems: Array<string> }) => {
           return (
             <HoverBox>
               <ListItem key={index}>
-                <Link href="/">
+                <Link href="/some-url" title="Some Title">
                   <span>{item}</span>
                 </Link>
               </ListItem>
@@ -24,16 +26,16 @@ export const HeaderMenu = (props: { menuItems: Array<string> }) => {
 
 const StyledHeaderMenu = styled.nav`
 
-ul {
-  display: flex;
-  justify-content: flex-end;
-  gap: 30px;
-  list-style-type: none;
-  }
+ ul {
+   display: flex;
+   justify-content: flex-end;
+   gap: 30px;
+   list-style-type: none;
+   }
 
-  @media ${myTheme.media.mobile}{
-    display: none;
-  }
+   @media ${myTheme.media.mobile}{
+     display: none;
+   }
 `;
 
 const ListItem = styled.li`
@@ -46,21 +48,21 @@ const ListItem = styled.li`
   white-space: nowrap;
   font-size: 0.9rem;
 
-  &::before {
-    content: "";
-    position: absolute;
-    top: 6px;
-    left: -2px;
-    width: calc(100% + 4px);
-    height: calc(100% - 12px);
-    background-color: ${myTheme.colors.lightFont};
-    transition: 0.3s ease-in-out;
-    transform: scaleY(1);
-  }
+   &::before {
+     content: "";
+     position: absolute;
+     top: 6px;
+     left: -2px;
+     width: calc(100% + 4px);
+     height: calc(100% - 12px);
+     background-color: ${myTheme.colors.lightFont};
+     transition: 0.3s ease-in-out;
+     transform: scaleY(1);
+   }
 
-  &:hover::before {
-    transform: scaleY(0);
-  }
+   &:hover::before {
+     transform: scaleY(0);
+   }
 
   &::after {
     content: "";
@@ -83,10 +85,4 @@ const ListItem = styled.li`
     position: relative;
     z-index: 3;
   }
-`;
-
-const Link = styled.a`
-  color: ${myTheme.colors.secondary};
-  text-decoration: none;
-  text-align: center;
 `;
