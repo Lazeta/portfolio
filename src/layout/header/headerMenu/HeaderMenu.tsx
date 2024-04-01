@@ -4,6 +4,7 @@ import { HoverBox } from "../../../components/hovers/HoverBox.styled";
 import { Link } from "../../../components/link/Link";
 
 
+
 export const HeaderMenu = (props: { menuItems: Array<string> }) => {
   return (
     <StyledHeaderMenu>
@@ -12,20 +13,19 @@ export const HeaderMenu = (props: { menuItems: Array<string> }) => {
           return (
             <HoverBox>
               <ListItem key={index}>
-                <Link href="/some-url" title="Some Title">
+                <Link href={"//" + item.toLowerCase()} title={item}>
                   <span>{item}</span>
                 </Link>
               </ListItem>
             </HoverBox>
           );
-        })}
+        })};
       </ul>
     </StyledHeaderMenu>
   );
 };
 
 const StyledHeaderMenu = styled.nav`
-
  ul {
    display: flex;
    justify-content: flex-end;

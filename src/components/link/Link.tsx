@@ -4,14 +4,14 @@ import { myTheme } from "../global/MyTheme.styled";
 type LinkPropsType = {
   href: string;
   title: string;
-  children: React.ReactNode;
+  children?: React.ReactNode;
 };
 
-export const Link: React.FC<LinkPropsType> = ({ href, title }) => {
+export const Link: React.FC<LinkPropsType> = ({ href, title, children }) => {
   return (
     <>
       <StyledLink>
-
+        {children || title}
       </StyledLink>
     </>
   );

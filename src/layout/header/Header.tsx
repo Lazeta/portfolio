@@ -7,8 +7,8 @@ const headerItems = ["Home", "About me", "Projects", "Skills", "Contacts"];
 export const Header = () => {
   return (
     <StyledHeader>
-      <HeaderMenu menuItems={headerItems} />
-      <MobileMenu menuItems={headerItems} />
+      <HeaderMenu menuItems={headerItems}/>
+      {/* <MobileMenu menuItems={headerItems}/> */}
     </StyledHeader>
   );
 };
