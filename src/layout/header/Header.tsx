@@ -2,13 +2,15 @@ import styled from "styled-components";
 import { HeaderMenu } from "./headerMenu/HeaderMenu";
 import { MobileMenu } from "./headerMenu/mobileMenu/MobileMenu";
 
+
 const headerItems = ["Home", "About me", "Projects", "Skills", "Contacts"];
 
 export const Header = () => {
+
   return (
     <StyledHeader>
       <HeaderMenu menuItems={headerItems}/>
-      {/* <MobileMenu menuItems={headerItems}/> */}
+      <MobileMenu menuItems={headerItems}/>
     </StyledHeader>
   );
 };
