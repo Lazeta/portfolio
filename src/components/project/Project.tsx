@@ -36,7 +36,7 @@ export const Project = (props: ProjectPropsType) => {
           <SectionTitle title={"Projects"}></SectionTitle>
           <ul>
             {links.map((link) => (
-              <Link key={link.href} href={link.href} title={link.title} />
+              <Link key={link.href} href={link.href} title={link.title} children={undefined} />
             ))}
           </ul>
         </FlexWrapper>

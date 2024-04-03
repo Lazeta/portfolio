@@ -14,10 +14,10 @@ const App = () => {
           <Header/>
           <Main/>
           <Footer/>
-          </Wrapper>
+        </Wrapper>
       </ThemeProvider>
     </div>
   );
 }
 
-export default App;
+export default App

@@ -1,53 +1,60 @@
 import { useState } from "react";
 import styled, { css } from "styled-components";
-import { myTheme } from "../../../components/global/MyTheme.styled";
+import { myTheme } from "../../../../components/global/MyTheme.styled";
+import { Link } from "../../../../components/link/Link";
 
-interface MobileMenuProps {
-  menuItems: string[];
+const headerItems = ["Home", "About me", "Projects", "Skills", "Contacts"];
+
+type MobileMenuPopupProps = {
+  isOpen: boolean;
+  menuItems: Array<string>
 }
 
-const MobileMenu: React.FC<MobileMenuProps> = ({ menuItems }) => {
-  const [menuIsOpen, setMenuIsOpen] = useState(false);
+export const MobileMenu = (props: MobileMenuPopupProps) => {
+  const [isMenuOpen, setIsMenuOpen] = useState(false)
+
+  const toggleMenu = () => {
+    setIsMenuOpen(!isMenuOpen)
+  }
 
   return (
     <StyledMobileMenu>
-      <MobileMenuPopup isOpen={menuIsOpen}>
-        <ul>
-          {menuItems.map((item, index) => (
+      <Burger onClick={toggleMenu} isMenuOpen={isMenuOpen}>
+        <Line></Line>
+      </Burger>
+      <ul>
+        {props.menuItems.map((item, index) => {
+          return (
             <ListItem key={index}>
-              <Link href="">
+              <Link href="/another-url" title="Another Title">
                 <span>{item}</span>
               </Link>
             </ListItem>
-          ))}
-        </ul>
-      </MobileMenuPopup>
+          );
+        })}
+      </ul>
+      <MobileMenuPopup menuItems={props.menuItems}/>
     </StyledMobileMenu>
   );
-};
-
-
-interface MobileMenuPopupProps {
-  isOpen: boolean;
 }
+
 
 const StyledMobileMenu = styled.nav`
   margin: 0 auto;
-  position: relative;
-  display: flex;
 
-  @media ${myTheme.media.desktop} {
-    display: none;
-  }
-  @media ${myTheme.media.mobile} {
-    display: flex;
-  }
+/* @media ${myTheme.media.desktop} {
+     display: none;
+   }
+@media ${myTheme.media.mobile} {
+  display: flex;
+} */
 `;
 
 const MobileMenuPopup = styled.div<MobileMenuPopupProps>`
   display: ${(props) => (props.isOpen ? "flex" : "none")};
   position: fixed;
   width: 100vw;
+  margin: 0 auto;
   left: 0;
   right: 0;
   top: 0;
@@ -126,10 +133,43 @@ const ListItem = styled.li`
   }
 `;
 
-const Link = styled.a`
-  color: ${myTheme.colors.secondary};
-  text-decoration: none;
-  text-align: center;
+const Burger = styled.div<{ isMenuOpen: boolean }>`
+  display: flex;
+  flex-direction: column;
+  cursor: pointer;
+  position: fixed;
+  top: 40px;
+  right: 40px;
+  z-index: 100;
+  transition: transform 0.3s ease-in-out;
+  transform: ${({ isMenuOpen }) =>
+    isMenuOpen ? "rotate(90deg)" : "rotate(0)"
+  };
+
+  &:before,
+  &:after {
+    content: "";
+    width: 30px;
+    height: 3px;
+    background-color: #eeffee;
+    margin-bottom: 6px;
+    transition: transform 0.3s ease;
+  }
+
+  &:before {
+    transform: ${({ isMenuOpen }) =>
+    isMenuOpen ? "rotate(-90deg) translate(-6px, 0)" : "rotate(0) translate(0, -6px)"};
+  }
+
+  &:after {
+    transform: ${({ isMenuOpen }) =>
+    isMenuOpen ? "rotate(90deg) translate(-6px, 0)" : "rotate(0) translate(0, 6px)"};
+  }
 `;
 
-export default MobileMenu;
+const Line = styled.div`
+    width: 30px;
+    height: 3px;
+    background-color: #eeffee;
+    margin-bottom: 6px;
+`
