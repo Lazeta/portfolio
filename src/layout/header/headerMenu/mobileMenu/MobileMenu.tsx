@@ -1,16 +1,15 @@
+import React from "react";
 import { useState } from "react";
 import styled, { css } from "styled-components";
 import { myTheme } from "../../../../components/global/MyTheme.styled";
 import { Link } from "../../../../components/link/Link";
 
-const headerItems = ["Home", "About me", "Projects", "Skills", "Contacts"];
-
 type MobileMenuPopupProps = {
-  isOpen: boolean;
+  isOpen?: boolean;
   menuItems: Array<string>
 }
 
-export const MobileMenu = (props: MobileMenuPopupProps) => {
+export const MobileMenu: React.FC<MobileMenuPopupProps> = ({isOpen, menuItems}) => {
   const [isMenuOpen, setIsMenuOpen] = useState(false)
 
   const toggleMenu = () => {
@@ -23,17 +22,17 @@ export const MobileMenu = (props: MobileMenuPopupProps) => {
         <Line></Line>
       </Burger>
       <ul>
-        {props.menuItems.map((item, index) => {
+        {menuItems.map((item, index) => {
           return (
             <ListItem key={index}>
-              <Link href="/another-url" title="Another Title">
+              <Link href="/another-url">
                 <span>{item}</span>
               </Link>
             </ListItem>
           );
         })}
       </ul>
-      <MobileMenuPopup menuItems={props.menuItems}/>
+      <MobileMenuPopup menuItems={menuItems}/>
     </StyledMobileMenu>
   );
 }

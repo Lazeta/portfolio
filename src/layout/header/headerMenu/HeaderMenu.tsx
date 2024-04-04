@@ -1,18 +1,22 @@
+import React from "react";
 import styled from "styled-components";
 import { myTheme } from "../../../components/global/MyTheme.styled";
 import { HoverBox } from "../../../components/hovers/HoverBox.styled";
 import { Link } from "../../../components/link/Link";
 
+type ArrayHeaderItemsProps = {
+  menuItems: Array<string>
+}
 
-export const HeaderMenu = (props: { menuItems: Array<string> }) => {
+export const HeaderMenu: React.FC<ArrayHeaderItemsProps> = ({menuItems}) => {
   return (
     <StyledHeaderMenu>
       <ul>
-        {props.menuItems.map((item, index) => {
+        {menuItems.map((item, index) => {
           return (
             <HoverBox>
               <ListItem key={index}>
-                <Link title={item}>
+                <Link href="/url">
                   <span>{item}</span>
                 </Link>
               </ListItem>

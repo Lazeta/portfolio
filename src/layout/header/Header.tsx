@@ -1,3 +1,4 @@
+import React from "react";
 import styled from "styled-components";
 import { HeaderMenu } from "./headerMenu/HeaderMenu";
 import { MobileMenu } from "./headerMenu/mobileMenu/MobileMenu";
@@ -5,7 +6,7 @@ import { MobileMenu } from "./headerMenu/mobileMenu/MobileMenu";
 
 const headerItems = ["Home", "About me", "Projects", "Skills", "Contacts"];
 
-export const Header = () => {
+export const Header: React.FC = () => {
 
   return (
     <StyledHeader>
