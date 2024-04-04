@@ -1,5 +1,5 @@
 import React from "react";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import styled, { css } from "styled-components";
 import { myTheme } from "../../../../components/global/MyTheme.styled";
 import { Link } from "../../../../components/link/Link";
@@ -19,12 +19,31 @@ export const MobileMenu: React.FC<MobileMenuPopupProps> = ({
     setIsMenuOpen(!isMenuOpen);
   };
 
+  useEffect(() => {
+    const handleEscKey = (event: { keyCode: number }) => {
+      if (event.keyCode === 27) {
+        setIsMenuOpen(false);
+      }
+    };
+    document.addEventListener("keydown", handleEscKey);
+    return () => {
+      document.removeEventListener("keydown", handleEscKey);
+    };
+  }, []);
+
   return (
     <StyledMobileMenu>
       <Burger onClick={toggleMenu} isMenuOpen={isMenuOpen}>
         <Line></Line>
       </Burger>
-      <MobileMenuPopup menuItems={menuItems} isOpen={isMenuOpen}>
+      <MobileMenuPopup
+        menuItems={menuItems}
+        isOpen={isMenuOpen}
+        onClick={() => {
+          setIsMenuOpen(false);
+        }}
+        
+      >
         <ul>
           {menuItems.map((item, index) => {
             return (
@@ -43,7 +62,6 @@ export const MobileMenu: React.FC<MobileMenuPopupProps> = ({
 
 const StyledMobileMenu = styled.nav`
   margin: 0 auto;
-
 
   @media ${myTheme.media.desktop} {
     display: none;
