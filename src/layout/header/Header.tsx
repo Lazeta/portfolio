@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import styled from "styled-components";
+import { myTheme } from "../../components/global/MyTheme.styled";
 import { HeaderMenu } from "./headerMenu/HeaderMenu";
 import { MobileMenu } from "./headerMenu/mobileMenu/MobileMenu";
 
@@ -23,4 +24,8 @@ const StyledHeader = styled.header`
   width: 100%;
   margin: 0;
   min-height: 100px;
+
+  @media ${myTheme.media.mobile} {
+    min-height: 0;
+  }
 `;

@@ -55,8 +55,6 @@ const StyledMobileMenu = styled.nav`
 
 const MobileMenuPopup = styled.div<MobileMenuPopupProps>`
   display: ${(props) => (props.isOpen ? "flex" : "none")};
-  /* visibility: ${(props) => (props.isOpen ? "visible" : "hidden")};
-  opacity: ${(props) => (props.isOpen ? 1 : 0)}; */
   position: fixed;
   width: 100vw;
   margin: 0 auto;
