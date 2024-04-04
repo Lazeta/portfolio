@@ -8,6 +8,9 @@ export const StyledProject = styled.div`
   display: flex;
   flex-direction: column;
   gap: 10px;
+  @media ${myTheme.media.mobileSlide} {
+    width: 100%;
+  }
 `;
 
 export const UseTechnologys = styled.ul`
@@ -15,18 +18,15 @@ export const UseTechnologys = styled.ul`
   list-style-type: none;
   flex-direction: row;
   flex-wrap: wrap;
-  justify-content: center;
+  justify-content: left;
   gap: 10px;
-  padding-right: 40px;
 `;
 
-export const ButtonUseTechnologys = styled.div`
-  
-`;
+export const ButtonUseTechnologys = styled.div``;
 
 export const StyledProjectDescription = styled.div`
   display: flex;
-  gap: 0px;
+  gap: 5px;
   padding: 0 15px;
   flex-wrap: wrap;
   span {

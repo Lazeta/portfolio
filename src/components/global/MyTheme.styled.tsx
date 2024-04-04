@@ -19,5 +19,6 @@ export const myTheme = {
     desktop: "screen and (max-width: 5000px)",
     tablet: "screen and (max-width: 1280px)",
     mobile: "screen and (max-width: 768px)",
+    mobileSlide: "screen and (max-width: 621px)",
   }
 };

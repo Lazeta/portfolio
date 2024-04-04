@@ -8,4 +8,8 @@ export const Wrapper = styled.div`
   background-color: ${myTheme.colors.theme};
   margin: 0 auto;
   padding: 0 2%;
+
+  @media ${myTheme.media.mobileSlide} {
+    padding: 0 20px;
+  }
 `;

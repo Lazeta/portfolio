@@ -66,7 +66,8 @@ const StyledFooter = styled.footer`
 const SocialList = styled.ul`
   display: flex;
   justify-content: center;
-  gap: 50px;
+  flex-wrap: wrap;
+  gap: 4rem;
   padding: 20px;
   list-style-type: none;
 `;

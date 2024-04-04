@@ -1,53 +1,56 @@
+import React from "react";
 import { useState } from "react";
 import styled, { css } from "styled-components";
 import { myTheme } from "../../../../components/global/MyTheme.styled";
 import { Link } from "../../../../components/link/Link";
 
-const headerItems = ["Home", "About me", "Projects", "Skills", "Contacts"];
-
 type MobileMenuPopupProps = {
   isOpen: boolean;
-  menuItems: Array<string>
-}
+  menuItems: Array<string>;
+};
 
-export const MobileMenu = (props: MobileMenuPopupProps) => {
-  const [isMenuOpen, setIsMenuOpen] = useState(false)
+export const MobileMenu: React.FC<MobileMenuPopupProps> = ({
+  isOpen,
+  menuItems,
+}) => {
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   const toggleMenu = () => {
-    setIsMenuOpen(!isMenuOpen)
-  }
+    setIsMenuOpen(!isMenuOpen);
+  };
 
   return (
     <StyledMobileMenu>
       <Burger onClick={toggleMenu} isMenuOpen={isMenuOpen}>
         <Line></Line>
       </Burger>
-      <ul>
-        {props.menuItems.map((item, index) => {
-          return (
-            <ListItem key={index}>
-              <Link href="/another-url" title="Another Title">
-                <span>{item}</span>
-              </Link>
-            </ListItem>
-          );
-        })}
-      </ul>
-      <MobileMenuPopup menuItems={props.menuItems}/>
+      <MobileMenuPopup menuItems={menuItems} isOpen={isMenuOpen}>
+        <ul>
+          {menuItems.map((item, index) => {
+            return (
+              <ListItem key={index}>
+                <Link href="/another-url">
+                  <span>{item}</span>
+                </Link>
+              </ListItem>
+            );
+          })}
+        </ul>
+      </MobileMenuPopup>
     </StyledMobileMenu>
   );
-}
-
+};
 
 const StyledMobileMenu = styled.nav`
   margin: 0 auto;
 
-/* @media ${myTheme.media.desktop} {
-     display: none;
-   }
-@media ${myTheme.media.mobile} {
-  display: flex;
-} */
+
+  @media ${myTheme.media.desktop} {
+    display: none;
+  }
+  @media ${myTheme.media.mobile} {
+    display: flex;
+  }
 `;
 
 const MobileMenuPopup = styled.div<MobileMenuPopupProps>`
@@ -70,6 +73,7 @@ const MobileMenuPopup = styled.div<MobileMenuPopupProps>`
     justify-content: center;
     align-items: center;
     gap: 5rem;
+    margin: 0 auto;
   }
 
   @keyframes animate {
@@ -143,8 +147,7 @@ const Burger = styled.div<{ isMenuOpen: boolean }>`
   z-index: 100;
   transition: transform 0.3s ease-in-out;
   transform: ${({ isMenuOpen }) =>
-    isMenuOpen ? "rotate(90deg)" : "rotate(0)"
-  };
+    isMenuOpen ? "rotate(90deg)" : "rotate(0)"};
 
   &:before,
   &:after {
@@ -158,18 +161,22 @@ const Burger = styled.div<{ isMenuOpen: boolean }>`
 
   &:before {
     transform: ${({ isMenuOpen }) =>
-    isMenuOpen ? "rotate(-90deg) translate(-6px, 0)" : "rotate(0) translate(0, -6px)"};
+      isMenuOpen
+        ? "rotate(-90deg) translate(-6px, 0)"
+        : "rotate(0) translate(0, -6px)"};
   }
 
   &:after {
     transform: ${({ isMenuOpen }) =>
-    isMenuOpen ? "rotate(90deg) translate(-6px, 0)" : "rotate(0) translate(0, 6px)"};
+      isMenuOpen
+        ? "rotate(90deg) translate(-6px, 0)"
+        : "rotate(0) translate(0, 6px)"};
   }
 `;
 
 const Line = styled.div`
-    width: 30px;
-    height: 3px;
-    background-color: #eeffee;
-    margin-bottom: 6px;
-`
+  width: 30px;
+  height: 3px;
+  background-color: #eeffee;
+  margin-bottom: 6px;
+`;
