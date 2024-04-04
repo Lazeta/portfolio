@@ -1,4 +1,3 @@
-import React, { useState } from "react";
 import styled from "styled-components";
 import { myTheme } from "../../components/global/MyTheme.styled";
 import { HeaderMenu } from "./headerMenu/HeaderMenu";

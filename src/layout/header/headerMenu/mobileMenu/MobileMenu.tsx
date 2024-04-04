@@ -1,8 +1,10 @@
 import React from "react";
 import { useEffect, useState } from "react";
-import styled, { css } from "styled-components";
+import styled from "styled-components";
 import { myTheme } from "../../../../components/global/MyTheme.styled";
 import { Link } from "../../../../components/link/Link";
+// import { Burger } from "../../../../components/menu/burger/Burger";
+import { BurgerButton } from "../../../../components/menu/burger/BurgerButton";
 
 type MobileMenuPopupProps = {
   isOpen: boolean;
@@ -33,9 +35,11 @@ export const MobileMenu: React.FC<MobileMenuPopupProps> = ({
 
   return (
     <StyledMobileMenu>
-      <Burger onClick={toggleMenu} isMenuOpen={isMenuOpen}>
+      {/* <Burger onClick={toggleMenu} isMenuOpen={isMenuOpen}>
         <Line></Line>
-      </Burger>
+      </Burger> этот вариант до того как был разбит на отдельный компонент */ }
+      {/* <Burger  onClick={toggleMenu} isMenuOpen={isMenuOpen}/> */}
+      <BurgerButton isOpen={isMenuOpen} onClick={toggleMenu} />
       <MobileMenuPopup
         menuItems={menuItems}
         isOpen={isMenuOpen}
@@ -153,48 +157,4 @@ const ListItem = styled.li`
     position: relative;
     z-index: 3;
   }
-`;
-
-const Burger = styled.div<{ isMenuOpen: boolean }>`
-  display: flex;
-  flex-direction: column;
-  cursor: pointer;
-  position: fixed;
-  top: 40px;
-  right: 40px;
-  z-index: 100;
-  transition: transform 0.3s ease-in-out;
-  transform: ${({ isMenuOpen }) =>
-    isMenuOpen ? "rotate(90deg)" : "rotate(0)"};
-
-  &:before,
-  &:after {
-    content: "";
-    width: 30px;
-    height: 3px;
-    background-color: #eeffee;
-    margin-bottom: 6px;
-    transition: transform 0.3s ease;
-  }
-
-  &:before {
-    transform: ${({ isMenuOpen }) =>
-      isMenuOpen
-        ? "rotate(-90deg) translate(-6px, 0)"
-        : "rotate(0) translate(0, -6px)"};
-  }
-
-  &:after {
-    transform: ${({ isMenuOpen }) =>
-      isMenuOpen
-        ? "rotate(90deg) translate(-6px, 0)"
-        : "rotate(0) translate(0, 6px)"};
-  }
-`;
-
-const Line = styled.div`
-  width: 30px;
-  height: 3px;
-  background-color: #eeffee;
-  margin-bottom: 6px;
 `;
