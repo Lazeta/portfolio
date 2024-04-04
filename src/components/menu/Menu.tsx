@@ -25,6 +25,7 @@ const StyledMenu = styled.nav`
     display: flex;
     gap: 30px;
     list-style-type: none;
+    flex-wrap: wrap;
 
     li {
       position: relative;
