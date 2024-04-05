@@ -37,8 +37,9 @@ export const MobileMenu: React.FC<MobileMenuPopupProps> = ({
     <StyledMobileMenu>
       {/* <Burger onClick={toggleMenu} isMenuOpen={isMenuOpen}>
         <Line></Line>
-      </Burger> этот вариант до того как был разбит на отдельный компонент */ }
-      {/* <Burger  onClick={toggleMenu} isMenuOpen={isMenuOpen}/> */}
+      </Burger> этот вариант до того как был разбит на отдельный компонент */}
+      {/* <Burger  onClick={toggleMenu} isMenuOpen={isMenuOpen}/> после того как сделали компонент */}
+
       <BurgerButton isOpen={isMenuOpen} onClick={toggleMenu} />
       <MobileMenuPopup
         menuItems={menuItems}
@@ -46,7 +47,6 @@ export const MobileMenu: React.FC<MobileMenuPopupProps> = ({
         onClick={() => {
           setIsMenuOpen(false);
         }}
-        
       >
         <ul>
           {menuItems.map((item, index) => {
@@ -76,7 +76,7 @@ const StyledMobileMenu = styled.nav`
 `;
 
 const MobileMenuPopup = styled.div<MobileMenuPopupProps>`
-  display: ${(props) => (props.isOpen ? "flex" : "none")};
+  opacity: ${(props) => (props.isOpen ? "1" : "0")};
   position: fixed;
   width: 100vw;
   margin: 0 auto;
@@ -84,10 +84,34 @@ const MobileMenuPopup = styled.div<MobileMenuPopupProps>`
   right: 0;
   top: 0;
   bottom: 0;
-  z-index: 99;
+  z-index: ${(props) => (props.isOpen ? "99" : "99")};
   background-color: rgba(31, 38, 38, 0.98);
-  animation: animate 1s;
-  grid-template-rows: auto;
+  animation: ${(props) => (props.isOpen ? "animate-in" : "animate-out")} 1s
+    ease-in-out forwards;
+  max-height: ${(props) => (props.isOpen ? "100%" : "-100%")};
+  overflow: hidden;
+
+  @keyframes animate-in {
+    from {
+      opacity: 0;
+      transform: translateY(-100%);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  @keyframes animate-out {
+    from {
+      opacity: 1;
+      transform: translateY(0);
+    }
+    to {
+      opacity: 0;
+      transform: translateY(-100%);
+    }
+  }
 
   ul {
     display: flex;
@@ -95,18 +119,7 @@ const MobileMenuPopup = styled.div<MobileMenuPopupProps>`
     justify-content: center;
     align-items: center;
     gap: 5rem;
-    margin: 0 auto;
-  }
-
-  @keyframes animate {
-    from {
-      top: -500px;
-      opacity: 0;
-    }
-    to {
-      top: 0;
-      opacity: 1;
-    }
+    margin: 20%;
   }
 `;
 
