@@ -1,10 +1,10 @@
 import React from "react";
 import { useEffect, useState } from "react";
 import styled from "styled-components";
-import { myTheme } from "../../../../components/global/MyTheme.styled";
-import { Link } from "../../../../components/link/Link";
-// import { Burger } from "../../../../components/menu/burger/Burger";
-import { BurgerButton } from "../../../../components/menu/burger/BurgerButton";
+import { BurgerButton } from "../../../components/menu/burger/BurgerButton";
+import { Link } from "../../../components/link/Link";
+import { ListItem } from "../../../components/listItem/ListItem";
+import { S } from "../../../components/headerMenu/HeaderMenu.styles";
 
 type MobileMenuPopupProps = {
   isOpen: boolean;
@@ -34,12 +34,7 @@ export const MobileMenu: React.FC<MobileMenuPopupProps> = ({
   }, []);
 
   return (
-    <StyledMobileMenu>
-      {/* <Burger onClick={toggleMenu} isMenuOpen={isMenuOpen}>
-        <Line></Line>
-      </Burger> этот вариант до того как был разбит на отдельный компонент */}
-      {/* <Burger  onClick={toggleMenu} isMenuOpen={isMenuOpen}/> после того как сделали компонент */}
-
+    <S.MobileMenu>
       <BurgerButton isOpen={isMenuOpen} onClick={toggleMenu} />
       <MobileMenuPopup
         menuItems={menuItems}
@@ -51,8 +46,8 @@ export const MobileMenu: React.FC<MobileMenuPopupProps> = ({
         <ul>
           {menuItems.map((item, index) => {
             return (
-              <ListItem key={index}>
-                <Link href="/another-url">
+              <ListItem index={index}>
+                <Link href="/url">
                   <span>{item}</span>
                 </Link>
               </ListItem>
@@ -60,20 +55,9 @@ export const MobileMenu: React.FC<MobileMenuPopupProps> = ({
           })}
         </ul>
       </MobileMenuPopup>
-    </StyledMobileMenu>
+    </S.MobileMenu>
   );
 };
-
-const StyledMobileMenu = styled.nav`
-  margin: 0 auto;
-
-  @media ${myTheme.media.desktop} {
-    display: none;
-  }
-  @media ${myTheme.media.mobile} {
-    display: flex;
-  }
-`;
 
 const MobileMenuPopup = styled.div<MobileMenuPopupProps>`
   opacity: ${(props) => (props.isOpen ? "1" : "0")};
@@ -120,54 +104,5 @@ const MobileMenuPopup = styled.div<MobileMenuPopupProps>`
     align-items: center;
     gap: 5rem;
     margin: 20%;
-  }
-`;
-
-const ListItem = styled.li`
-  position: relative;
-  display: flex;
-  padding: 5px 15px;
-  border: 1px solid ${myTheme.colors.secondary};
-  color: ${myTheme.colors.secondary};
-  text-decoration: column;
-  white-space: nowrap;
-  font-size: 1.5rem;
-
-  &::before {
-    content: "";
-    position: absolute;
-    top: 6px;
-    left: -2px;
-    width: calc(100% + 4px);
-    height: calc(100% - 12px);
-    background-color: ${myTheme.colors.lightFont};
-    transition: 0.3s ease-in-out;
-    transform: scaleY(1);
-  }
-
-  &:hover::before {
-    transform: scaleY(0);
-  }
-
-  &::after {
-    content: "";
-    position: absolute;
-    left: 6px;
-    top: -2px;
-    height: calc(100% + 4px);
-    width: calc(100% - 12px);
-    background-color: ${myTheme.colors.lightFont};
-    transition: 0.3s ease-in-out;
-    transform: scaleX(1);
-    transition-delay: 0.5s;
-  }
-
-  &:hover::after {
-    transform: scaleX(0);
-  }
-
-  span {
-    position: relative;
-    z-index: 3;
   }
 `;

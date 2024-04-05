@@ -1,30 +1,26 @@
-import styled from "styled-components";
-import { myTheme } from "../../components/global/MyTheme.styled";
-import { HeaderMenu } from "./headerMenu/HeaderMenu";
-import { MobileMenu } from "./headerMenu/mobileMenu/MobileMenu";
+import React from "react";
+import { S } from "../../components/headerMenu/HeaderMenu.styles";
+import { DesktopMenu } from "./desktopMenu/DesktopMenu";
+import { MobileMenu } from "./mobileMenu/MobileMenu";
 
 
 const headerItems = ["Home", "About me", "Projects", "Skills", "Contacts"];
 
-export const Header = () => {
+export const Header: React.FC = () => {
+
+  const [width, setWidth] = React.useState(window.innerWidth);
+  const breakpoint = 768;
+
+  React.useEffect( () => {
+    const handleWindowResize = () => setWidth(window.innerWidth)
+    window.addEventListener( "resize", handleWindowResize);
+    return () => window.removeEventListener( "resize", handleWindowResize);
+  }, []);
 
   return (
-    <StyledHeader>
-      <HeaderMenu menuItems={headerItems}/>
-      <MobileMenu menuItems={headerItems} isOpen={false}/>
-    </StyledHeader>
+    <S.Header>
+      {width < breakpoint ? <MobileMenu menuItems={headerItems} isOpen={false}/> 
+                          : <DesktopMenu menuItems={headerItems}/>}      
+    </S.Header>
   );
 };
-
-const StyledHeader = styled.header`
-  position: relative;
-  right: 0;
-  max-width: 1550px;
-  width: 100%;
-  margin: 0;
-  min-height: 100px;
-
-  @media ${myTheme.media.mobile} {
-    min-height: 0;
-  }
-`;

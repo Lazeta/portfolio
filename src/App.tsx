@@ -1,5 +1,5 @@
-import { myTheme } from './components/global/MyTheme.styled';
 import { ThemeProvider } from 'styled-components';
+import { myTheme } from './components/global/MyTheme.styled';
 import { Wrapper } from './layout/Wrapper.styled';
 import { Header } from './layout/header/Header';
 import { Main } from './layout/sections/Main';
