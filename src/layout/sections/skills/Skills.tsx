@@ -22,12 +22,7 @@ export const Skills = () => {
         <Menu menuItems={SkilsItems} />
       </StyledSkillsMenu>
       <FlexWrapper
-        direction="row"
-        wrap="wrap"
-        justify="space-between"
-        content="center"
-        gapItem="20px"
-      >
+        direction="row" wrap="wrap" justify="space-between" content="center" gapItem="20px">
         <Skill iconId={"html5Svg"} title={"HTML"} />
         <Skill iconId={"css3Svg"} title={"CSS"} />
         <Skill iconId={"sassSvg"} title={"SCSS"} />

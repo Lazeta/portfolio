@@ -1,32 +1,35 @@
 import styled from "styled-components";
 import { myTheme } from "../../../components/global/MyTheme.styled";
-import logo from "../../../components/assets/images/logo.jpg";
 import { FlexWrapper } from "../../../components/wrapper/FlexWrapper";
 import { Button } from "../../../components/buttons/Button";
-
+import { Logo } from "../../../components/logo/Logo";
 
 export const HeroSection = () => {
   return (
     <StyledHeroSection>
-      <FlexWrapper justify="space-between" gapItem="50px">
+      <CustomFlexWrapper justify="space-between" gapItem="40px">
         <div>
           <StyledTitle>Frontend Developer</StyledTitle>
           <h2>Chekh Stas</h2>
-          <p>
+          <StyledParagraph>
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Deleniti
             obcaecati earum tempore non officiis nisi incidunt sapiente
             temporibus ipsa? Sint quas facilis eum sequi laborum ad nobis nulla
             vitae perspiciatis!
-          </p>
+          </StyledParagraph>
           <Button title={"Contact Me"} width={"150px"} font={"1.2rem"} />
         </div>
-        <Logo>
-          <img src={logo} alt="#" />
-        </Logo>
-      </FlexWrapper>
+        <Logo />
+      </CustomFlexWrapper>
     </StyledHeroSection>
   );
 };
+
+const CustomFlexWrapper = styled(FlexWrapper)`
+  @media ${myTheme.media.mobile} {
+    gap: 0;
+  }
+`
 
 const StyledHeroSection = styled.section`
   width: auto;
@@ -41,21 +44,17 @@ const StyledHeroSection = styled.section`
     font-size: 4rem;
     margin: 0;
   }
-  > * > * p {
-    color: ${myTheme.colors.secondary};
-  }
 `;
 
 const StyledTitle = styled.h1`
   color: ${myTheme.colors.secondary};
 `;
 
-const Logo = styled.div`
-  width: 50%;
-  img {
-    width: 100%;
-    object-fit: cover;
-    border-radius: 20px;
-    box-shadow: 5px 5px 10px 2px;
+const StyledParagraph = styled.p`
+  color: ${myTheme.colors.secondary};
+  max-width: 800px;
+
+  @media ${myTheme.media.mobile} {
+    max-width: 100%;
   }
-`
+`;

@@ -13,7 +13,7 @@ export const Footer = () => {
               <Icon
                 height="40px"
                 width="40px"
-                viewBox="0 0 40px 40px"
+                viewBox="0 0 40 40"
                 iconId={"telegram"}
               />
             </SocialLink>
@@ -23,7 +23,7 @@ export const Footer = () => {
               <Icon
                 height="40px"
                 width="40px"
-                viewBox="0 0 40px 40px"
+                viewBox="0 0 40 40"
                 iconId={"linkedinSvg"}
               />
             </SocialLink>
@@ -33,7 +33,7 @@ export const Footer = () => {
               <Icon
                 height="40px"
                 width="40px"
-                viewBox="0 0 40px 40px"
+                viewBox="0 0 40 40"
                 iconId={"githubSvg"}
               />
             </SocialLink>
@@ -43,7 +43,7 @@ export const Footer = () => {
               <Icon
                 height="40px"
                 width="40px"
-                viewBox="0 0 40px 40px"
+                viewBox="0 0 40 40"
                 iconId={"gmailSvg"}
               />
             </SocialLink>
@@ -66,7 +66,8 @@ const StyledFooter = styled.footer`
 const SocialList = styled.ul`
   display: flex;
   justify-content: center;
-  gap: 50px;
+  flex-wrap: wrap;
+  gap: 4rem;
   padding: 20px;
   list-style-type: none;
 `;

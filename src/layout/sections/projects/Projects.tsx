@@ -74,7 +74,5 @@ const StyledProjects = styled.section`
 
 const StyledSort = styled.div`
   width: 100%;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: flex-start;
+  display: block;
 `;
