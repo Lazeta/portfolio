@@ -164,6 +164,60 @@ const HoverBox = styled.button`
 `;
 
 
+const BurgerButton = styled.div<{isOpen: boolean}>`
+  display: flex;
+  position: fixed;
+  top: 30px;
+  right: 30px;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  cursor: pointer;
+  z-index: 100;
+
+  .bars {
+    position: relative;
+    width: 40px;
+    height: 2px;
+    background-color: ${myTheme.colors.secondary};
+    transition: all 0.3s ease-in-out;
+
+    &::before,
+    &::after {
+      content: "";
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      background-color: ${myTheme.colors.secondary};
+      transition: all 0.3s ease-in-out;
+    }
+
+    &::before {
+      top: -12px;
+    }
+
+    &::after {
+      bottom: -12px;
+    }
+  }
+
+  .bars.open {
+    background-color: transparent;
+
+    &::before {
+      top: 0;
+      transform: rotate(45deg);
+    }
+
+    &::after {
+      bottom: 0;
+      transform: rotate(-45deg);
+    }
+  }
+`;
+
+
 export const S = {
   Menu,
   Link,
@@ -171,5 +225,6 @@ export const S = {
   HoverBox,
   MobileMenu,
   DesktopMenu,
+  BurgerButton,
   MobileMenuPopup,
 } 
