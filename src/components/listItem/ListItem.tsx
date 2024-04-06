@@ -1,13 +1,29 @@
 import styled from "styled-components";
 import { myTheme } from "../global/MyTheme.styled";
+import { S } from "../headerMenu/HeaderMenu.styles";
+import { Link } from "../link/Link";
 
 type ListItemProps = {
-  index: number;
-  children: React.ReactNode;
+  menuItems: Array<string>;
 };
 
-export const ListItem: React.FC<ListItemProps> = ({ index, children }) => {
-  return <StyledListItem key={index}>{children}</StyledListItem>;
+export const ListItem: React.FC<ListItemProps> = ({ menuItems }) => {
+  return (
+    <ul>
+      {menuItems.map((item, index) => {
+        return (
+          <S.HoverBox>
+            <StyledListItem key={index}>
+              <Link href={item}>
+                <span>{item}</span>
+              </Link>
+            </StyledListItem>
+          </S.HoverBox>
+        );
+      })}
+      ;
+    </ul>
+  );
 };
 
 const StyledListItem = styled.li`
