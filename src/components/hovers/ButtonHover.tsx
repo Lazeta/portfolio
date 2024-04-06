@@ -1,5 +1,5 @@
 import React from 'react';
-import { StyledButton } from './ButtonHover.styled';
+import { StyledButton } from './ButtonHover.styles';
 
 interface ButtonHoverProps {
   text: string;

@@ -2,7 +2,7 @@ import { FlexWrapper } from "../../../components/wrapper/FlexWrapper";
 import { Menu } from "../../../components/menu/Menu";
 import { SectionTitle } from "../../../components/sectiontitle/SectionTitle";
 import { Skill } from "../../../components/skill/Skill";
-import { StyledSkills, StyledSkillsMenu } from "./Skills.styled";
+import { S } from "./Skills.styles";
 
 const SkilsItems = [
   "Main stack",
@@ -16,11 +16,11 @@ const SkilsItems = [
 
 export const Skills = () => {
   return (
-    <StyledSkills>
+    <S.Skills>
       <SectionTitle title="Skills" />
-      <StyledSkillsMenu>
+      <S.SkillsMenu>
         <Menu menuItems={SkilsItems} />
-      </StyledSkillsMenu>
+      </S.SkillsMenu>
       <FlexWrapper
         direction="row" wrap="wrap" justify="space-between" content="center" gapItem="20px">
         <Skill iconId={"html5Svg"} title={"HTML"} />
@@ -41,6 +41,6 @@ export const Skills = () => {
         <Skill iconId={"githubSvg"} title={"GitHub"} />
         <Skill iconId={"gitSvg"} title={"Git"} />
       </FlexWrapper>
-    </StyledSkills>
+    </S.Skills>
   );
 };

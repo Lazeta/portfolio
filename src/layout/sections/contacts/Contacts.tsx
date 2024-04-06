@@ -1,16 +1,13 @@
-import styled from "styled-components";
 import { Form } from "../../../components/forms/Form";
 import { SectionTitle } from "../../../components/sectiontitle/SectionTitle";
+import { S } from "./Contacts.styles";
 
 export const Contacts = () => {
   return (
-    <StyledContacts>
+    <S.Contacts>
       <SectionTitle title="Contacts" />
       <Form />
-    </StyledContacts>
+    </S.Contacts>
   );
 };
 
-const StyledContacts = styled.section`
-  margin: 0 auto;
-`;
