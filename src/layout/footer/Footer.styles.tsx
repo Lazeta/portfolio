@@ -36,7 +36,7 @@ const Footer = styled.footer`
 `;
 
 
-export const F = {
+export const S = {
   Footer,
   Copyright,
   SocialItem,

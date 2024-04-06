@@ -1,4 +1,3 @@
-import styled from "styled-components";
 import { FlexWrapper } from "../../../components/wrapper/FlexWrapper";
 import { Menu } from "../../../components/menu/Menu";
 import { Project } from "../../../components/project/Project";
@@ -7,9 +6,10 @@ import libraryImage from "../../../components/assets/images/library_project-min.
 import plantsImage from "../../../components/assets/images/plants_project-min.webp";
 import travelImage from "../../../components/assets/images/travel_project-min.webp";
 import audioPlayerImage from "../../../components/assets/images/audio-player_project-min.webp";
+import { S } from "../../../components/project/Project.styles";
 
 const SortItems = ["All", "Landing page", "React", "SPA"];
-const projects = [
+const ObjectProjects = [
   {
     title: "Library",
     src: libraryImage,
@@ -38,11 +38,11 @@ const projects = [
 
 export const Projects = () => {
   return (
-    <StyledProjects>
+    <S.Projects>
       <SectionTitle title="Projects" />
-      <StyledSort>
+      <S.Sort>
         <Menu menuItems={SortItems} />
-      </StyledSort>
+      </S.Sort>
       <FlexWrapper
         direction="row"
         wrap="wrap"
@@ -50,29 +50,15 @@ export const Projects = () => {
         content="center"
         gapItem="20px"
       >
-        {projects.map((item, index) => (
-          <Project
-            key={index}
-            src={item.src}
-            title={item.title}
+        {ObjectProjects.map((item, index) => (
+          <Project key={index} src={item.src} title={item.title}
             // text={""} // добавить сюда какое то описание навыков
             // skill={""} // добавить сюда навыки
           />
         ))}
       </FlexWrapper>
 
-      {/* <button>See All Projects</button> */}
-    </StyledProjects>
+      {/* <Button title={"See All Projects"}/> */}
+    </S.Projects>
   );
 };
-
-const StyledProjects = styled.section`
-  max-width: 100%;
-  max-height: 100%;
-  padding: 20px 0;
-`;
-
-const StyledSort = styled.div`
-  width: 100%;
-  display: block;
-`;

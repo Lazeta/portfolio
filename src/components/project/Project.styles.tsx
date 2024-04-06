@@ -1,7 +1,20 @@
 import styled from "styled-components";
 import { myTheme } from "../global/MyTheme.styled";
 
-export const StyledProject = styled.div`
+
+const Projects = styled.section`
+  max-width: 100%;
+  max-height: 100%;
+  padding: 20px 0;
+`;
+
+const Sort = styled.div`
+  width: 100%;
+  display: block;
+`;
+
+
+const Project = styled.div`
   max-width: 100%;
   width: 48%;
   background-color: ${myTheme.colors.lightFont};
@@ -13,7 +26,7 @@ export const StyledProject = styled.div`
   }
 `;
 
-export const UseTechnologys = styled.ul`
+const UseTechnologys = styled.ul`
   display: flex;
   list-style-type: none;
   flex-direction: row;
@@ -22,9 +35,9 @@ export const UseTechnologys = styled.ul`
   gap: 10px;
 `;
 
-export const ButtonUseTechnologys = styled.div``;
+const ButtonUseTechnologys = styled.div``;
 
-export const StyledProjectDescription = styled.div`
+const ProjectDescription = styled.div`
   display: flex;
   gap: 5px;
   padding: 0 15px;
@@ -32,14 +45,28 @@ export const StyledProjectDescription = styled.div`
   span {
     color: ${myTheme.colors.secondary};
   }
-  p {
-    color: ${myTheme.colors.secondary};
-  }
 `;
 
-export const StyledImage = styled.img`
+const Image = styled.img`
   max-width: 100%;
   width: 100%;
   height: 400px;
   object-fit: cover;
 `;
+
+
+const Paragraph = styled.p`
+  color: ${myTheme.colors.secondary};
+`
+
+
+export const S = {
+  Projects,
+  Sort,
+  Project,
+  UseTechnologys,
+  ButtonUseTechnologys,
+  ProjectDescription,
+  Image,
+  Paragraph,
+}

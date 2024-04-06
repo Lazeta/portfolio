@@ -1,14 +1,8 @@
-import {
-  ButtonUseTechnologys,
-  StyledImage,
-  StyledProject,
-  StyledProjectDescription,
-  UseTechnologys,
-} from "./Project.styled";
 import { Link } from "../link/Link";
 import { FlexWrapper } from "../wrapper/FlexWrapper";
 import { SectionTitle } from "../sectiontitle/SectionTitle";
 import { Button } from "../buttons/Button";
+import { S } from "./Project.styles";
 
 type ProjectPropsType = {
   src: string;
@@ -24,43 +18,43 @@ const links = [
 
 export const Project = (props: ProjectPropsType) => {
   return (
-    <StyledProject>
-      <StyledImage src={props.src} alt="bad way" />
-      <StyledProjectDescription>
+    <S.Project>
+      <S.Image src={props.src} alt="bad way" />
+      <S.ProjectDescription>
         <FlexWrapper
           justify="space-between"
           wrap="wrap"
           align="center"
           gapItem="40px"
         >
-          <SectionTitle title={"Projects"}></SectionTitle>
+          <SectionTitle title={"Projects"}/>
           <ul>
             {links.map((link) => (
-              <Link key={link.href} href={link.href} title={link.title} children={undefined} />
+              <Link key={link.href} href={link.href} title={link.title}/>
             ))}
           </ul>
         </FlexWrapper>
-        <UseTechnologys>
-          <ButtonUseTechnologys>
+        <S.UseTechnologys>
+          <S.ButtonUseTechnologys>
             <Button title="JAVASCRIPT" />
-          </ButtonUseTechnologys>
-          <ButtonUseTechnologys>
+          </S.ButtonUseTechnologys>
+          <S.ButtonUseTechnologys>
             <Button title="REACT" />
-          </ButtonUseTechnologys>
-          <ButtonUseTechnologys>
+          </S.ButtonUseTechnologys>
+          <S.ButtonUseTechnologys>
             <Button title="WEBPACK" />
-          </ButtonUseTechnologys>
-          <ButtonUseTechnologys>
+          </S.ButtonUseTechnologys>
+          <S.ButtonUseTechnologys>
             <Button title="TYPESCRIPT" />
-          </ButtonUseTechnologys>
-        </UseTechnologys>
-        <p>
+          </S.ButtonUseTechnologys>
+        </S.UseTechnologys>
+        <S.Paragraph>
           Lorem ipsum dolor sit amet consectetur, adipisicing elit. Facilis
           sequi deserunt quibusdam amet, harum repellendus laborum ea minima
           quidem neque, quaerat voluptatem eum. Placeat laudantium sapiente illo
           velit, officia perspiciatis.
-        </p>
-      </StyledProjectDescription>
-    </StyledProject>
+        </S.Paragraph>
+      </S.ProjectDescription>
+    </S.Project>
   );
 };

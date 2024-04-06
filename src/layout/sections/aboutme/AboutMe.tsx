@@ -1,30 +1,18 @@
-import styled from "styled-components";
-import { myTheme } from "../../../components/global/MyTheme.styled";
 import { SectionTitle } from "../../../components/sectiontitle/SectionTitle";
+import { S } from "./AboutMe.styles";
 
 export const AboutMe = () => {
   return (
-    <StyledAboutMe>
+    <S.AboutMe>
       <SectionTitle title="About me"/>
-      <StyledVerticalLine>
-        <p>
+      <S.VerticalLine>
+        <S.Paragraph>
           Lorem ipsum dolor sit amet consectetur adipisicing elit. Similique
           maiores consequuntur dolore quos in. Doloribus blanditiis aspernatur
           dignissimos provident, vitae dicta placeat sint nemo repudiandae ex,
           mollitia quaerat aperiam temporibus.
-        </p>
-      </StyledVerticalLine>
-    </StyledAboutMe>
+        </S.Paragraph>
+      </S.VerticalLine>
+    </S.AboutMe>
   );
 };
-
-const StyledAboutMe = styled.section`
-  max-width: 700px;
-  width: 100%;
-`;
-
-const StyledVerticalLine = styled.div`
-  p {
-    color: ${myTheme.colors.secondary}
-  }
-`
