@@ -4,8 +4,9 @@ import { AboutMe } from "./aboutme/AboutMe";
 import { Projects } from "./projects/Projects";
 import { Skills } from "./skills/Skills";
 import { Contacts } from "./contacts/Contacts";
+import React from "react";
 
-export const Main = () => {
+export const Main: React.FC = () => {
     return (
         <StyledMain>
             <HeroSection/>
@@ -16,7 +17,7 @@ export const Main = () => {
         </StyledMain>
     )
 }
-
+  
 const StyledMain = styled.main`
   max-width: 1300px;
   width: 100%;

@@ -1,8 +1,9 @@
+import React from "react";
 import { Form } from "../../../components/forms/Form";
 import { SectionTitle } from "../../../components/sectiontitle/SectionTitle";
 import { S } from "./Contacts.styles";
 
-export const Contacts = () => {
+export const Contacts: React.FC = () => {
   return (
     <S.Contacts>
       <SectionTitle title="Contacts" />

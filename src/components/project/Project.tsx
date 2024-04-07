@@ -3,6 +3,7 @@ import { FlexWrapper } from "../wrapper/FlexWrapper";
 import { SectionTitle } from "../sectiontitle/SectionTitle";
 import { Button } from "../buttons/Button";
 import { S } from "./Project.styles";
+import { links, UseTechnologysData } from "../data/Data";
 
 type ProjectPropsType = {
   src: string;
@@ -10,11 +11,6 @@ type ProjectPropsType = {
   skill?: string;
   text?: string;
 };
-
-const links = [
-  { href: "/demo", title: "demo" },
-  { href: "/github.io", title: "code" },
-];
 
 export const Project = (props: ProjectPropsType) => {
   return (
@@ -27,26 +23,21 @@ export const Project = (props: ProjectPropsType) => {
           align="center"
           gapItem="40px"
         >
-          <SectionTitle title={"Projects"}/>
+          <SectionTitle title={"Projects"} />
           <ul>
             {links.map((link) => (
-              <Link key={link.href} href={link.href} title={link.title}/>
+              <Link key={link.href} href={link.href} title={link.title} />
             ))}
           </ul>
         </FlexWrapper>
         <S.UseTechnologys>
-          <S.ButtonUseTechnologys>
-            <Button title="JAVASCRIPT" />
-          </S.ButtonUseTechnologys>
-          <S.ButtonUseTechnologys>
-            <Button title="REACT" />
-          </S.ButtonUseTechnologys>
-          <S.ButtonUseTechnologys>
-            <Button title="WEBPACK" />
-          </S.ButtonUseTechnologys>
-          <S.ButtonUseTechnologys>
-            <Button title="TYPESCRIPT" />
-          </S.ButtonUseTechnologys>
+          {UseTechnologysData.map((item) => {
+            return (
+              <S.ButtonUseTechnologys>
+                <Button title={item.title} />
+              </S.ButtonUseTechnologys>
+            );
+          })}
         </S.UseTechnologys>
         <S.Paragraph>
           Lorem ipsum dolor sit amet consectetur, adipisicing elit. Facilis

@@ -5,11 +5,12 @@ import { Icon } from "../icon/Icon";
 type SkillPropsType = {
   iconId: string;
   title: string;
+  index?: number;
 };
 
 export const Skill = (props: SkillPropsType) => {
   return (
-    <div>
+    <div key={props.index}>
       <Icon iconId={props.iconId} width="100px" height="100px" />
       <SkillTitle>{props.title}</SkillTitle>
     </div>

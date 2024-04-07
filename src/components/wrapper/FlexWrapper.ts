@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import '../font/font.css';
 
 type FlexWrapperPropsType = {
     direction?: string

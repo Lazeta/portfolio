@@ -1,6 +1,6 @@
 import styled from 'styled-components'
 import { myTheme } from '../global/MyTheme.styled'
-import '../font/font.css';
+// import '../font/font.css';
 
 type SectionTitlePropsType = {
   title: string

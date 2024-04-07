@@ -1,8 +1,9 @@
+import React from "react";
 import { Button } from "../../../components/buttons/Button";
 import { Logo } from "../../../components/logo/Logo";
 import { S } from "./HeroSection.styles";
 
-export const HeroSection = () => {
+export const HeroSection: React.FC = () => {
   return (
     <S.HeroSection>
       <S.CustomFlexWrapper justify="space-between" gapItem="40px">
