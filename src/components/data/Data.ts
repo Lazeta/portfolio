@@ -3,7 +3,7 @@ import plantsImage from "../../components/assets/images/plants_project-min.webp"
 import travelImage from "../../components/assets/images/travel_project-min.webp";
 import audioPlayerImage from "../../components/assets/images/audio-player_project-min.webp";
 
-export const SkillsItems = [
+export const SkillsFilter = [
   "Main stack",
   "Coding languages",
   "Bundlers",
@@ -96,30 +96,54 @@ export const UseTechnologysData = [
   { title: "TYPESCRIPT"},
 ]
 
-export const SortItems = ["All", "Landing page", "React", "SPA"];
+// export const tabsItems = ["All", "Landing page", "React", "SPA"];
+
+export const tabsItems: Array<{status: 'all' | 'landing' | 'react' | 'spa', title: string}> = [
+  {
+    title: "All",
+    status: "all",
+  },
+  {
+    title: "Landing page",
+    status: "landing",
+  },
+  {
+    title: "React",
+    status: "react",
+  },
+  {
+    title: "SPA",
+    status: "spa",
+  },
+]
+
 export const ObjectProjects = [
   {
     title: "Library",
     src: libraryImage,
     skill: "",
     text: "",
+    type: "spa",
   },
   {
     title: "Plants",
     src: plantsImage,
     skill: "",
     text: "",
+    type: "spa",
   },
   {
     title: "Travel",
     src: travelImage,
     skill: "",
     text: "",
+    type: "spa",
   },
   {
     title: "Audio-player",
     src: audioPlayerImage,
     skill: "",
     text: "",
+    type: "landing",
   },
 ];

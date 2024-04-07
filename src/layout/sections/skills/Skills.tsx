@@ -3,7 +3,7 @@ import { Menu } from "../../../components/menu/Menu";
 import { SectionTitle } from "../../../components/sectiontitle/SectionTitle";
 import { Skill } from "../../../components/skill/Skill";
 import { S } from "./Skills.styles";
-import { SkillsItems, SkillsData } from "../../../components/data/Data";
+import { SkillsFilter, SkillsData } from "../../../components/data/Data";
 import React from "react";
 
 
@@ -12,7 +12,7 @@ export const Skills: React.FC = () => {
     <S.Skills>
       <SectionTitle title="Skills" />
       <S.SkillsMenu>
-        <Menu menuItems={SkillsItems} />
+        <Menu menuItems={SkillsFilter} />
       </S.SkillsMenu>
       <FlexWrapper
         direction="row"

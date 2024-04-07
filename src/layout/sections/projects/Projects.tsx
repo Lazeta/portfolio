@@ -1,10 +1,10 @@
+import React from "react";
 import { FlexWrapper } from "../../../components/wrapper/FlexWrapper";
-import { Menu } from "../../../components/menu/Menu";
 import { Project } from "../../../components/project/Project";
 import { SectionTitle } from "../../../components/sectiontitle/SectionTitle";
 import { S } from "../../../components/project/Project.styles";
-import { SortItems, ObjectProjects } from "../../../components/data/Data";
-import React from "react";
+import { tabsItems, ObjectProjects } from "../../../components/data/Data";
+import { TabMenu } from "../../../components/menu/tabMenu/tabMenu";
 
 
 export const Projects: React.FC = () => {
@@ -12,7 +12,7 @@ export const Projects: React.FC = () => {
     <S.Projects>
       <SectionTitle title="Projects" />
       <S.Sort>
-        <Menu menuItems={SortItems} />
+        <TabMenu tabsItems={tabsItems}/>
       </S.Sort>
       <FlexWrapper
         direction="row"
@@ -26,8 +26,6 @@ export const Projects: React.FC = () => {
           />
         ))}
       </FlexWrapper>
-
-      {/* <Button title={"See All Projects"}/> */}
     </S.Projects>
   );
 };

@@ -2,34 +2,7 @@ import styled from "styled-components";
 import { myTheme } from "../global/MyTheme.styled";
 
 
-const Header = styled.header`
-  position: relative;
-  right: 0;
-  max-width: 1550px;
-  width: 100%;
-  margin: 0;
-  min-height: 100px;
-
-  @media ${myTheme.media.mobile} {
-    min-height: 0;
-  }
-`;
-
-
-const DesktopMenu = styled.nav`
- ul {
-   display: flex;
-   justify-content: flex-end;
-   gap: 30px;
-   list-style-type: none;
-   }
-`;
-
-
-const MobileMenu = styled.nav`
-  margin: 0 auto;
-`;
-
+// Menu
 
 const Menu = styled.nav`
   ul {
@@ -92,7 +65,6 @@ const Menu = styled.nav`
   }
 `;
 
-
 const Link = styled.a`
   background-color: ${myTheme.colors.primary};
   padding: 5px 10px;
@@ -103,66 +75,40 @@ const Link = styled.a`
   text-align: center;
 `;
 
-type MobileMenuPopupProps = {
-  isOpen: boolean;
-  menuItems: Array<string>;
-};
 
-const MobileMenuPopup = styled.div<MobileMenuPopupProps>`
-  opacity: ${(props) => (props.isOpen ? "1" : "0")};
-  position: fixed;
-  width: 100vw;
-  margin: 0 auto;
-  left: 0;
+// Header
+
+const Header = styled.header`
+  position: relative;
   right: 0;
-  top: 0;
-  bottom: 0;
-  z-index: ${(props) => (props.isOpen ? "99" : "99")};
-  background-color: rgba(31, 38, 38, 0.98);
-  animation: ${(props) => (props.isOpen ? "animate-in" : "animate-out")} 1s
-    ease-in-out forwards;
-  max-height: ${(props) => (props.isOpen ? "100%" : "-100%")};
-  overflow: hidden;
+  max-width: 1550px;
+  width: 100%;
+  margin: 0;
+  min-height: 100px;
 
-  @keyframes animate-in {
-    from {
-      opacity: 0;
-      transform: translateY(-100%);
-    }
-    to {
-      opacity: 1;
-      transform: translateY(0);
-    }
-  }
-
-  @keyframes animate-out {
-    from {
-      opacity: 1;
-      transform: translateY(0);
-    }
-    to {
-      opacity: 0;
-      transform: translateY(-100%);
-    }
-  }
-
-  ul {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    gap: 5rem;
-    margin: 20%;
+  @media ${myTheme.media.mobile} {
+    min-height: 0;
   }
 `;
 
 
-const HoverBox = styled.button`
-  background-color: transparent;
-  border: none;
-  padding: 0;
+// Desktop Menu
+
+const DesktopMenu = styled.nav`
+ ul {
+   display: flex;
+   justify-content: flex-end;
+   gap: 30px;
+   list-style-type: none;
+   }
 `;
 
+
+// Mobile Menu
+
+const MobileMenu = styled.nav`
+  margin: 0 auto;
+`;
 
 const BurgerButton = styled.div<{isOpen: boolean}>`
   display: flex;
@@ -214,6 +160,68 @@ const BurgerButton = styled.div<{isOpen: boolean}>`
       bottom: 0;
       transform: rotate(-45deg);
     }
+  }
+`;
+
+const HoverBox = styled.button`
+  background-color: transparent;
+  border: none;
+  padding: 0;
+`;
+
+
+// Mobile Menu Popup
+
+type MobileMenuPopupProps = {
+  isOpen: boolean;
+  menuItems: Array<string>;
+};
+
+const MobileMenuPopup = styled.div<MobileMenuPopupProps>`
+  opacity: ${(props) => (props.isOpen ? "1" : "0")};
+  position: fixed;
+  width: 100vw;
+  margin: 0 auto;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  z-index: ${(props) => (props.isOpen ? "99" : "99")};
+  background-color: rgba(31, 38, 38, 0.98);
+  animation: ${(props) => (props.isOpen ? "animate-in" : "animate-out")} 1s
+    ease-in-out forwards;
+  max-height: ${(props) => (props.isOpen ? "100%" : "-100%")};
+  overflow: hidden;
+
+  @keyframes animate-in {
+    from {
+      opacity: 0;
+      transform: translateY(-100%);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  @keyframes animate-out {
+    from {
+      opacity: 1;
+      transform: translateY(0);
+    }
+    to {
+      opacity: 0;
+      transform: translateY(-100%);
+    }
+  }
+
+  ul {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 5rem;
+    margin: 20%;
   }
 `;
 

@@ -4,6 +4,7 @@ import { SectionTitle } from "../sectiontitle/SectionTitle";
 import { Button } from "../buttons/Button";
 import { S } from "./Project.styles";
 import { links, UseTechnologysData } from "../data/Data";
+import React from "react";
 
 type ProjectPropsType = {
   src: string;
@@ -12,7 +13,7 @@ type ProjectPropsType = {
   text?: string;
 };
 
-export const Project = (props: ProjectPropsType) => {
+export const Project:React.FC<ProjectPropsType> = (props: ProjectPropsType) => {
   return (
     <S.Project>
       <S.Image src={props.src} alt="bad way" />

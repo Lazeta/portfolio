@@ -1,12 +1,12 @@
 import styled from 'styled-components'
 import { myTheme } from '../global/MyTheme.styled'
-// import '../font/font.css';
+import React from "react";
 
 type SectionTitlePropsType = {
   title: string
 }
 
-export const SectionTitle = ({title}: SectionTitlePropsType) => {
+export const SectionTitle:React.FC<SectionTitlePropsType> = ({title}: SectionTitlePropsType) => {
   return (
     <StyledSectionTitle>
       {title}

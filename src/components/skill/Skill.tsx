@@ -1,6 +1,7 @@
 import styled from "styled-components";
 import { myTheme } from "../global/MyTheme.styled";
 import { Icon } from "../icon/Icon";
+import React from "react";
 
 type SkillPropsType = {
   iconId: string;
@@ -8,7 +9,7 @@ type SkillPropsType = {
   index?: number;
 };
 
-export const Skill = (props: SkillPropsType) => {
+export const Skill:React.FC<SkillPropsType> = (props: SkillPropsType) => {
   return (
     <div key={props.index}>
       <Icon iconId={props.iconId} width="100px" height="100px" />
