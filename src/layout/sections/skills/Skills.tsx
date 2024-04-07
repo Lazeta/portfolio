@@ -4,7 +4,7 @@ import { SectionTitle } from "../../../components/sectiontitle/SectionTitle";
 import { Skill } from "../../../components/skill/Skill";
 import { S } from "./Skills.styles";
 
-const SkilsItems = [
+const SkillsItems = [
   "Main stack",
   "Coding languages",
   "Bundlers",
@@ -14,12 +14,19 @@ const SkilsItems = [
   "Metodology",
 ];
 
+const SkillsData = [
+  {
+    iconId: "html5Svg",
+    title: "HTML",
+  }
+]
+
 export const Skills = () => {
   return (
     <S.Skills>
       <SectionTitle title="Skills" />
       <S.SkillsMenu>
-        <Menu menuItems={SkilsItems} />
+        <Menu menuItems={SkillsItems} />
       </S.SkillsMenu>
       <FlexWrapper
         direction="row" wrap="wrap" justify="space-between" content="center" gapItem="20px">
