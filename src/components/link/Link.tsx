@@ -4,7 +4,7 @@ import { S } from "../headerMenu/HeaderMenu.styles";
 type LinkPropsType = {
   href?: string;
   title?: string;
-  children?: React.ReactNode;
+  children: React.ReactNode;
 };
 
 export const Link: React.FC<LinkPropsType> = ({ href, title, children }) => {

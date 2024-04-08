@@ -1,20 +1,32 @@
-import { S } from "../../headerMenu/HeaderMenu.styles";
-import { SL } from "../../listItem/ListItem.styles";
-import { Link } from "../../link/Link";
+import React from "react";
+import { TabButton } from "../../buttons/TabButton";
+import { S } from "./TabMenu.styles";
 
+export type TabsStatusType = "all" | "landing" | "react" | "spa" | 'js'
 
-export const TabMenu = (props: { tabsItems: Array<{status: 'all' | 'landing' | 'react' | 'spa', title: string}> }) => {
+type TabMenuPropsType = {
+  tabsItems: Array<{
+    status: TabsStatusType, title: string;
+  }>
+  changeFilterStatus: (value: TabsStatusType) => void
+};
+
+export const TabMenu: React.FC<TabMenuPropsType> = (props: TabMenuPropsType) => {
   return (
-    <ul>
+    <S.TabMenuList>
       {props.tabsItems.map((item, index) => {
         return (
-          <S.HoverBox>
-            <SL.ListItem key={index}>
-                <Link href=''>{item.title}</Link>
-            </SL.ListItem>
-          </S.HoverBox>
+          <TabButton key={index}
+            onClick={() => {
+              props.changeFilterStatus(item.status);
+            }}
+            title={item.title}
+          >
+            {item.title}
+          </TabButton>
+          
         );
-      })};
-    </ul>
+      })}
+    </S.TabMenuList>
   );
 };

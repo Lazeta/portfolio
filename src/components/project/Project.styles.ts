@@ -10,7 +10,9 @@ const Projects = styled.section`
 
 const Sort = styled.div`
   width: 100%;
-  display: block;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
 `;
 
 

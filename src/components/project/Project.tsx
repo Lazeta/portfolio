@@ -27,7 +27,7 @@ export const Project:React.FC<ProjectPropsType> = (props: ProjectPropsType) => {
           <SectionTitle title={"Projects"} />
           <ul>
             {links.map((link) => (
-              <Link key={link.href} href={link.href} title={link.title} />
+              <Link key={link.href} href={link.href} title={link.title} children={undefined} />
             ))}
           </ul>
         </FlexWrapper>

@@ -2,6 +2,7 @@ import libraryImage from "../../components/assets/images/library_project-min.web
 import plantsImage from "../../components/assets/images/plants_project-min.webp";
 import travelImage from "../../components/assets/images/travel_project-min.webp";
 import audioPlayerImage from "../../components/assets/images/audio-player_project-min.webp";
+import { TabsStatusType } from "../menu/tabMenu/TabMenu";
 
 export const SkillsFilter = [
   "Main stack",
@@ -96,16 +97,10 @@ export const UseTechnologysData = [
   { title: "TYPESCRIPT"},
 ]
 
-// export const tabsItems = ["All", "Landing page", "React", "SPA"];
-
-export const tabsItems: Array<{status: 'all' | 'landing' | 'react' | 'spa', title: string}> = [
+export const tabsItems: Array<{status: TabsStatusType; title: string}> = [
   {
     title: "All",
     status: "all",
-  },
-  {
-    title: "Landing page",
-    status: "landing",
   },
   {
     title: "React",
@@ -115,8 +110,17 @@ export const tabsItems: Array<{status: 'all' | 'landing' | 'react' | 'spa', titl
     title: "SPA",
     status: "spa",
   },
+  {
+    title: "Landing page",
+    status: "landing",
+  },
+  {
+    title: "Java Script",
+    status: "js",
+  }
 ]
 
+// у неё это worksData
 export const ObjectProjects = [
   {
     title: "Library",
@@ -146,4 +150,25 @@ export const ObjectProjects = [
     text: "",
     type: "landing",
   },
+  // {
+  //   title: "Audio-player",
+  //   src: audioPlayerImage,
+  //   skill: "",
+  //   text: "",
+  //   type: "landing",
+  // },
+  // {
+  //   title: "Audio-player",
+  //   src: audioPlayerImage,
+  //   skill: "",
+  //   text: "",
+  //   type: "landing",
+  // },
+  // {
+  //   title: "Audio-player",
+  //   src: audioPlayerImage,
+  //   skill: "",
+  //   text: "",
+  //   type: "landing",
+  // },
 ];

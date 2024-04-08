@@ -1,4 +1,4 @@
-import { StyledButton } from "./Button.styles";
+import { S } from "./Button.styles";
 
 type ButtonPropsType = {
   title: string
@@ -11,9 +11,9 @@ export const Button = (props: ButtonPropsType) => {
   const { title} = props; // Извлекаем title из props
   return (
     <>
-      <StyledButton width={props.width} font={props.font}>
+      <S.Button width={props.width} font={props.font}>
         {title}
-      </StyledButton>
+      </S.Button>
     </>
   );
 };
