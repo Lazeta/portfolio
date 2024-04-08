@@ -31,7 +31,7 @@ export const Projects: React.FC = () => {
     <S.Projects>
       <SectionTitle title="Projects" />
       <S.Sort>
-        <TabMenu tabsItems={tabsItems} changeFilterStatus={changeFilterStatus}/>
+        <TabMenu tabsItems={tabsItems} changeFilterStatus={changeFilterStatus} currentFilterStatus={currentFilterStatus}/>
       </S.Sort>
       <FlexWrapper
         direction="row"
@@ -40,10 +40,6 @@ export const Projects: React.FC = () => {
         content="center"
         gapItem="20px"
       >
-        {/* {ObjectProjects.map((item, index) => (
-          <Project key={index} src={item.src} title={item.title}
-          />
-        ))} */}
         {filteredWorks.map((w) => (
           <Project title={w.title} src={w.src}/>
         ))}

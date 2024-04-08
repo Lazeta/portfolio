@@ -132,7 +132,7 @@ export const ObjectProjects = [
     src: projectTravelCover,
     skill: "",
     text: "",
-    type: ["landing", "js", "spa"] as TabsStatusType[],
+    type: "landing",
     href: "",
   },
   {

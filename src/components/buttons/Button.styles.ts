@@ -1,14 +1,18 @@
-import styled from "styled-components";
+import styled, { css } from "styled-components";
 import { myTheme } from "../global/MyTheme.styled";
 
-type StyledButtonPropsType = {
+export type StyledButtonPropsType = {
   height?: string;
   width?: string | undefined;
   font?: string;
   color?: string;
+  active?: boolean;
 };
 
 export const Button = styled.button<StyledButtonPropsType>`
+  ${(props) => props.active && css`
+    font-size: 1.5rem;
+ `}
   width: ${(props) => props.width || "100%"};
   height: ${(props) => props.height || "40px"};
   font-size: ${(props) => props.font || "1rem"};
@@ -36,7 +40,7 @@ export const Button = styled.button<StyledButtonPropsType>`
   100% {
    box-shadow: 0 0 0 0 rgb(218 103 68 / 0%);
   }
- }
+ };
 `;
 
 // Tab Button
@@ -56,6 +60,9 @@ const TabButton = styled.button<StyledButtonPropsType>`
     -webkit-animation: pulse 2s infinite;
     animation: pulse512 1.5s infinite;
   }
+  ${(props) => props.active && css`
+     font-size: 1.2rem;
+  `}
   @keyframes pulse512 {
   0% {
    box-shadow: 0 0 0 0 #00d9ff66;
@@ -69,6 +76,8 @@ const TabButton = styled.button<StyledButtonPropsType>`
    box-shadow: 0 0 0 0 rgb(218 103 68 / 0%);
   }
  }
+ 
+
 `
 
 export const S = {
