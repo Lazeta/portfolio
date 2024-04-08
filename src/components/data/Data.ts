@@ -1,8 +1,13 @@
-import libraryImage from "../../components/assets/images/library_project-min.webp";
-import plantsImage from "../../components/assets/images/plants_project-min.webp";
-import travelImage from "../../components/assets/images/travel_project-min.webp";
-import audioPlayerImage from "../../components/assets/images/audio-player_project-min.webp";
 import { TabsStatusType } from "../menu/tabMenu/TabMenu";
+import projectTravelCover from "../../components/assets/images/project_travel.png";
+import projectFridayLiveCodingCover from "../../components/assets/images/project_friday-live-coding.png";
+import projectPlantsCover from "../../components/assets/images/project_plants.png";
+import projectLibraryCover from "../../components/assets/images/project_library.png";
+import projectAudioPlayerCover from "../../components/assets/images/project_audio-player.png";
+import projectCssMemeSliderCover from "../../components/assets/images/project_css-meme-slider.png";
+import projectPortfolioCover from "../../components/assets/images/project_portfolio.png";
+import projectRsschoolCvCover from "../../components/assets/images/project_rsschool-cv.png";
+
 
 export const SkillsFilter = [
   "Main stack",
@@ -123,52 +128,67 @@ export const tabsItems: Array<{status: TabsStatusType; title: string}> = [
 // у неё это worksData
 export const ObjectProjects = [
   {
-    title: "Library",
-    src: libraryImage,
+    title: "Travel",
+    src: projectTravelCover,
+    skill: "",
+    text: "",
+    type: ["landing", "js", "spa"] as TabsStatusType[],
+    href: "",
+  },
+  {
+    title: "FridayLiveCoding",
+    src: projectFridayLiveCodingCover,
     skill: "",
     text: "",
     type: "spa",
+    href: "",
   },
   {
     title: "Plants",
-    src: plantsImage,
+    src: projectPlantsCover,
     skill: "",
     text: "",
-    type: "spa",
+    type: "js",
+    href: "",
   },
   {
-    title: "Travel",
-    src: travelImage,
+    title: "Library",
+    src: projectLibraryCover,
     skill: "",
     text: "",
-    type: "spa",
+    type: "js",
+    href: "",
   },
   {
     title: "Audio-player",
-    src: audioPlayerImage,
+    src: projectAudioPlayerCover,
+    skill: "",
+    text: "",
+    type: "spa",
+    href: "",
+  },
+  {
+    title: "Css-meme-slider",
+    src: projectCssMemeSliderCover,
     skill: "",
     text: "",
     type: "landing",
+    href: "",
   },
-  // {
-  //   title: "Audio-player",
-  //   src: audioPlayerImage,
-  //   skill: "",
-  //   text: "",
-  //   type: "landing",
-  // },
-  // {
-  //   title: "Audio-player",
-  //   src: audioPlayerImage,
-  //   skill: "",
-  //   text: "",
-  //   type: "landing",
-  // },
-  // {
-  //   title: "Audio-player",
-  //   src: audioPlayerImage,
-  //   skill: "",
-  //   text: "",
-  //   type: "landing",
-  // },
+  {
+    title: "Portfolio",
+    src: projectPortfolioCover,
+    skill: "",
+    text: "",
+    type: "react",
+    href: "",
+  },
+  {
+    title: "Rsschool-CV",
+    src: projectRsschoolCvCover,
+    skill: "",
+    text: "",
+    type: "landing",
+    href: "",
+  },
 ];
