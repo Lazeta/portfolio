@@ -53,32 +53,34 @@ const TabButton = styled.button<StyledButtonPropsType>`
   border: none;
   border-radius: 8px;
   background: ${myTheme.colors.primary};
-  cursor: pointer;
+  transition: all 0.3s ease-in-out;
   &:hover {
-    background-position: right center;
-    background-size: 200% auto;
-    -webkit-animation: pulse 2s infinite;
-    animation: pulse512 1.5s infinite;
+    cursor: pointer;
+    opacity: 0.8;
   }
-  ${(props) => props.active && css`
-     font-size: 1.2rem;
-  `}
+  ${(props) =>
+    props.active &&
+    css`
+      font-weight: 700;
+      background-position: right center;
+      background-size: 200% auto;
+      -webkit-animation: pulse 2s infinite;
+      animation: pulse512 2s infinite;
+    `}
   @keyframes pulse512 {
-  0% {
-   box-shadow: 0 0 0 0 #00d9ff66;
-  }
- 
-  70% {
-   box-shadow: 0 0 0 10px rgb(218 103 68 / 0%);
-  }
- 
-  100% {
-   box-shadow: 0 0 0 0 rgb(218 103 68 / 0%);
-  }
- }
- 
+    0% {
+      box-shadow: 0 0 0 0 #00d9ff66;
+    }
 
-`
+    70% {
+      box-shadow: 0 0 0 10px rgb(218 103 68 / 0%);
+    }
+
+    100% {
+      box-shadow: 0 0 0 0 rgb(218 103 68 / 0%);
+    }
+  }
+`;
 
 export const S = {
   Button,

@@ -1,5 +1,6 @@
 import React from "react";
 import { TabButton } from "../../buttons/TabButton";
+import { Link } from "../../link/Link";
 import { S } from "./TabMenu.styles";
 
 export type TabsStatusType = "all" | "landing" | "react" | "spa" | "js";
@@ -15,8 +16,10 @@ export const TabMenu: React.FC<TabMenuPropsType> = (props: TabMenuPropsType) => 
     <S.TabMenuList>
       {props.tabsItems.map((item, index) => {
         return ( <div>
-          <TabButton isActive={item.status === props.currentFilterStatus} key={index} onClick={() => {
-              props.changeFilterStatus(item.status);}} title={item.title} />
+          <TabButton key={index}
+              isActive={item.status === props.currentFilterStatus}
+              onClick={() => {props.changeFilterStatus(item.status);}} 
+              title={item.title} />
         </div>
         );
       })}
