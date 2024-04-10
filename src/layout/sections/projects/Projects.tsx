@@ -11,16 +11,16 @@ export const Projects: React.FC = () => {
   let filteredWorks = ObjectProjects
 
   if (currentFilterStatus === "landing") {
-    filteredWorks = ObjectProjects.filter(work => work.type === "landing")
+    filteredWorks = ObjectProjects.filter(project => project.type === "landing")
   }
   if (currentFilterStatus === "react") {
-    filteredWorks = ObjectProjects.filter(work => work.type === "react")
+    filteredWorks = ObjectProjects.filter(project => project.type === "react")
   }
   if (currentFilterStatus === "spa") {
-    filteredWorks = ObjectProjects.filter(work => work.type === "spa")
+    filteredWorks = ObjectProjects.filter(project => project.type === "spa")
   }
   if (currentFilterStatus === "js") {
-    filteredWorks = ObjectProjects.filter(work => work.type === "js")
+    filteredWorks = ObjectProjects.filter(project => project.type === "js")
   }
 
   const changeFilterStatus = (value: TabsStatusType) => {
