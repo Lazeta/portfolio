@@ -31,7 +31,9 @@ export const Projects: React.FC = () => {
     <S.Projects>
       <SectionTitle title="Projects" />
       <S.Sort>
-        <TabMenu tabsItems={tabsItems} changeFilterStatus={changeFilterStatus} currentFilterStatus={currentFilterStatus}/>
+        <TabMenu tabsItems={tabsItems} 
+        changeFilterStatus={changeFilterStatus} 
+        currentFilterStatus={currentFilterStatus}/>
       </S.Sort>
       <FlexWrapper
         direction="row"

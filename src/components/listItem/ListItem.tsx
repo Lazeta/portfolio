@@ -1,6 +1,5 @@
 import { S } from "../headerMenu/HeaderMenu.styles";
 import { SL } from "../listItem/ListItem.styles";
-import { Link } from "../link/Link";
 
 
 export const ListItem = (props: { menuItems: Array<string> }) => {
@@ -9,13 +8,13 @@ export const ListItem = (props: { menuItems: Array<string> }) => {
       {props.menuItems.map((item, index) => {
         return (
           <S.HoverBox>
-            <SL.ListItem key={index}>
-              <Link href={item}>
+            <SL.ListItem key={item[index]}>
+              <S.Link href={item}> 
                 <span>{item}</span>
-              </Link>
+              </S.Link>
             </SL.ListItem>
           </S.HoverBox>
-        );
+        )
       })}
       ;
     </ul>

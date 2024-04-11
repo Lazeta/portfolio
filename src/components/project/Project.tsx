@@ -14,19 +14,19 @@ type ProjectPropsType = {
 };
 
 export const Project:React.FC<ProjectPropsType> = (props: ProjectPropsType) => {
-  // const [currentFilterStatus, setCurrentFilterStatus] = useState("demo")
-  // let filteredLinks = links
+  const [currentFilterStatus, setCurrentFilterStatus] = useState("demo")
+  let filteredLinks = links
   
-  // if (currentFilterStatus === "demo"){
-  //   filteredLinks = links.filter(link => link.type === "demo")
-  // }
-  // if (currentFilterStatus === "code"){
-  //   filteredLinks = links.filter(link => link.type === "code")
-  // }
+  if (currentFilterStatus === "demo"){
+    filteredLinks = links.filter(link => link.status === "demo")
+  }
+  if (currentFilterStatus === "code"){
+    filteredLinks = links.filter(link => link.status === "code")
+  }
 
-  // const changeFilterStatus = (value: ProjectLinksPropsType) => {
-  //   setCurrentFilterStatus(value)
-  // }
+  const changeFilterStatus = (value: "demo" | "code") => {
+    setCurrentFilterStatus(value)
+  }
 
   return (
     <S.Project>
@@ -41,7 +41,12 @@ export const Project:React.FC<ProjectPropsType> = (props: ProjectPropsType) => {
           <SectionTitle title={"Projects"} />
           <ul>
             {links.map((link) => (
-              <Link href={link.href} title={link.title}/>
+              <Link 
+              tabsItems={links}
+              changeFilterStatus={changeFilterStatus} 
+              currentFilterStatus={currentFilterStatus} 
+              href={link.href} title={link.title}
+              />
             ))}
           </ul>
         </FlexWrapper>
