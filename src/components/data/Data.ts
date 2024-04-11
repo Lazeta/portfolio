@@ -91,8 +91,16 @@ export const SkillsData = [
 ];
 
 export const links = [
-  { href: "/demo", title: "demo" },
-  { href: "/github.io", title: "code" },
+  { 
+  href: "/demo", 
+  title: "demo",
+  type: 'demo',
+  },
+  { 
+  href: "/github.io", 
+  title: "code",
+  type: 'code',
+  },
 ];
 
 export const UseTechnologysData = [

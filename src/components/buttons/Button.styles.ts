@@ -1,9 +1,9 @@
 import styled, { css } from "styled-components";
 import { myTheme } from "../global/MyTheme.styled";
 
-export type StyledButtonPropsType = {
+type StyledButtonPropsType = {
   height?: string;
-  width?: string | undefined;
+  width?: string;
   font?: string;
   color?: string;
   active?: boolean;

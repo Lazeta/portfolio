@@ -1,6 +1,13 @@
-import styled from "styled-components";
+import styled, { css } from "styled-components";
 import { myTheme } from "../global/MyTheme.styled";
 
+type StyledLinkPropsType = {
+  height?: string;
+  width?: string;
+  font?: string;
+  color?: string;
+  active?: boolean;
+};
 
 // Menu
 
@@ -65,7 +72,7 @@ const Menu = styled.nav`
   }
 `;
 
-const Link = styled.a`
+const Link = styled.a<StyledLinkPropsType>`
   background-color: ${myTheme.colors.primary};
   padding: 5px 10px;
   font-size: 0.9rem;
@@ -73,6 +80,15 @@ const Link = styled.a`
   color: ${myTheme.colors.secondary};
   text-decoration: none;
   text-align: center;
+  transition: all 0.3s ease-in-out;
+
+  ${(props) => props.active && css`
+    text-decoration: line;
+    
+    &:hover{
+      opacity: 0.8;
+    }
+  `}
 `;
 
 

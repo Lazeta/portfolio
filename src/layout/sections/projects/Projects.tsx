@@ -8,19 +8,19 @@ import { TabMenu, TabsStatusType } from "../../../components/menu/tabMenu/TabMen
 
 export const Projects: React.FC = () => {
   const [currentFilterStatus, setCurrentFilterStatus] = useState("all")
-  let filteredWorks = ObjectProjects
+  let filteredProjects = ObjectProjects
 
   if (currentFilterStatus === "landing") {
-    filteredWorks = ObjectProjects.filter(project => project.type === "landing")
+    filteredProjects = ObjectProjects.filter(project => project.type === "landing")
   }
   if (currentFilterStatus === "react") {
-    filteredWorks = ObjectProjects.filter(project => project.type === "react")
+    filteredProjects = ObjectProjects.filter(project => project.type === "react")
   }
   if (currentFilterStatus === "spa") {
-    filteredWorks = ObjectProjects.filter(project => project.type === "spa")
+    filteredProjects = ObjectProjects.filter(project => project.type === "spa")
   }
   if (currentFilterStatus === "js") {
-    filteredWorks = ObjectProjects.filter(project => project.type === "js")
+    filteredProjects = ObjectProjects.filter(project => project.type === "js")
   }
 
   const changeFilterStatus = (value: TabsStatusType) => {
@@ -40,8 +40,8 @@ export const Projects: React.FC = () => {
         content="center"
         gapItem="20px"
       >
-        {filteredWorks.map((w) => (
-          <Project title={w.title} src={w.src}/>
+        {filteredProjects.map((proj) => (
+          <Project title={proj.title} src={proj.src}/>
         ))}
       </FlexWrapper>
     </S.Projects>

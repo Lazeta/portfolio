@@ -1,6 +1,5 @@
 import React from "react";
 import { TabButton } from "../../buttons/TabButton";
-import { Link } from "../../link/Link";
 import { S } from "./TabMenu.styles";
 
 export type TabsStatusType = "all" | "landing" | "react" | "spa" | "js";

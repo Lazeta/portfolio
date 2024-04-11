@@ -4,7 +4,7 @@ import { SectionTitle } from "../sectiontitle/SectionTitle";
 import { Button } from "../buttons/Button";
 import { S } from "./Project.styles";
 import { links, UseTechnologysData } from "../data/Data";
-import React from "react";
+import React, { useState } from "react";
 
 type ProjectPropsType = {
   src: string;
@@ -14,6 +14,20 @@ type ProjectPropsType = {
 };
 
 export const Project:React.FC<ProjectPropsType> = (props: ProjectPropsType) => {
+  // const [currentFilterStatus, setCurrentFilterStatus] = useState("demo")
+  // let filteredLinks = links
+  
+  // if (currentFilterStatus === "demo"){
+  //   filteredLinks = links.filter(link => link.type === "demo")
+  // }
+  // if (currentFilterStatus === "code"){
+  //   filteredLinks = links.filter(link => link.type === "code")
+  // }
+
+  // const changeFilterStatus = (value: ProjectLinksPropsType) => {
+  //   setCurrentFilterStatus(value)
+  // }
+
   return (
     <S.Project>
       <S.Image src={props.src} alt="bad way" />
@@ -27,7 +41,7 @@ export const Project:React.FC<ProjectPropsType> = (props: ProjectPropsType) => {
           <SectionTitle title={"Projects"} />
           <ul>
             {links.map((link) => (
-              <Link key={link.href} href={link.href} title={link.title} children={undefined} />
+              <Link href={link.href} title={link.title}/>
             ))}
           </ul>
         </FlexWrapper>
