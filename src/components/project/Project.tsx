@@ -1,11 +1,11 @@
-import { Link } from "../link/Link";
-import { FlexWrapper } from "../wrapper/FlexWrapper";
-import { SectionTitle } from "../sectiontitle/SectionTitle";
-import { Button } from "../buttons/Button";
-import { S } from "./Project.styles";
 import { links, UseTechnologysData } from "../data/Data";
+import { SectionTitle } from "../sectiontitle/SectionTitle";
+import { FlexWrapper } from "../wrapper/FlexWrapper";
+import { Button } from "../buttons/Button";
+import { Link } from "../link/Link";
+import { S } from "./Project.styles";
 import React from "react";
-// import { ListItem } from "../listItem/ListItem";
+
 
 // export const Links = [
 //   { 
@@ -29,20 +29,6 @@ type ProjectPropsType = {
 
 
 export const Project:React.FC<ProjectPropsType> = (props: ProjectPropsType) => {
-  // const [currentFilterStatus, setCurrentFilterStatus] = useState("demo")
-  // let filteredLinks = links
-  
-  // if (currentFilterStatus === "demo"){
-  //   filteredLinks = links.filter(link => link.status === "demo")
-  // }
-  // if (currentFilterStatus === "code"){
-  //   filteredLinks = links.filter(link => link.status === "code")
-  // }
-
-  // const changeFilterStatus = (value: "demo" | "code") => {
-  //   setCurrentFilterStatus(value)
-  // }
-
   return (
     <S.Project>
       <S.Image src={props.src} alt="bad way" />
@@ -56,10 +42,7 @@ export const Project:React.FC<ProjectPropsType> = (props: ProjectPropsType) => {
           <SectionTitle title={"Projects"} />
           <ul>
             {links.map((link) => (
-              <Link title={link.title}  href={link.href}
-              // changeFilterStatus={changeFilterStatus} 
-              // currentFilterStatus={currentFilterStatus} 
-              />
+              <Link title={link.title}  href={link.href}/>
             ))}
           </ul>
         </FlexWrapper>

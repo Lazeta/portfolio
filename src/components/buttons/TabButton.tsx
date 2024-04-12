@@ -1,11 +1,11 @@
-import React from "react";
 import { S } from "./Button.styles";
+import React from "react";
 
 type TabButtonPropsType = {
-  title?: string;
-  children?: React.ReactNode;
-  onClick: () => void;
+  title: string;
   isActive: boolean;
+  children: React.ReactNode;
+  onClick: () => void;
 };
 
 export const TabButton = (props: TabButtonPropsType) => {
@@ -13,7 +13,6 @@ export const TabButton = (props: TabButtonPropsType) => {
     <S.TabButton
       active={props.isActive}
       onClick={props.onClick}
-      title={props.title}
       width={"100px"}
     >
       {props.title}

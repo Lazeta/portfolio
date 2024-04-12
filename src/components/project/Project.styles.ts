@@ -1,5 +1,5 @@
-import styled from "styled-components";
 import { myTheme } from "../global/MyTheme.styled";
+import styled from "styled-components";
 
 
 const Projects = styled.section`

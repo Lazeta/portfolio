@@ -1,5 +1,5 @@
-import styled, { css } from "styled-components";
 import { myTheme } from "../global/MyTheme.styled";
+import styled, { css } from "styled-components";
 
 type StyledButtonPropsType = {
   height?: string;

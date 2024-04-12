@@ -16,9 +16,12 @@ export const TabMenu = (props: TabMenuPropsType) => {
         return ( 
         <div>
           <TabButton key={index}
-              isActive={item.status === props.currentFilterStatus}
-              onClick={() => {props.changeFilterStatus(item.status);}} 
-              title={item.title} />
+            isActive={item.status === props.currentFilterStatus}
+            onClick={() => { props.changeFilterStatus(item.status); } }
+            title={item.title}
+            >
+            {item.title}
+          </TabButton>
         </div>
         );
       })}
