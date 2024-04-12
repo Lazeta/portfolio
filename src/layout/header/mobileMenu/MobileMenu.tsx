@@ -8,7 +8,7 @@ type MobileMenuPopupProps = {
   menuItems: Array<string>;
 };
 
-export const MobileMenu: React.FC<MobileMenuPopupProps> = ({menuItems}) => {
+export const MobileMenu: React.FC<MobileMenuPopupProps> = (props: MobileMenuPopupProps) => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   const toggleMenu = () => {
@@ -30,12 +30,12 @@ export const MobileMenu: React.FC<MobileMenuPopupProps> = ({menuItems}) => {
   return (
     <S.MobileMenu>
       <BurgerButton isOpen={isMenuOpen} onClick={toggleMenu} />
-      <S.MobileMenuPopup menuItems={menuItems} isOpen={isMenuOpen}
+      <S.MobileMenuPopup menuItems={props.menuItems} isOpen={isMenuOpen}
         onClick={() => {
           setIsMenuOpen(false);
         }}
       >
-        <ListItem menuItems={menuItems}/>
+        <ListItem menuItems={props.menuItems}/>
       </S.MobileMenuPopup>
     </S.MobileMenu>
   );

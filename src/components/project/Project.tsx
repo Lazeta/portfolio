@@ -4,7 +4,21 @@ import { SectionTitle } from "../sectiontitle/SectionTitle";
 import { Button } from "../buttons/Button";
 import { S } from "./Project.styles";
 import { links, UseTechnologysData } from "../data/Data";
-import React, { useState } from "react";
+import React from "react";
+// import { ListItem } from "../listItem/ListItem";
+
+// export const Links = [
+//   { 
+//   type: 'demo',
+//   href: "/demo", 
+//   title: "demo",
+//   },
+//   { 
+//   type: 'code',
+//   href: "https://github.com/Lazeta?tab=repositories", 
+//   title: "code",
+//   },
+// ];
 
 type ProjectPropsType = {
   src: string;
@@ -13,20 +27,21 @@ type ProjectPropsType = {
   text?: string;
 };
 
-export const Project:React.FC<ProjectPropsType> = (props: ProjectPropsType) => {
-  const [currentFilterStatus, setCurrentFilterStatus] = useState("demo")
-  let filteredLinks = links
-  
-  if (currentFilterStatus === "demo"){
-    filteredLinks = links.filter(link => link.status === "demo")
-  }
-  if (currentFilterStatus === "code"){
-    filteredLinks = links.filter(link => link.status === "code")
-  }
 
-  const changeFilterStatus = (value: "demo" | "code") => {
-    setCurrentFilterStatus(value)
-  }
+export const Project:React.FC<ProjectPropsType> = (props: ProjectPropsType) => {
+  // const [currentFilterStatus, setCurrentFilterStatus] = useState("demo")
+  // let filteredLinks = links
+  
+  // if (currentFilterStatus === "demo"){
+  //   filteredLinks = links.filter(link => link.status === "demo")
+  // }
+  // if (currentFilterStatus === "code"){
+  //   filteredLinks = links.filter(link => link.status === "code")
+  // }
+
+  // const changeFilterStatus = (value: "demo" | "code") => {
+  //   setCurrentFilterStatus(value)
+  // }
 
   return (
     <S.Project>
@@ -41,11 +56,9 @@ export const Project:React.FC<ProjectPropsType> = (props: ProjectPropsType) => {
           <SectionTitle title={"Projects"} />
           <ul>
             {links.map((link) => (
-              <Link 
-              tabsItems={links}
-              changeFilterStatus={changeFilterStatus} 
-              currentFilterStatus={currentFilterStatus} 
-              href={link.href} title={link.title}
+              <Link title={link.title}  href={link.href}
+              // changeFilterStatus={changeFilterStatus} 
+              // currentFilterStatus={currentFilterStatus} 
               />
             ))}
           </ul>

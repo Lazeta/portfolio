@@ -7,7 +7,7 @@ import projectAudioPlayerCover from "../../components/assets/images/project_audi
 import projectCssMemeSliderCover from "../../components/assets/images/project_css-meme-slider.png";
 import projectPortfolioCover from "../../components/assets/images/project_portfolio.png";
 import projectRsschoolCvCover from "../../components/assets/images/project_rsschool-cv.png";
-import { ProjectLinksPropsType } from "../link/Link";
+// import { ProjectLinksPropsType } from "../link/Link";
 
 
 export const SkillsFilter = [
@@ -91,16 +91,16 @@ export const SkillsData = [
   },
 ];
 
-export const links: Array<{title: string; status: ProjectLinksPropsType; href: string}> = [
+export const links = [
   { 
   href: "/demo", 
   title: "demo",
-  status: 'demo',
+  // status: 'demo',
   },
   { 
   href: "https://github.com/Lazeta?tab=repositories", 
   title: "code",
-  status: 'code',
+  // status: 'code',
   },
 ];
 
