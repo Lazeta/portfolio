@@ -37,7 +37,7 @@ const UseTechnologys = styled.ul`
   gap: 10px;
 `;
 
-const ButtonUseTechnologys = styled.div``;
+// const ButtonUseTechnologys = styled.div``;
 
 const ProjectDescription = styled.div`
   display: flex;
@@ -67,7 +67,7 @@ export const S = {
   Sort,
   Project,
   UseTechnologys,
-  ButtonUseTechnologys,
+  // ButtonUseTechnologys,
   ProjectDescription,
   Image,
   Paragraph,

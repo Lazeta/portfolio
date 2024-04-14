@@ -95,12 +95,10 @@ export const links = [
   { 
   href: "/demo", 
   title: "demo",
-  // status: 'demo',
   },
   { 
   href: "https://github.com/Lazeta?tab=repositories", 
   title: "code",
-  // status: 'code',
   },
 ];
 

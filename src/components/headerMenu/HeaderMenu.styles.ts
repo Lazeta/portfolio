@@ -89,6 +89,9 @@ const Link = styled.a<StyledLinkPropsType>`
       opacity: 0.8;
     }
   `}
+  ${(props) => props.className && css`
+    text-decoration: underline;
+  `}
 `;
 
 

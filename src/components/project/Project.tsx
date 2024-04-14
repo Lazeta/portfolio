@@ -42,16 +42,20 @@ export const Project:React.FC<ProjectPropsType> = (props: ProjectPropsType) => {
           <SectionTitle title={"Projects"} />
           <ul>
             {links.map((link) => (
-              <Link title={link.title} href={link.href}/>
+              <Link 
+              title={link.title} 
+              href={link.href} 
+              shouldUnderline={link.title === "demo"}
+              />
             ))}
           </ul>
         </FlexWrapper>
         <S.UseTechnologys>
           {UseTechnologysData.map((item) => {
             return (
-              <S.ButtonUseTechnologys>
+              <div>
                 <Button title={item.title} />
-              </S.ButtonUseTechnologys>
+              </div>
             );
           })}
         </S.UseTechnologys>
