@@ -1,25 +1,20 @@
 import React from "react";
 import { S } from "../headerMenu/HeaderMenu.styles";
 
-// export type ProjectLinksPropsType = "demo" | "code";
-
 type LinkPropsType = {
-  href?: string;
-  title?: string;
+  href: string;
+  title: string;
   children?: React.ReactNode;
-  // onClick?: () => void;
-  // isActive?: boolean;
 };
 
-export const Link:React.FC<LinkPropsType> = (props: LinkPropsType) => {
+export const Link = (props: LinkPropsType) => {
+  const {title, href} = props
   return (
     <S.Link 
-      // active={props.isActive}
-      // onClick={props.onClick}
-      title={props.title}
-      href={props.href}
+      title={title}
+      href={href}
       >
-      <span>{props.title}</span>
+      <span>{title}</span>
     </S.Link>
   )
 };

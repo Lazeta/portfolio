@@ -8,10 +8,10 @@ type ButtonPropsType = {
 
 
 export const Button = (props: ButtonPropsType) => {
-  const { title} = props; // Извлекаем title из props
+  const {title, width, font} = props; // Деструктуризация объекта из пропсов
   return (
     <>
-      <S.Button width={props.width} font={props.font}>
+      <S.Button width={width} font={font}>
         {title}
       </S.Button>
     </>

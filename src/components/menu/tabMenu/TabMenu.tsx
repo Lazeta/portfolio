@@ -10,14 +10,15 @@ export type TabMenuPropsType = {
 };
 
 export const TabMenu = (props: TabMenuPropsType) => {
+  const {tabsItems, currentFilterStatus, changeFilterStatus} = props
   return (    
     <S.TabMenuList>
-      {props.tabsItems.map((item, index) => {
+      {tabsItems.map((item, index) => {
         return ( 
         <div>
           <TabButton key={index}
-            isActive={item.status === props.currentFilterStatus}
-            onClick={() => { props.changeFilterStatus(item.status); } }
+            isActive={item.status === currentFilterStatus}
+            onClick={() => { changeFilterStatus(item.status); } }
             title={item.title}
             >
             {item.title}

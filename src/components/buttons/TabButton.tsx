@@ -1,5 +1,4 @@
 import { S } from "./Button.styles";
-import React from "react";
 
 type TabButtonPropsType = {
   title: string;
@@ -9,13 +8,14 @@ type TabButtonPropsType = {
 };
 
 export const TabButton = (props: TabButtonPropsType) => {
+  const {title} = props;
   return (
     <S.TabButton
       active={props.isActive}
       onClick={props.onClick}
       width={"100px"}
     >
-      {props.title}
+      {title}
     </S.TabButton>
   );
 };

@@ -6,9 +6,13 @@ type BurgerButtonProps = {
   onClick: () => void;
 };
 
-export const BurgerButton: React.FC<BurgerButtonProps> = ({isOpen, onClick }) => {
+export const BurgerButton = (props: BurgerButtonProps) => {
+  const {isOpen, onClick} = props
   return (
-    <S.BurgerButton isOpen={isOpen} onClick={onClick}>
+    <S.BurgerButton 
+      isOpen={isOpen} 
+      onClick={onClick}
+    >
       <div className={`bars ${isOpen ? "open" : ""}`} />
     </S.BurgerButton>
   );

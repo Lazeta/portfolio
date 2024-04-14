@@ -42,7 +42,7 @@ export const Project:React.FC<ProjectPropsType> = (props: ProjectPropsType) => {
           <SectionTitle title={"Projects"} />
           <ul>
             {links.map((link) => (
-              <Link title={link.title}  href={link.href}/>
+              <Link title={link.title} href={link.href}/>
             ))}
           </ul>
         </FlexWrapper>

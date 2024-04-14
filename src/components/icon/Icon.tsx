@@ -9,6 +9,7 @@ type IconPropsType = {
 };
 
 export const Icon:React.FC<IconPropsType> = (props: IconPropsType) => {
+  const {iconId} = props
   return (
     <a href="https://github.com/Lazeta">
       <svg
@@ -18,7 +19,7 @@ export const Icon:React.FC<IconPropsType> = (props: IconPropsType) => {
         fill="none"
         xmlns="http://www.w3.org/2000/svg"
       >
-        <use xlinkHref={`${iconsSprite}#${props.iconId}`} />
+        <use xlinkHref={`${iconsSprite}#${iconId}`} />
       </svg>
     </a>
   );

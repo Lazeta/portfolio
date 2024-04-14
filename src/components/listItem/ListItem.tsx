@@ -8,19 +8,10 @@ export const ListItem = (props: { menuItems: Array<string> }) => {
       {props.menuItems.map((item, index) => {
         return (
           <S.HoverBox>
-            <SL.ListItem key={item[index]}>
+            <SL.ListItem key={item}>
               <S.Link href={item}> 
                 <span>{item}</span>
               </S.Link>
-
-              {/* <S.Link>
-                <Link key={index} 
-                  isActive={item.type === props.currentFilterStatus}
-                  onClick={() => {props.changeFilterStatus(item.type)}}
-                  title={item.title}
-                  // href={""}
-                />
-              </S.Link> */}
             </SL.ListItem>
           </S.HoverBox>
         )
