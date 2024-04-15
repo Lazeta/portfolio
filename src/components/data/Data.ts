@@ -7,7 +7,6 @@ import projectAudioPlayerCover from "../../components/assets/images/project_audi
 import projectCssMemeSliderCover from "../../components/assets/images/project_css-meme-slider.png";
 import projectPortfolioCover from "../../components/assets/images/project_portfolio.png";
 import projectRsschoolCvCover from "../../components/assets/images/project_rsschool-cv.png";
-// import { ProjectLinksPropsType } from "../link/Link";
 
 
 export const SkillsFilter = [
@@ -92,24 +91,137 @@ export const SkillsData = [
 ];
 
 export const links = [
-  { 
-  href: "/demo", 
-  title: "demo",
+  {
+    href: "/demo",
+    title: "demo",
   },
-  { 
-  href: "https://github.com/Lazeta?tab=repositories", 
-  title: "code",
+  {
+    href: "https://github.com/Lazeta?tab=repositories",
+    title: "code",
   },
 ];
 
-export const UseTechnologysData = [
-  { title: "JAVASCRIPT"},
-  { title: "REACT"},
-  { title: "WEBPACK"},
-  { title: "TYPESCRIPT"},
-]
+// export const UseTechnologysData = [
+//   {
+//     id: "Travel",
+//     skills: [
+//       { title: "HTML" },
+//       { title: "SCSS" },
+//       { title: "JavaScript" },
+//     ],
+//   },
+//   {
+//     id: "FridayLiveCoding",
+//     skills: [
+//       { title: "HTML" },
+//       { title: "SCSS" },
+//       { title: "JavaScript" },
+//       { title: "BEM" },
+//     ],
+//   },
+//   {
+//     id: "Plants",
+//     skills: [
+//       { title: "HTML" },
+//       { title: "SCSS" },
+//       { title: "JavaScript" },
+//       { title: "BEM" },
+//     ],
+//   },
+//   {
+//     id: "Library",
+//     skills: [
+//       { title: "HTML" },
+//       { title: "SCSS" },
+//       { title: "JavaScript" },
+//       { title: "BEM" },
+//     ],
+//   },
+//   {
+//     id: "Audio-player",
+//     skills: [
+//       { title: "TailwindCSS" },
+//       { title: "JavaScript" },
+//     ],
+//   },
+//   {
+//     id: "Css-meme-slider",
+//     skills: [
+//       { title: "HTML" },
+//       { title: "CSS" },
+//     ],
+//   },
+//   {
+//     id: "Portfolio",
+//     skills: [
+//       { title: "WEBPACK" },
+//       { title: "REACT" },
+//       { title: "TYPESCRIPT" },
+//       { title: "JavaScript" },
+//       { title: "STYLED-COMPONENTS" },
+//       { title: "REDUX-toolkit" },
+//     ],
+//   },
+//   {
+//     id: "Rsschool-CV",
+//     skills: [
+//       { title: "HTML" },
+//       { title: "CSS" },
+//       { title: "SCSS" },
+//       { title: "JavaScript" },
+//     ],
+//   },
+// ]
 
-export const tabsItems: Array<{status: TabsStatusType; title: string}> = [
+export const UseTechnologysData = {
+  object1: [
+    { title: "HTML" },
+    { title: "SCSS" },
+    { title: "JavaScript" },
+  ],
+  object2: [
+    { title: "HTML" },
+    { title: "SCSS" },
+    { title: "JavaScript" },
+    { title: "BEM" },
+  ],
+  object3: [
+    { title: "HTML" },
+    { title: "SCSS" },
+    { title: "JavaScript" },
+    { title: "BEM" },
+  ],
+  object4: [
+    { title: "HTML" },
+    { title: "SCSS" },
+    { title: "JavaScript" },
+    { title: "BEM" },
+  ],
+  object5: [
+    { title: "TailwindCSS" },
+    { title: "JavaScript" },
+  ],
+  object6: [
+    { title: "HTML" },
+    { title: "CSS" },
+  ],
+  object7: [
+    { title: "WEBPACK" },
+    { title: "REACT" },
+    { title: "TYPESCRIPT" },
+    { title: "JavaScript" },
+    { title: "STYLED-COMPONENTS" },
+    { title: "REDUX-toolkit" },
+  ],
+  object8: [
+    { title: "HTML" },
+    { title: "CSS" },
+    { title: "SCSS" },
+    { title: "JavaScript" },
+  ],
+}
+
+export const tabsItems: Array<{ status: TabsStatusType; title: string }> = [
   {
     title: "All",
     status: "all",

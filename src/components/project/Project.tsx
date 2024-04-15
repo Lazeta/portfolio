@@ -6,29 +6,17 @@ import { Link } from "../link/Link";
 import { S } from "./Project.styles";
 import React from "react";
 
-
-// export const Links = [
-//   { 
-//   type: 'demo',
-//   href: "/demo", 
-//   title: "demo",
-//   },
-//   { 
-//   type: 'code',
-//   href: "https://github.com/Lazeta?tab=repositories", 
-//   title: "code",
-//   },
-// ];
-
 type ProjectPropsType = {
   src: string;
   title: string;
   skill?: string;
   text?: string;
+  values?: () => void;
 };
 
-
-export const Project:React.FC<ProjectPropsType> = (props: ProjectPropsType) => {
+export const Project: React.FC<ProjectPropsType> = (
+  props: ProjectPropsType
+) => {
   return (
     <S.Project>
       <S.Image src={props.src} alt="bad way" />
@@ -42,22 +30,25 @@ export const Project:React.FC<ProjectPropsType> = (props: ProjectPropsType) => {
           <SectionTitle title={"Projects"} />
           <ul>
             {links.map((link) => (
-              <Link 
-              title={link.title} 
-              href={link.href} 
-              shouldUnderline={link.title === "demo"}
+              <Link
+                title={link.title}
+                href={link.href}
+                shouldUnderline={link.title === "demo"}
               />
             ))}
           </ul>
         </FlexWrapper>
         <S.UseTechnologys>
-          {UseTechnologysData.map((item) => {
-            return (
-              <div>
-                <Button title={item.title} />
-              </div>
-            );
-          })}
+          {Object.values(UseTechnologysData).map((item, index) => (
+            <div key={`object-${index}`}>
+              {item.map((skill, skillIndex) => (
+                <Button
+                  key={`skill-${index}-${skillIndex}`}
+                  title={skill.title}
+                />
+              ))}
+            </div>
+          ))}
         </S.UseTechnologys>
         <S.Paragraph>
           Lorem ipsum dolor sit amet consectetur, adipisicing elit. Facilis
