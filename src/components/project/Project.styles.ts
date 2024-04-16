@@ -29,25 +29,24 @@ const Project = styled.div`
 `;
 
 const UseTechnologys = styled.ul`
-  /* display: inline-flex; */
-  /* flex-wrap: wrap; */
-  max-width: 500px;
+  padding: 0 10px;
+  display: flex;
+  list-style-type: none;
+  align-items: flex-start;
+  justify-content: center;
+  flex-direction: column;
+  max-width: 100%;
 `;
 
 const UseTechnologysItem = styled.li`
   display: flex;
-  flex-direction: row;
-  list-style-type: none;
   flex-wrap: wrap;
   gap: 15px;
-
-  &>button {
-    max-width: min-content;
-  }
 `
 
 const ProjectDescription = styled.div`
   display: flex;
+  flex-direction: column;
   gap: 5px;
   padding: 0 15px;
   flex-wrap: wrap;

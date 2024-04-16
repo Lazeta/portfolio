@@ -1,4 +1,4 @@
-import { links, UseTechnologysData } from "../data/Data";
+import { links } from "../data/Data";
 import { SectionTitle } from "../sectiontitle/SectionTitle";
 import { FlexWrapper } from "../wrapper/FlexWrapper";
 import { Button } from "../buttons/Button";
@@ -7,23 +7,24 @@ import { S } from "./Project.styles";
 import React from "react";
 
 type ProjectPropsType = {
-  src: string;
-  title: string;
-  skill?: string;
-  text?: string;
-  values?: () => void;
-  currentIndex: number;
+  src: string
+  title: string
+  href: string
+  text?: string
+  skills?: string[]
+  values?: () => void
 };
 
 export const Project: React.FC<ProjectPropsType> = (
   props: ProjectPropsType
 ) => {
-  const { currentIndex } = props;
-  const currentItem = Object.values(UseTechnologysData)[currentIndex - 1];
+  const { title, text, src, href, skills } = props;
 
   return (
     <S.Project>
-      <S.Image src={props.src} alt="bad way" />
+      <a href={href}>
+        <S.Image src={src} alt="bad way" />
+      </a>
       <S.ProjectDescription>
         <FlexWrapper
           justify="space-between"
@@ -31,10 +32,11 @@ export const Project: React.FC<ProjectPropsType> = (
           align="center"
           gapItem="40px"
         >
-          <SectionTitle title={"Projects"} />
+          <SectionTitle title={title} />
           <ul>
             {links.map((link) => (
               <Link
+                key={link.title}
                 title={link.title}
                 href={link.href}
                 shouldUnderline={link.title === "demo"}
@@ -43,23 +45,12 @@ export const Project: React.FC<ProjectPropsType> = (
           </ul>
         </FlexWrapper>
         <S.UseTechnologys>
-          <S.UseTechnologysItem
-            key={`object_${currentIndex}`}
-          >
-            {currentItem.map((skill, skillIndex) => (
-              <Button
-                key={`skill-${currentIndex}-${skillIndex}`}
-                title={skill.title}
-              />
-            ))}
+          <S.UseTechnologysItem>
+            {skills && skills.map((skill) => 
+            <Button key={skill} title={skill} width="8rem"/>)}
           </S.UseTechnologysItem>
         </S.UseTechnologys>
-        <S.Paragraph>
-          Lorem ipsum dolor sit amet consectetur, adipisicing elit. Facilis
-          sequi deserunt quibusdam amet, harum repellendus laborum ea minima
-          quidem neque, quaerat voluptatem eum. Placeat laudantium sapiente illo
-          velit, officia perspiciatis.
-        </S.Paragraph>
+        <S.Paragraph>{text}</S.Paragraph>
       </S.ProjectDescription>
     </S.Project>
   );

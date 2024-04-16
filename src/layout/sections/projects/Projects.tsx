@@ -40,7 +40,7 @@ export const Projects: React.FC = () => {
 
   return (
     <S.Projects>
-      <SectionTitle title="Projects" />
+      <SectionTitle title={"Projects"} />
       <S.Sort>
         <TabMenu
           tabsItems={tabsItems}
@@ -50,17 +50,19 @@ export const Projects: React.FC = () => {
       </S.Sort>
       <FlexWrapper
         direction="row"
-        wrap="wrap"
         justify="space-between"
+        wrap="wrap"
         content="center"
         gapItem="20px"
       >
-        {filteredProjects.map((project, i) => (
+        {filteredProjects.map((project) => (
           <Project
-            key={i}
+            key={project.title}
+            href={project.href}
             title={project.title}
             src={project.src}
-            currentIndex={i + 1}
+            skills={project.skills}
+            text={project.text}
           />
         ))}
       </FlexWrapper>
