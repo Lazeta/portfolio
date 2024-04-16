@@ -29,15 +29,16 @@ const Project = styled.div`
 `;
 
 const UseTechnologys = styled.ul`
+  display: block;
+  button {
   display: flex;
-  list-style-type: none;
   flex-direction: row;
+  list-style-type: none;
   flex-wrap: wrap;
   justify-content: left;
   gap: 10px;
+  }
 `;
-
-// const ButtonUseTechnologys = styled.div``;
 
 const ProjectDescription = styled.div`
   display: flex;
@@ -67,7 +68,6 @@ export const S = {
   Sort,
   Project,
   UseTechnologys,
-  // ButtonUseTechnologys,
   ProjectDescription,
   Image,
   Paragraph,

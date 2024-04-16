@@ -174,38 +174,38 @@ export const links = [
 // ]
 
 export const UseTechnologysData = {
-  object1: [
+  object_1: [
     { title: "HTML" },
     { title: "SCSS" },
     { title: "JavaScript" },
   ],
-  object2: [
-    { title: "HTML" },
-    { title: "SCSS" },
-    { title: "JavaScript" },
-    { title: "BEM" },
-  ],
-  object3: [
+  object_2: [
     { title: "HTML" },
     { title: "SCSS" },
     { title: "JavaScript" },
     { title: "BEM" },
   ],
-  object4: [
+  object_3: [
     { title: "HTML" },
     { title: "SCSS" },
     { title: "JavaScript" },
     { title: "BEM" },
   ],
-  object5: [
+  object_4: [
+    { title: "HTML" },
+    { title: "SCSS" },
+    { title: "JavaScript" },
+    { title: "BEM" },
+  ],
+  object_5: [
     { title: "TailwindCSS" },
     { title: "JavaScript" },
   ],
-  object6: [
+  object_6: [
     { title: "HTML" },
     { title: "CSS" },
   ],
-  object7: [
+  object_7: [
     { title: "WEBPACK" },
     { title: "REACT" },
     { title: "TYPESCRIPT" },
@@ -213,7 +213,7 @@ export const UseTechnologysData = {
     { title: "STYLED-COMPONENTS" },
     { title: "REDUX-toolkit" },
   ],
-  object8: [
+  object_8: [
     { title: "HTML" },
     { title: "CSS" },
     { title: "SCSS" },

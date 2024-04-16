@@ -12,11 +12,15 @@ type ProjectPropsType = {
   skill?: string;
   text?: string;
   values?: () => void;
+  currentIndex: number;
 };
 
 export const Project: React.FC<ProjectPropsType> = (
   props: ProjectPropsType
 ) => {
+  const { currentIndex } = props;
+  const currentItem = Object.values(UseTechnologysData)[currentIndex - 1];
+
   return (
     <S.Project>
       <S.Image src={props.src} alt="bad way" />
@@ -39,16 +43,19 @@ export const Project: React.FC<ProjectPropsType> = (
           </ul>
         </FlexWrapper>
         <S.UseTechnologys>
-          {Object.values(UseTechnologysData).map((item, index) => (
-            <div key={`object-${index}`}>
-              {item.map((skill, skillIndex) => (
-                <Button
-                  key={`skill-${index}-${skillIndex}`}
-                  title={skill.title}
-                />
-              ))}
-            </div>
-          ))}
+          <FlexWrapper
+            key={`object_${currentIndex}`}
+            justify="space-between"
+            align="center"
+            gapItem="10px"
+          >
+            {currentItem.map((skill, skillIndex) => (
+              <Button
+                key={`skill-${currentIndex}-${skillIndex}`}
+                title={skill.title}
+              />
+            ))}
+          </FlexWrapper>
         </S.UseTechnologys>
         <S.Paragraph>
           Lorem ipsum dolor sit amet consectetur, adipisicing elit. Facilis
