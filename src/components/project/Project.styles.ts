@@ -29,16 +29,22 @@ const Project = styled.div`
 `;
 
 const UseTechnologys = styled.ul`
-  display: block;
-  button {
+  /* display: inline-flex; */
+  /* flex-wrap: wrap; */
+  max-width: 500px;
+`;
+
+const UseTechnologysItem = styled.li`
   display: flex;
   flex-direction: row;
   list-style-type: none;
   flex-wrap: wrap;
-  justify-content: left;
-  gap: 10px;
+  gap: 15px;
+
+  &>button {
+    max-width: min-content;
   }
-`;
+`
 
 const ProjectDescription = styled.div`
   display: flex;
@@ -64,11 +70,12 @@ const Paragraph = styled.p`
 
 
 export const S = {
-  Projects,
-  Sort,
-  Project,
-  UseTechnologys,
+  UseTechnologysItem,
   ProjectDescription,
-  Image,
+  UseTechnologys,
   Paragraph,
+  Projects,
+  Project,
+  Image,
+  Sort,
 }

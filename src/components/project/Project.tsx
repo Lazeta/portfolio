@@ -43,11 +43,8 @@ export const Project: React.FC<ProjectPropsType> = (
           </ul>
         </FlexWrapper>
         <S.UseTechnologys>
-          <FlexWrapper
+          <S.UseTechnologysItem
             key={`object_${currentIndex}`}
-            justify="space-between"
-            align="center"
-            gapItem="10px"
           >
             {currentItem.map((skill, skillIndex) => (
               <Button
@@ -55,7 +52,7 @@ export const Project: React.FC<ProjectPropsType> = (
                 title={skill.title}
               />
             ))}
-          </FlexWrapper>
+          </S.UseTechnologysItem>
         </S.UseTechnologys>
         <S.Paragraph>
           Lorem ipsum dolor sit amet consectetur, adipisicing elit. Facilis

@@ -174,6 +174,7 @@ export const links = [
 // ]
 
 export const UseTechnologysData = {
+  // id: '1',
   object_1: [
     { title: "HTML" },
     { title: "SCSS" },
