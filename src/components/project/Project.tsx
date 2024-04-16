@@ -7,12 +7,12 @@ import { S } from "./Project.styles";
 import React from "react";
 
 type ProjectPropsType = {
-  src: string
-  title: string
-  href: string
-  text?: string
-  skills?: string[]
-  values?: () => void
+  src: string;
+  title: string;
+  href: string;
+  text?: string;
+  skills?: string[];
+  values?: () => void;
 };
 
 export const Project: React.FC<ProjectPropsType> = (
@@ -33,7 +33,7 @@ export const Project: React.FC<ProjectPropsType> = (
           gapItem="40px"
         >
           <SectionTitle title={title} />
-          <ul>
+          <S.DescriptionLinks>
             {links.map((link) => (
               <Link
                 key={link.title}
@@ -42,12 +42,14 @@ export const Project: React.FC<ProjectPropsType> = (
                 shouldUnderline={link.title === "demo"}
               />
             ))}
-          </ul>
+          </S.DescriptionLinks>
         </FlexWrapper>
         <S.UseTechnologys>
           <S.UseTechnologysItem>
-            {skills && skills.map((skill) => 
-            <Button key={skill} title={skill} width="8rem"/>)}
+            {skills &&
+              skills.map((skill) => (
+                <Button key={skill} title={skill} width="8rem" />
+              ))}
           </S.UseTechnologysItem>
         </S.UseTechnologys>
         <S.Paragraph>{text}</S.Paragraph>

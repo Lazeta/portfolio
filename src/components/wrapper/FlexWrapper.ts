@@ -1,5 +1,6 @@
 import styled from "styled-components";
 import '../font/font.css';
+import { myTheme } from "../global/MyTheme.styled";
 
 type FlexWrapperPropsType = {
     direction?: string
@@ -18,4 +19,8 @@ export const FlexWrapper = styled.div<FlexWrapperPropsType>`
     flex-wrap: ${(props) => props.wrap || "nowrap"};
     align-content: ${(props) => props.content || "stretch"};
     gap: ${(props) => props.gapItem || "0"};
+
+    @media ${myTheme.media.mobile} {
+        gap: ${(props) => (props.gapItem ? "0" : "")};
+    }
 `

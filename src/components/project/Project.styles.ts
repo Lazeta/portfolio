@@ -1,5 +1,6 @@
 import { myTheme } from "../global/MyTheme.styled";
 import styled from "styled-components";
+// import { SectionTitle } from "../sectiontitle/SectionTitle";
 
 
 const Projects = styled.section`
@@ -35,14 +36,17 @@ const UseTechnologys = styled.ul`
   align-items: flex-start;
   justify-content: center;
   flex-direction: column;
-  max-width: 100%;
+  
+  @media screen and (max-width: 379px) {
+    padding: 0px;
+  }
 `;
 
 const UseTechnologysItem = styled.li`
   display: flex;
   flex-wrap: wrap;
   gap: 15px;
-`
+`;
 
 const ProjectDescription = styled.div`
   display: flex;
@@ -50,10 +54,11 @@ const ProjectDescription = styled.div`
   gap: 5px;
   padding: 0 15px;
   flex-wrap: wrap;
-  span {
-    color: ${myTheme.colors.secondary};
-  }
 `;
+
+const DescriptionLinks = styled.div`
+
+`
 
 const Image = styled.img`
   max-width: 100%;
@@ -65,12 +70,13 @@ const Image = styled.img`
 
 const Paragraph = styled.p`
   color: ${myTheme.colors.secondary};
-`
+`;
 
 
 export const S = {
   UseTechnologysItem,
   ProjectDescription,
+  DescriptionLinks,
   UseTechnologys,
   Paragraph,
   Projects,
