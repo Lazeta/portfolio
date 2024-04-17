@@ -21,6 +21,7 @@ export const FlexWrapper = styled.div<FlexWrapperPropsType>`
     gap: ${(props) => props.gapItem || "0"};
 
     @media ${myTheme.media.mobile} {
-        gap: ${(props) => (props.gapItem ? "0" : "")};
+        flex-direction: ${(props) => props.direction || "column"};
+        gap: ${(props) => (props.gapItem || "0px")};
     }
 `

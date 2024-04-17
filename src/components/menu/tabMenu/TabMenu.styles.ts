@@ -6,10 +6,6 @@ const TabMenuList = styled.ul`
     flex-direction: row;
     flex-wrap: wrap;
     gap: 1.5rem;
-
-    @media ${myTheme.media.mobile} {
-        padding-left: 0;
-    }
 `
 
 export const S = {

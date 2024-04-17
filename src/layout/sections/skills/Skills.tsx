@@ -17,7 +17,7 @@ export const Skills: React.FC = () => {
       <FlexWrapper
         direction="row"
         wrap="wrap"
-        justify="space-between"
+        justify="center"
         content="center"
         gapItem="20px"
       >

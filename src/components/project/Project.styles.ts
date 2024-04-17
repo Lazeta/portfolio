@@ -1,6 +1,5 @@
 import { myTheme } from "../global/MyTheme.styled";
 import styled from "styled-components";
-// import { SectionTitle } from "../sectiontitle/SectionTitle";
 
 
 const Projects = styled.section`
@@ -23,9 +22,11 @@ const Project = styled.div`
   background-color: ${myTheme.colors.lightFont};
   display: flex;
   flex-direction: column;
-  gap: 10px;
-  @media ${myTheme.media.mobileSlide} {
+  gap: 20px;
+
+  @media ${myTheme.media.mobile} {
     width: 100%;
+    gap: 0px;
   }
 `;
 
@@ -33,12 +34,16 @@ const UseTechnologys = styled.ul`
   padding: 0 10px;
   display: flex;
   list-style-type: none;
-  align-items: flex-start;
-  justify-content: center;
+  align-items: center;
+  justify-content: space-evenly;
   flex-direction: column;
   
   @media screen and (max-width: 379px) {
     padding: 0px;
+    
+    button {
+      width: 7.3rem;
+    }
   }
 `;
 
@@ -56,9 +61,7 @@ const ProjectDescription = styled.div`
   flex-wrap: wrap;
 `;
 
-const DescriptionLinks = styled.div`
-
-`
+const DescriptionLinks = styled.div``
 
 const Image = styled.img`
   max-width: 100%;

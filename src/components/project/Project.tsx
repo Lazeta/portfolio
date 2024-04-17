@@ -5,6 +5,7 @@ import { Button } from "../buttons/Button";
 import { Link } from "../link/Link";
 import { S } from "./Project.styles";
 import React from "react";
+import { myTheme } from "../global/MyTheme.styled";
 
 type ProjectPropsType = {
   src: string;
@@ -30,7 +31,7 @@ export const Project: React.FC<ProjectPropsType> = (
           justify="space-between"
           wrap="wrap"
           align="center"
-          gapItem="40px"
+          gapItem={myTheme.media.mobile ? '0' : '40px'}
         >
           <SectionTitle title={title} />
           <S.DescriptionLinks>
