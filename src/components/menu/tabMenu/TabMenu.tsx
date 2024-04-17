@@ -1,7 +1,7 @@
 import { TabButton } from "../../buttons/TabButton";
 import { S } from "./TabMenu.styles";
 
-export type TabsStatusType = "all" | "landing" | "react" | "spa" | "js";
+export type TabsStatusType = "all" | "landing" | "react" | "spa" | "js" | "ts";
 
 export type TabMenuPropsType = {
   tabsItems: Array<{ status: TabsStatusType; title: string }>;

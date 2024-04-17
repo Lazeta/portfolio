@@ -101,55 +101,6 @@ export const links = [
   },
 ];
 
-export const UseTechnologysData = {
-  // id: '1',
-  object_1: [
-    { title: "HTML" },
-    { title: "SCSS" },
-    { title: "JavaScript" },
-  ],
-  object_2: [
-    { title: "HTML" },
-    { title: "SCSS" },
-    { title: "JavaScript" },
-    { title: "BEM" },
-  ],
-  object_3: [
-    { title: "HTML" },
-    { title: "SCSS" },
-    { title: "JavaScript" },
-    { title: "BEM" },
-  ],
-  object_4: [
-    { title: "HTML" },
-    { title: "SCSS" },
-    { title: "JavaScript" },
-    { title: "BEM" },
-  ],
-  object_5: [
-    { title: "TailwindCSS" },
-    { title: "JavaScript" },
-  ],
-  object_6: [
-    { title: "HTML" },
-    { title: "CSS" },
-  ],
-  object_7: [
-    { title: "WEBPACK" },
-    { title: "REACT" },
-    { title: "TYPESCRIPT" },
-    { title: "JavaScript" },
-    { title: "STYLED-COMPONENTS" },
-    { title: "REDUX-toolkit" },
-  ],
-  object_8: [
-    { title: "HTML" },
-    { title: "CSS" },
-    { title: "SCSS" },
-    { title: "JavaScript" },
-  ],
-}
-
 export const tabsItems: Array<{ status: TabsStatusType; title: string }> = [
   {
     title: "All",
@@ -170,7 +121,11 @@ export const tabsItems: Array<{ status: TabsStatusType; title: string }> = [
   {
     title: "Java Script",
     status: "js",
-  }
+  },
+  {
+    title: "Type Script",
+    status: "ts",
+  },
 ]
 
 
@@ -178,30 +133,24 @@ export const ObjectProjects = [
   {
     title: "Travel",
     src: projectTravelCover,
-    type: "landing",
-    skills: [ "HTML", "SCSS", "JavaScript" ],
-    text: `Lorem ipsum dolor sit amet consectetur, adipisicing elit. Facilis
-    sequi deserunt quibusdam amet, harum repellendus laborum ea minima
-    quidem neque, quaerat voluptatem eum. Placeat laudantium sapiente illo
-    velit, officia perspiciatis.`,
+    type: ["landing", "js"],
+    skills: ["HTML", "SCSS", "JavaScript"],
+    text: `Landing page of Travel, this is an application that has authorization, travel planner, tour offers. Has Travel stories, recommendations for the perfect trip. Popular tours in the form of a slider.`,
     href: "https://lazeta.github.io/Travel/",
   },
   {
     title: "Friday Live Coding",
     src: projectFridayLiveCodingCover,
-    type: "spa",
-    skills: [ "HTML", "SCSS", "JavaScript", "BEM" ],
-    text: `Lorem ipsum dolor sit amet consectetur, adipisicing elit. Facilis
-    sequi deserunt quibusdam amet, harum repellendus laborum ea minima
-    quidem neque, quaerat voluptatem eum. Placeat laudantium sapiente illo
-    velit, officia perspiciatis.`,
+    type: ["js"],
+    skills: ["HTML", "SCSS", "JavaScript", "BEM"],
+    text: `The 'Productly' also 'Friday Live Coding' is a demo project with various implementations such as: user authorization, user registration, promo video, visual, visual toolset, marketing strategies, card filter, contact form and visualization of footer links for commerce. The product itself.`,
     href: "https://lazeta.github.io/Friday_Live_Coding/#",
   },
   {
     title: "Plants",
     src: projectPlantsCover,
-    type: "js",
-    skills: [ "HTML", "SCSS", "JavaScript", "BEM" ],
+    type: ["js"],
+    skills: ["HTML", "SCSS", "JavaScript", "BEM"],
     text: `Lorem ipsum dolor sit amet consectetur, adipisicing elit. Facilis
     sequi deserunt quibusdam amet, harum repellendus laborum ea minima
     quidem neque, quaerat voluptatem eum. Placeat laudantium sapiente illo
@@ -211,8 +160,8 @@ export const ObjectProjects = [
   {
     title: "Library",
     src: projectLibraryCover,
-    type: "js",
-    skills: [ "HTML", "SCSS", "JavaScript", "BEM" ],
+    type: ["js"],
+    skills: ["HTML", "SCSS", "JavaScript", "BEM"],
     text: `Lorem ipsum dolor sit amet consectetur, adipisicing elit. Facilis
     sequi deserunt quibusdam amet, harum repellendus laborum ea minima
     quidem neque, quaerat voluptatem eum. Placeat laudantium sapiente illo
@@ -222,8 +171,8 @@ export const ObjectProjects = [
   {
     title: "Audio player",
     src: projectAudioPlayerCover,
-    type: "spa",
-    skills: [ "TailwindCSS", "JavaScript" ],
+    type: ["landing", "js"], 
+    skills: ["TailwindCSS", "JavaScript"],
     text: `Lorem ipsum dolor sit amet consectetur, adipisicing elit. Facilis
     sequi deserunt quibusdam amet, harum repellendus laborum ea minima
     quidem neque, quaerat voluptatem eum. Placeat laudantium sapiente illo
@@ -233,8 +182,8 @@ export const ObjectProjects = [
   {
     title: "Css meme slider",
     src: projectCssMemeSliderCover,
-    type: "landing",
-    skills: [ "HTML", "CSS" ],
+    type: ["landing"],
+    skills: ["HTML", "CSS"],
     text: `Lorem ipsum dolor sit amet consectetur, adipisicing elit. Facilis
     sequi deserunt quibusdam amet, harum repellendus laborum ea minima
     quidem neque, quaerat voluptatem eum. Placeat laudantium sapiente illo
@@ -244,8 +193,8 @@ export const ObjectProjects = [
   {
     title: "Portfolio",
     src: projectPortfolioCover,
-    type: "react",
-    skills: [ "WEBPACK", "REACT", "JavaScript", "TYPESCRIPT", "REDUX", "styled components" ],
+    type: ["spa", "react", "ts"],
+    skills: ["WEBPACK", "REACT", "JavaScript", "TYPESCRIPT", "REDUX", "styled components"],
     text: `Lorem ipsum dolor sit amet consectetur, adipisicing elit. Facilis
     sequi deserunt quibusdam amet, harum repellendus laborum ea minima
     quidem neque, quaerat voluptatem eum. Placeat laudantium sapiente illo
@@ -255,8 +204,8 @@ export const ObjectProjects = [
   {
     title: "Rsschool CV",
     src: projectRsschoolCvCover,
-    type: "landing",
-    skills: [ "HTML", "CSS", "SCSS", "JavaScript" ],
+    type: ["landing"],
+    skills: ["HTML", "CSS", "SCSS", "JavaScript"],
     text: `Lorem ipsum dolor sit amet consectetur, adipisicing elit. Facilis
     sequi deserunt quibusdam amet, harum repellendus laborum ea minima
     quidem neque, quaerat voluptatem eum. Placeat laudantium sapiente illo

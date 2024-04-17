@@ -14,25 +14,30 @@ export const Projects: React.FC = () => {
   let filteredProjects = ObjectProjects;
 
   if (currentFilterStatus === "landing") {
-    filteredProjects = ObjectProjects.filter(
-      (project) => project.type === "landing"
+    filteredProjects = ObjectProjects.filter((project) => 
+      project.type.includes("landing")
     );
   }
   if (currentFilterStatus === "react") {
-    filteredProjects = ObjectProjects.filter(
-      (project) => project.type === "react"
+    filteredProjects = ObjectProjects.filter((project) => 
+      project.type.includes("react")
     );
   }
   if (currentFilterStatus === "spa") {
-    filteredProjects = ObjectProjects.filter(
-      (project) => project.type === "spa"
+    filteredProjects = ObjectProjects.filter((project) => 
+      project.type.includes("spa")
     );
   }
   if (currentFilterStatus === "js") {
-    filteredProjects = ObjectProjects.filter(
-      (project) => project.type === "js"
+    filteredProjects = ObjectProjects.filter((project) => 
+      project.type.includes("js")
     );
   }
+  if (currentFilterStatus === "ts") {
+    filteredProjects = ObjectProjects.filter((project) => 
+      project.type.includes("ts")
+    )
+  } 
 
   const changeFilterStatus = (value: TabsStatusType) => {
     setCurrentFilterStatus(value);

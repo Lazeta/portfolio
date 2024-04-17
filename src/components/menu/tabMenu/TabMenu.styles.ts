@@ -1,5 +1,4 @@
 import styled from "styled-components";
-import { myTheme } from "../../global/MyTheme.styled";
 
 const TabMenuList = styled.ul`
     display: flex;
