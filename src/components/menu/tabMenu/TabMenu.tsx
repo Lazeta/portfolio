@@ -11,7 +11,7 @@ export type TabMenuPropsType = {
 
 export const TabMenu = (props: TabMenuPropsType) => {
   const {tabsItems, currentFilterStatus, changeFilterStatus} = props
-  return (    
+  return (
     <S.TabMenuList>
       {tabsItems.map((item, index) => {
         return ( 

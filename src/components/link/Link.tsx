@@ -1,5 +1,5 @@
 import React from "react";
-import { S } from "../headerMenu/HeaderMenu.styles";
+import { S } from "../menu/headerMenu/HeaderMenu.styles";
 
 type LinkPropsType = {
   href: string;

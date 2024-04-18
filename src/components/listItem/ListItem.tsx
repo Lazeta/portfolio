@@ -1,11 +1,11 @@
-import { S } from "../headerMenu/HeaderMenu.styles";
+import { S } from "../menu/headerMenu/HeaderMenu.styles";
 import { SL } from "../listItem/ListItem.styles";
 
 
 export const ListItem = (props: { menuItems: Array<string> }) => {
   return (
     <ul>
-      {props.menuItems.map((item, index) => {
+      {props.menuItems.map((item) => {
         return (
           <S.HoverBox>
             <SL.ListItem key={item}>

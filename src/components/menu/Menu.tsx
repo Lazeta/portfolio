@@ -1,5 +1,5 @@
 import { ListItem } from "../listItem/ListItem";
-import {S} from "../headerMenu/HeaderMenu.styles"
+import {S} from "./headerMenu/HeaderMenu.styles"
 
 export const Menu = (props: { menuItems: Array<string> }) => {
   return (

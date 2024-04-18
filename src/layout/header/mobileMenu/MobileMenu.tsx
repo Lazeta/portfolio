@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { BurgerButton } from "../../../components/menu/burger/BurgerButton";
 import { ListItem } from "../../../components/listItem/ListItem";
-import { S } from "../../../components/headerMenu/HeaderMenu.styles";
+import { S } from "../../../components/menu/headerMenu/HeaderMenu.styles";
 
 type MobileMenuPopupProps = {
   isOpen: boolean;

@@ -1,5 +1,4 @@
-import React from "react";
-import { S } from "../../headerMenu/HeaderMenu.styles";
+import { S } from "../headerMenu/HeaderMenu.styles";
 
 type BurgerButtonProps = {
   isOpen: boolean;

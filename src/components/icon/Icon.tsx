@@ -8,19 +8,18 @@ type IconPropsType = {
   viewBox?: string;
 };
 
-export const Icon:React.FC<IconPropsType> = (props: IconPropsType) => {
-  const {iconId} = props
+export const Icon: React.FC<IconPropsType> = (props: IconPropsType) => {
+  const { iconId, ...rest } = props;
   return (
-    <a href="https://github.com/Lazeta">
-      <svg
-        width={props.width || "50px"}
-        height={props.height || "50px"}
-        viewBox={props.viewBox || "0 0 40 40"}
-        fill="none"
-        xmlns="http://www.w3.org/2000/svg"
-      >
-        <use xlinkHref={`${iconsSprite}#${iconId}`} />
-      </svg>
-    </a>
+    <svg
+      width={"50px"}
+      height={"50px"}
+      viewBox={"0 0 40 40"}
+      fill="none"
+      xmlns="http://www.w3.org/2000/svg"
+      {...rest} // spred operator
+    >
+      <use xlinkHref={`${iconsSprite}#${iconId}`} />
+    </svg>
   );
 };

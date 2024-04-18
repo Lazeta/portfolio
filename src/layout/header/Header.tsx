@@ -1,5 +1,5 @@
 import React from "react";
-import { S } from "../../components/headerMenu/HeaderMenu.styles";
+import { S } from "../../components/menu/headerMenu/HeaderMenu.styles";
 import { DesktopMenu } from "./desktopMenu/DesktopMenu";
 import { MobileMenu } from "./mobileMenu/MobileMenu";
 
