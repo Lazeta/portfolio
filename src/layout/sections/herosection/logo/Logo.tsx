@@ -1,6 +1,6 @@
 import styled from "styled-components";
 import logo from "../../components/assets/images/logo.jpg";
-import { myTheme } from "../global/MyTheme.styled";
+import { myTheme } from "../../../../styles/global/MyTheme.styled";
 // import { Icon } from "../icon/Icon";
 
 export const Logo = () => {

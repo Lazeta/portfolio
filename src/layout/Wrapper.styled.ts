@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import { myTheme } from "../components/global/MyTheme.styled";
+import { myTheme } from "../styles/global/MyTheme.styled";
 
 export const Wrapper = styled.div`
   max-width: 100%;

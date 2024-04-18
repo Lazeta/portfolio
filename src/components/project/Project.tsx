@@ -1,13 +1,12 @@
-import { links } from "../data/Data";
+import { links } from "../../data/Data";
 import { SectionTitle } from "../sectiontitle/SectionTitle";
-// import { BasicButtons } from "../buttons/ButtonBasic";
 import { FlexWrapper } from "../wrapper/FlexWrapper";
-import { myTheme } from "../global/MyTheme.styled";
+import { myTheme } from "../../styles/global/MyTheme.styled";
 import { Link } from "../link/Link";
 import { S } from "./Project.styles";
-import React from "react";
-import Stack from '@mui/material/Stack';
 import Button from '@mui/material/Button';
+import Stack from '@mui/material/Stack';
+import React from "react";
 
 type ProjectPropsType = {
   src: string;
@@ -51,8 +50,6 @@ export const Project: React.FC<ProjectPropsType> = (
           <S.UseTechnologysItem>
             {skills &&
               skills.map((skill) => (
-                // <Button key={skill} title={skill} width="8rem" />
-                // <BasicButtons key={skill} title={skill}>{skill}</BasicButtons>
                 <Stack spacing={2} direction="row">
                 <Button key={skill} variant="outlined">{skill}</Button>
                 </Stack>

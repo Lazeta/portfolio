@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import { myTheme } from "../../components/global/MyTheme.styled";
+import { myTheme } from "../../styles/global/MyTheme.styled";
 
 
 const Copyright = styled.small`
@@ -28,6 +28,7 @@ const SocialLink = styled.a`
 
 
 const Footer = styled.footer`
+  position: relative;
   max-width: 1300px;
   width: 100%;
   margin: 0 auto;

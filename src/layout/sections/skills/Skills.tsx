@@ -3,7 +3,7 @@ import { Menu } from "../../../components/menu/Menu";
 import { SectionTitle } from "../../../components/sectiontitle/SectionTitle";
 import { Skill } from "../../../components/skill/Skill";
 import { S } from "./Skills.styles";
-import { SkillsFilter, SkillsData } from "../../../components/data/Data";
+import { SkillsFilter, SkillsData } from "../../../data/Data";
 import React from "react";
 
 

@@ -1,4 +1,4 @@
-import { myTheme } from "../global/MyTheme.styled";
+import { myTheme } from "../../styles/global/MyTheme.styled";
 import styled from "styled-components";
 
 

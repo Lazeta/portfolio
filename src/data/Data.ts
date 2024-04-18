@@ -1,4 +1,4 @@
-import { TabsStatusType } from "../menu/tabMenu/TabMenu";
+import { TabsStatusType } from "../components/menu/tabMenu/TabMenu";
 import projectTravelCover from "../../components/assets/images/project_travel.png";
 import projectFridayLiveCodingCover from "../../components/assets/images/project_friday-live-coding.png";
 import projectPlantsCover from "../../components/assets/images/project_plants.png";

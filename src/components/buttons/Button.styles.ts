@@ -1,4 +1,4 @@
-import { myTheme } from "../global/MyTheme.styled";
+import { myTheme } from "../../styles/global/MyTheme.styled";
 import styled, { css } from "styled-components";
 
 type StyledButtonPropsType = {

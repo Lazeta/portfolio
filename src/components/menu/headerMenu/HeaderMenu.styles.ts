@@ -1,5 +1,5 @@
 import styled, { css } from "styled-components";
-import { myTheme } from "../../global/MyTheme.styled";
+import { myTheme } from "../../../styles/global/MyTheme.styled";
 
 type StyledLinkPropsType = {
   height?: string;

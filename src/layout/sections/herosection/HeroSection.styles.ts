@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import { myTheme } from "../../../components/global/MyTheme.styled";
+import { myTheme } from "../../../styles/global/MyTheme.styled";
 import { FlexWrapper } from "../../../components/wrapper/FlexWrapper";
 
 const Title = styled.h1`
@@ -39,6 +39,10 @@ const TitleSecond = styled.h2`
   margin: 0;
 `;
 
+const Hidden = styled.h1`
+  display: none;
+`
+
 export const S = {
   Title,
   Paragraph,
@@ -46,4 +50,5 @@ export const S = {
   CustomFlexWrapper,
   Container,
   TitleSecond,
+  Hidden,
 };

@@ -3,7 +3,7 @@ import { FlexWrapper } from "../../../components/wrapper/FlexWrapper";
 import { Project } from "../../../components/project/Project";
 import { SectionTitle } from "../../../components/sectiontitle/SectionTitle";
 import { S } from "../../../components/project/Project.styles";
-import { tabsItems, ObjectProjects } from "../../../components/data/Data";
+import { tabsItems, ObjectProjects } from "../../../data/Data";
 import {
   TabMenu,
   TabsStatusType,

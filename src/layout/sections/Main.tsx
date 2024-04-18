@@ -7,18 +7,19 @@ import { Contacts } from "./contacts/Contacts";
 import React from "react";
 
 export const Main: React.FC = () => {
-    return (
-        <StyledMain>
-            <HeroSection/>
-            <AboutMe/>
-            <Projects/>
-            <Skills/>
-            <Contacts/>
-        </StyledMain>
-    )
-}
-  
+  return (
+    <StyledMain>
+      <HeroSection />
+      <AboutMe />
+      <Projects />
+      <Skills />
+      <Contacts />
+    </StyledMain>
+  );
+};
+
 const StyledMain = styled.main`
+  position: relative;
   max-width: 1300px;
   width: 100%;
   margin: 0 auto;

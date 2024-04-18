@@ -1,6 +1,6 @@
 import styled from "styled-components";
 import '../css/font.css';
-import { myTheme } from "../global/MyTheme.styled";
+import { myTheme } from "../../styles/global/MyTheme.styled";
 
 type FlexWrapperPropsType = {
     direction?: string

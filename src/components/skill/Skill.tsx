@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import { myTheme } from "../global/MyTheme.styled";
+import { myTheme } from "../../styles/global/MyTheme.styled";
 import { Icon } from "../icon/Icon";
 import React from "react";
 

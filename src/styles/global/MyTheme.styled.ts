@@ -1,6 +1,6 @@
 export const myTheme = {
   colors: {
-    theme: "rgba(4, 31, 49, 1)",
+    theme: "rgba(4, 31, 49, 0.95)",
     primary: `linear-gradient(90.00deg, rgb(0, 245, 160),rgb(0, 217, 245) 100%);`,
     secondary: "#bdebea",
     font: "#ffffff",
