@@ -1,12 +1,12 @@
 import { TabsStatusType } from "../components/menu/tabMenu/TabMenu";
-import projectTravelCover from "../../components/assets/images/project_travel.png";
-import projectFridayLiveCodingCover from "../../components/assets/images/project_friday-live-coding.png";
-import projectPlantsCover from "../../components/assets/images/project_plants.png";
-import projectLibraryCover from "../../components/assets/images/project_library.png";
-import projectAudioPlayerCover from "../../components/assets/images/project_audio-player.png";
-import projectCssMemeSliderCover from "../../components/assets/images/project_css-meme-slider.png";
-import projectPortfolioCover from "../../components/assets/images/project_portfolio.png";
-import projectRsschoolCvCover from "../../components/assets/images/project_rsschool-cv.png";
+import projectTravelCover from "../assets/images/project_travel.png";
+import projectFridayLiveCodingCover from "../assets/images/project_friday-live-coding.png";
+import projectPlantsCover from "../assets/images/project_plants.png";
+import projectLibraryCover from "../assets/images/project_library.png";
+import projectAudioPlayerCover from "../assets/images/project_audio-player.png";
+import projectCssMemeSliderCover from "../assets/images/project_css-meme-slider.png";
+import projectPortfolioCover from "../assets/images/project_portfolio.png";
+import projectRsschoolCvCover from "../assets/images/project_rsschool-cv.png";
 
 
 export const SkillsFilter = [

@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import '../css/font.css';
+import '../../styles/css/font.css';
 import { myTheme } from "../../styles/global/MyTheme.styled";
 
 type FlexWrapperPropsType = {
