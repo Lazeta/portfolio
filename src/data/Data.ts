@@ -8,17 +8,6 @@ import projectCssMemeSliderCover from "../assets/images/project_css-meme-slider.
 import projectPortfolioCover from "../assets/images/project_portfolio.png";
 import projectRsschoolCvCover from "../assets/images/project_rsschool-cv.png";
 
-
-export const SkillsFilter = [
-  "Main stack",
-  "Coding languages",
-  "Bundlers",
-  "Development environment",
-  "Styles",
-  "Libraries",
-  "Metodology",
-];
-
 export const SkillsData = [
   {
     iconId: "html5Svg",
@@ -128,7 +117,6 @@ export const tabsItems: Array<{ status: TabsStatusType; title: string }> = [
   },
 ]
 
-
 export const ObjectProjects = [
   {
     title: "Travel",
@@ -203,3 +191,26 @@ export const ObjectProjects = [
     code: "https://github.com/Lazeta/rsschool-cv/tree/gh-pages",
   },
 ];
+
+export const anchorObjects = [
+  {
+    title: 'Home',
+    href: 'home'
+  },
+  {
+    title: 'About me',
+    href: 'about'
+  },
+  {
+    title: 'Projects',
+    href: 'projects'
+  },
+  {
+    title: 'Skills',
+    href: 'skills'
+  },
+  {
+    title: 'Contacts',
+    href: 'contacts'
+  },
+]

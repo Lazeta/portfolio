@@ -193,7 +193,7 @@ const HoverBox = styled.button`
 
 type MobileMenuPopupProps = {
   isOpen: boolean;
-  menuItems: Array<string>;
+  // menuItems: Array<string>;
 };
 
 const MobileMenuPopup = styled.div<MobileMenuPopupProps>`

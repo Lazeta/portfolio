@@ -1,18 +1,19 @@
-import { FlexWrapper } from "../../../components/wrapper/FlexWrapper";
-import { Menu } from "../../../components/menu/Menu";
 import { SectionTitle } from "../../../components/sectiontitle/SectionTitle";
+import { FlexWrapper } from "../../../components/wrapper/FlexWrapper";
 import { Skill } from "../../../components/skill/Skill";
+import { SkillsData } from "../../../data/Data";
 import { S } from "./Skills.styles";
-import { SkillsFilter, SkillsData } from "../../../data/Data";
 import React from "react";
+import { FilterMenu } from "../../../components/menu/FilterMenu";
+
 
 
 export const Skills: React.FC = () => {
   return (
-    <S.Skills>
+    <S.Skills id={'skills'}>
       <SectionTitle title="Skills" />
       <S.SkillsMenu>
-        <Menu menuItems={SkillsFilter} />
+        <FilterMenu />
       </S.SkillsMenu>
       <FlexWrapper
         direction="row"

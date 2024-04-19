@@ -4,7 +4,7 @@ import { S } from "./AboutMe.styles";
 
 export const AboutMe: React.FC = () => {
   return (
-    <S.AboutMe>
+    <S.AboutMe id={'about'}>
       <SectionTitle title="About me"/>
       <S.VerticalLine>
         <S.Paragraph>

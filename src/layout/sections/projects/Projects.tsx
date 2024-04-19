@@ -44,7 +44,7 @@ export const Projects: React.FC = () => {
   };
 
   return (
-    <S.Projects>
+    <S.Projects id={'projects'}>
       <SectionTitle title={"Projects"} />
       <S.Sort>
         <TabMenu

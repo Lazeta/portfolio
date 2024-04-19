@@ -6,7 +6,7 @@ import Typewriter from "typewriter-effect";
 
 export const HeroSection: React.FC = () => {
   return (
-    <S.HeroSection>
+    <S.HeroSection id={'hero'}>
       <S.CustomFlexWrapper justify="space-between" gapItem="40px">
         <S.Container>
           <S.Hidden>Frontend Developer</S.Hidden>

@@ -3,9 +3,6 @@ import { S } from "../../components/menu/headerMenu/HeaderMenu.styles";
 import { DesktopMenu } from "./desktopMenu/DesktopMenu";
 import { MobileMenu } from "./mobileMenu/MobileMenu";
 
-
-const headerItems = ["Home", "About me", "Projects", "Skills", "Contacts"];
-
 export const Header: React.FC = () => {
 
   const [width, setWidth] = React.useState(window.innerWidth);
@@ -19,8 +16,8 @@ export const Header: React.FC = () => {
 
   return (
     <S.Header>
-      {width < breakpoint ? <MobileMenu menuItems={headerItems} isOpen={false}/> 
-                          : <DesktopMenu menuItems={headerItems}/>}      
+      {width < breakpoint ? <MobileMenu isOpen={false}/> 
+                          : <DesktopMenu />}      
     </S.Header>
   );
 };

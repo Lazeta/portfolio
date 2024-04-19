@@ -1,15 +1,16 @@
 import React, { useEffect, useState } from "react";
 import { BurgerButton } from "../../../components/menu/burger/BurgerButton";
-import { ListItem } from "../../../components/listItem/ListItem";
 import { S } from "../../../components/menu/headerMenu/HeaderMenu.styles";
+import { Menu } from "../../../components/menu/Menu";
 
 type MobileMenuPopupProps = {
   isOpen: boolean;
-  menuItems: Array<string>;
+  // menuItems: Array<string>;
 };
 
 export const MobileMenu: React.FC<MobileMenuPopupProps> = (props: MobileMenuPopupProps) => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  // const { menuItems } = props;
 
   const toggleMenu = () => {
     setIsMenuOpen(!isMenuOpen);
@@ -30,12 +31,12 @@ export const MobileMenu: React.FC<MobileMenuPopupProps> = (props: MobileMenuPopu
   return (
     <S.MobileMenu>
       <BurgerButton isOpen={isMenuOpen} onClick={toggleMenu} />
-      <S.MobileMenuPopup menuItems={props.menuItems} isOpen={isMenuOpen}
+      <S.MobileMenuPopup isOpen={isMenuOpen}
         onClick={() => {
           setIsMenuOpen(false);
         }}
       >
-        <ListItem menuItems={props.menuItems}/>
+        <Menu/>
       </S.MobileMenuPopup>
     </S.MobileMenu>
   );

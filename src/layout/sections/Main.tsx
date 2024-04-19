@@ -1,26 +1,19 @@
-import styled from "styled-components";
 import { HeroSection } from "./herosection/HeroSection";
-import { AboutMe } from "./aboutme/AboutMe";
 import { Projects } from "./projects/Projects";
-import { Skills } from "./skills/Skills";
 import { Contacts } from "./contacts/Contacts";
+import { AboutMe } from "./aboutme/AboutMe";
+import { Skills } from "./skills/Skills";
+import { S } from "./Main.styles";
 import React from "react";
 
 export const Main: React.FC = () => {
   return (
-    <StyledMain>
+    <S.Main>
       <HeroSection />
       <AboutMe />
       <Projects />
       <Skills />
       <Contacts />
-    </StyledMain>
+    </S.Main>
   );
 };
-
-const StyledMain = styled.main`
-  position: relative;
-  max-width: 1300px;
-  width: 100%;
-  margin: 0 auto;
-`;
