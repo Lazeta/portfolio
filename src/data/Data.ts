@@ -8,6 +8,14 @@ import projectCssMemeSliderCover from "../assets/images/project_css-meme-slider.
 import projectPortfolioCover from "../assets/images/project_portfolio.png";
 import projectRsschoolCvCover from "../assets/images/project_rsschool-cv.png";
 
+export const headerItems = [
+  "Home",
+  "About me",
+  "Projects",
+  "Skills",
+  "Contacts",
+];
+
 export const SkillsData = [
   {
     iconId: "html5Svg",
@@ -77,6 +85,16 @@ export const SkillsData = [
     iconId: "gitSvg",
     title: "Git",
   },
+];
+
+export const SkillsFilter = [
+  "Main stack",
+  "Coding languages",
+  "Bundlers",
+  "Development environment",
+  "Styles",
+  "Libraries",
+  "Metodology",
 ];
 
 export const links = [

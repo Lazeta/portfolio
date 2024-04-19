@@ -72,7 +72,7 @@ const Menu = styled.nav`
   }
 `;
 
-const Link = styled.a<StyledLinkPropsType>`
+const NavLink = styled.a<StyledLinkPropsType>`
   background-color: ${myTheme.colors.primary};
   padding: 5px 10px;
   font-size: 0.9rem;
@@ -113,11 +113,10 @@ const Header = styled.header`
 
 // Desktop Menu
 
-const DesktopMenu = styled.nav`
+const DesktopMenu = styled.div`
  ul {
    display: flex;
    justify-content: flex-end;
-   gap: 30px;
    list-style-type: none;
    }
 `;
@@ -247,8 +246,8 @@ const MobileMenuPopup = styled.div<MobileMenuPopupProps>`
 
 export const S = {
   Menu,
-  Link,
   Header,
+  NavLink,
   HoverBox,
   MobileMenu,
   DesktopMenu,

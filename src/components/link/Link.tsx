@@ -8,15 +8,15 @@ type LinkPropsType = {
   shouldUnderline?: boolean;
 };
 
-export const Link = (props: LinkPropsType) => {
+export const NavLink = (props: LinkPropsType) => {
   const {title, href, shouldUnderline} = props
   return (
-    <S.Link 
+    <S.NavLink 
       title={title}
       href={href}
       className={shouldUnderline ? "underlined-text" : ""}
       >
       <span>{title}</span>
-    </S.Link>
+    </S.NavLink>
   )
 };

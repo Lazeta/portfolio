@@ -1,15 +1,6 @@
 import { S } from "./headerMenu/HeaderMenu.styles";
+import { SkillsFilter } from "../../data/Data";
 import { SL } from "./Menu.styles";
-
-export const SkillsFilter = [
-  "Main stack",
-  "Coding languages",
-  "Bundlers",
-  "Development environment",
-  "Styles",
-  "Libraries",
-  "Metodology",
-];
 
 export const FilterMenu = () => {
   return (
@@ -19,9 +10,9 @@ export const FilterMenu = () => {
           return (
             <S.HoverBox>
               <SL.ListItem key={index}>
-                <S.Link href={item}>
+                <S.NavLink href={item}>
                   <span>{item}</span>
-                </S.Link>
+                </S.NavLink>
               </SL.ListItem>
             </S.HoverBox>
           );

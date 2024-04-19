@@ -2,7 +2,7 @@ import { links } from "../../data/Data";
 import { SectionTitle } from "../sectiontitle/SectionTitle";
 import { FlexWrapper } from "../wrapper/FlexWrapper";
 import { myTheme } from "../../styles/global/MyTheme.styled";
-import { Link } from "../link/Link";
+import { NavLink } from "../link/Link";
 import { S } from "./Project.styles";
 import Button from '@mui/material/Button';
 import Stack from '@mui/material/Stack';
@@ -37,7 +37,7 @@ export const Project: React.FC<ProjectPropsType> = (
           <SectionTitle title={title} />
           <S.DescriptionLinks>
             {links.map((link) => (
-              <Link
+              <NavLink
                 key={link.title}
                 title={link.title}
                 href={link.href}
@@ -51,7 +51,7 @@ export const Project: React.FC<ProjectPropsType> = (
             {skills &&
               skills.map((skill) => (
                 <Stack spacing={2} direction="row">
-                <Button key={skill} variant="outlined">{skill}</Button>
+                  <Button key={skill} variant="outlined">{skill}</Button>
                 </Stack>
               ))}
           </S.UseTechnologysItem>
