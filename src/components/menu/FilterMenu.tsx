@@ -15,9 +15,8 @@ export const FilterMenu = () => {
                 </S.NavLink>
               </SL.ListItem>
             </S.HoverBox>
-          );
+          )
         })}
-        ;
       </ul>
     </S.Menu>
   );

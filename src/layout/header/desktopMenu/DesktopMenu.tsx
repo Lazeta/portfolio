@@ -10,7 +10,7 @@ export const DesktopMenu = () => {
   // const { menuItems } = props;
   return (
     <S.DesktopMenu>
-      <Menu/>
+      <Menu />
     </S.DesktopMenu>
   );
 };

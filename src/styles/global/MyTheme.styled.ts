@@ -13,6 +13,7 @@ export const myTheme = {
     noValid: "rgba(192, 83, 83, 1)",
     additionary: "rgba(82, 34, 208, 1)",
     any: "#3ce0af",
+    header: "#454545",
   },
 
   media: {

@@ -1,5 +1,6 @@
 import styled, { css } from "styled-components";
 import { myTheme } from "../../../styles/global/MyTheme.styled";
+import { Link } from "react-scroll";
 
 type StyledLinkPropsType = {
   height?: string;
@@ -9,69 +10,7 @@ type StyledLinkPropsType = {
   active?: boolean;
 };
 
-// Menu
-
-const Menu = styled.nav`
-  ul {
-    display: flex;
-    gap: 30px;
-    list-style-type: none;
-    flex-wrap: wrap;
-
-    li {
-      position: relative;
-      display: inline-block;
-      padding: 5px 15px;
-      border: 1px solid ${myTheme.colors.secondary};
-      color: ${myTheme.colors.secondary};
-      text-decoration: none;
-      white-space: nowrap;
-      a {
-        font-size: 1rem;
-        color: ${myTheme.colors.secondary};
-        text-decoration: none;
-      }
-      &::before {
-        content: "";
-        position: absolute;
-        top: 6px;
-        left: -2px;
-        width: calc(100% + 4px);
-        height: calc(100% - 12px);
-        background-color: ${myTheme.colors.lightFont};
-        transition: 0.3s ease-in-out;
-        transform: scaleY(1);
-      }
-
-      &:hover::before {
-        transform: scaleY(0);
-      }
-
-      &::after {
-        content: "";
-        position: absolute;
-        left: 6px;
-        top: -2px;
-        height: calc(100% + 4px);
-        width: calc(100% - 12px);
-        background-color: ${myTheme.colors.lightFont};
-        transition: 0.3s ease-in-out;
-        transform: scaleX(1);
-        transition-delay: 0.5s;
-      }
-
-      &:hover::after {
-        transform: scaleX(0);
-      }
-
-      span {
-        position: relative;
-        z-index: 3;
-      }
-    }
-  }
-`;
-
+// NavLink
 const NavLink = styled.a<StyledLinkPropsType>`
   background-color: ${myTheme.colors.primary};
   padding: 5px 10px;
@@ -85,7 +24,7 @@ const NavLink = styled.a<StyledLinkPropsType>`
   ${(props) => props.active && css`
     text-decoration: line;
     
-    &:hover{
+    &:hover {
       opacity: 0.8;
     }
   `}
@@ -96,39 +35,50 @@ const NavLink = styled.a<StyledLinkPropsType>`
 
 
 // Header
-
 const Header = styled.header`
   position: relative;
-  right: 0;
-  max-width: 1550px;
   width: 100%;
-  margin: 0;
-  min-height: 100px;
+  max-width: 1300px;
+  margin: 0 auto;
+  padding: 30px 10px;
+  z-index: 3;
 
   @media ${myTheme.media.mobile} {
-    min-height: 0;
+    padding: 0;
   }
 `;
 
 
 // Desktop Menu
+const DesktopContainer = styled.div`
+  position: relative; // or initial
+  width: 100vw;
+  z-index: 5;
+  `
 
 const DesktopMenu = styled.div`
- ul {
-   display: flex;
-   justify-content: flex-end;
-   list-style-type: none;
-   }
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 0;
+  margin: 0 auto;
+  max-width: 1300px;
+  z-index: 1;
+  
+  ul {
+    display: flex;
+    justify-content: flex-end;
+    list-style-type: none;
+  }
 `;
 
 
 // Mobile Menu
-
 const MobileMenu = styled.nav`
   margin: 0 auto;
 `;
 
-const BurgerButton = styled.div<{isOpen: boolean}>`
+const BurgerButton = styled.div<{ isOpen: boolean }>`
   display: flex;
   position: fixed;
   top: 30px;
@@ -183,13 +133,12 @@ const BurgerButton = styled.div<{isOpen: boolean}>`
 
 const HoverBox = styled.button`
   background-color: transparent;
-  border: none;
+  border: 1px none;
   padding: 0;
 `;
 
 
 // Mobile Menu Popup
-
 type MobileMenuPopupProps = {
   isOpen: boolean;
   // menuItems: Array<string>;
@@ -244,13 +193,100 @@ const MobileMenuPopup = styled.div<MobileMenuPopupProps>`
 `;
 
 
+// Menu
+const Menu = styled.nav`
+  position: initial;
+  width: 100%;
+
+  ul {
+    display: flex;
+    gap: 30px;
+    list-style-type: none;
+    flex-wrap: wrap;
+    padding: 0 40px;
+
+    @media ${myTheme.media.mobile} {
+      gap: 5rem;
+    }
+
+    li {
+      position: relative;
+      display: inline-block;
+      padding: 5px 15px;
+      border: 1px solid ${myTheme.colors.secondary};
+      color: ${myTheme.colors.secondary};
+      text-decoration: none;
+      white-space: nowrap;
+      
+      a {
+        font-size: 1rem;
+        color: ${myTheme.colors.secondary};
+        text-decoration: none;
+      }
+      &::before {
+        content: "";
+        position: absolute;
+        top: 6px;
+        left: -2px;
+        width: calc(100% + 4px);
+        height: calc(100% - 12px);
+        background-color: ${myTheme.colors.lightFont};
+        transition: 0.3s ease-in-out;
+        transform: scaleY(1);
+      }
+
+      &:hover::before {
+        transform: scaleY(0);
+      }
+
+      &::after {
+        content: "";
+        position: absolute;
+        left: 6px;
+        top: -2px;
+        height: calc(100% + 4px);
+        width: calc(100% - 12px);
+        background-color: ${myTheme.colors.lightFont};
+        transition: 0.3s ease-in-out;
+        transform: scaleX(1);
+        transition-delay: 0.5s;
+      }
+
+      &:hover::after {
+        transform: scaleX(0);
+      }
+
+      span {
+        position: relative;
+        z-index: 3;
+        opacity: 1;
+        visibility: visible;
+      }
+    }
+  }
+`;
+
+const ItemLink = styled(Link)`
+  cursor: pointer;
+
+  &:hover, &.active {
+    color: #0b8b9c;
+  }
+  &.active {
+    transform: scale(1.2);
+  }
+`
+
+
 export const S = {
   Menu,
   Header,
   NavLink,
+  ItemLink,
   HoverBox,
   MobileMenu,
   DesktopMenu,
   BurgerButton,
   MobileMenuPopup,
+  DesktopContainer,
 } 

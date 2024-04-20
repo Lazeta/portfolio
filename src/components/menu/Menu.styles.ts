@@ -12,8 +12,6 @@ const ListItem = styled.li`
   font-size: 0.9rem;
 
   @media ${myTheme.media.mobile} {
-    display: flex;
-    text-decoration: column;
     font-size: 1.5rem;
   }
 
