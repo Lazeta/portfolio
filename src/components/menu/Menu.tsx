@@ -16,6 +16,7 @@ export const Menu = () => {
                   activeClass="active"
                   spy={true}
                   smooth={true}
+                  offset={-200}
                 >
                   <span>{item.title}</span>
                 </S.ItemLink>

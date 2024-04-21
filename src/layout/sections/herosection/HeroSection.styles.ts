@@ -2,6 +2,12 @@ import styled from "styled-components";
 import { myTheme } from "../../../styles/global/MyTheme.styled";
 import { FlexWrapper } from "../../../components/wrapper/FlexWrapper";
 
+const HeroSection = styled.section`
+  width: auto;
+  min-height: 250px;
+  margin: 50px auto;
+`;
+
 const Title = styled.h1`
   color: ${myTheme.colors.secondary};
 `;
@@ -16,10 +22,6 @@ const Paragraph = styled.p`
   }
 `;
 
-const HeroSection = styled.section`
-  width: auto;
-  min-height: 250px;
-`;
 
 const CustomFlexWrapper = styled(FlexWrapper)`
   @media ${myTheme.media.mobile} {

@@ -14,7 +14,7 @@ export const Header: React.FC = () => {
   }, []);
 
   return (
-    <S.Header id={"home"}>
+    <S.Header>
       {width < breakpoint ? (
         <MobileMenu isOpen={false} />
       ) : (

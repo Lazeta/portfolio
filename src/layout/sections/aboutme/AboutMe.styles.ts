@@ -3,14 +3,15 @@ import { myTheme } from "../../../styles/global/MyTheme.styled";
 
 
 const AboutMe = styled.section`
-  max-width: 700px;
+  max-width: 800px;
   width: 100%;
+  margin: 100px auto;
 `;
 
 const VerticalLine = styled.div``
 
 const Paragraph = styled.p`
-    color: ${myTheme.colors.secondary}
+    color: ${myTheme.colors.secondary};
 `
 
 export const S = {

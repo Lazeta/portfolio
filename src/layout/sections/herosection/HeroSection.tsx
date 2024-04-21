@@ -6,7 +6,7 @@ import Typewriter from "typewriter-effect";
 
 export const HeroSection: React.FC = () => {
   return (
-    <S.HeroSection id={'about'}>
+    <S.HeroSection id={"home"}>
       <S.CustomFlexWrapper justify="space-between" gapItem="40px">
         <S.Container>
           <S.Hidden>Frontend Developer</S.Hidden>
@@ -20,12 +20,7 @@ export const HeroSection: React.FC = () => {
           </S.Title>
           <S.TitleSecond>Chekh Stas</S.TitleSecond>
           <S.Paragraph>
-            I have been developing web applications since 2019. Previously, 
-            I was interested in algorithmic trading in C#, 
-            then Python and the development of simple pixel games in Unity.
-            I study front-end from layout markdown to JavaScript frameworks and various stack technologies. 
-            I approach a task creatively and bring the task to completion, 
-            i have a sense of style and believe that logic should not only work, but also be pleasing to the eye.
+            I Develop in React, TypeScript, JavaScript
           </S.Paragraph>
           <Button title={"Contact Me"} width={"150px"} font={"1.2rem"} />
         </S.Container>

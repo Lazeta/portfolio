@@ -4,6 +4,7 @@ const Skills = styled.section`
   max-width: 100%;
   max-height: 100%;
   padding: 20px 0;
+  margin: 100px auto;
 `;
 
 const SkillsMenu = styled.div`

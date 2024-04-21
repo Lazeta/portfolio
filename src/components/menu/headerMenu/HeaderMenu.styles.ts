@@ -40,7 +40,7 @@ const Header = styled.header`
   width: 100%;
   max-width: 1300px;
   margin: 0 auto;
-  padding: 30px 10px;
+  padding: 5px 10px;
   z-index: 3;
 
   @media ${myTheme.media.mobile} {
