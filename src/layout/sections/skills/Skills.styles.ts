@@ -15,6 +15,8 @@ const SkillsMenu = styled.div`
     justify-content: center;
     flex-wrap: wrap;
     text-align: center;
+    z-index: 1;
+    position: relative;
   }
 `;
 

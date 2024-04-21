@@ -51,9 +51,10 @@ const Header = styled.header`
 
 // Desktop Menu
 const DesktopContainer = styled.div`
-  position: relative; // or initial
+  position: relative;
   width: 100vw;
   z-index: 5;
+  background: #0b8b9c;
   `
 
 const DesktopMenu = styled.div`
@@ -63,7 +64,7 @@ const DesktopMenu = styled.div`
   left: 0;
   margin: 0 auto;
   max-width: 1300px;
-  z-index: 1;
+  z-index: 6;
   
   ul {
     display: flex;
@@ -235,7 +236,7 @@ const Menu = styled.nav`
         transform: scaleY(1);
       }
 
-      &:hover::before {
+      &:active::before {
         transform: scaleY(0);
       }
 
@@ -252,7 +253,7 @@ const Menu = styled.nav`
         transition-delay: 0.5s;
       }
 
-      &:hover::after {
+      &:active::after {
         transform: scaleX(0);
       }
 
@@ -268,13 +269,23 @@ const Menu = styled.nav`
 
 const ItemLink = styled(Link)`
   cursor: pointer;
+  transition: color 0.4s ease;
 
-  &:hover, &.active {
-    color: #0b8b9c;
-  }
-  &.active {
-    transform: scale(1.2);
-  }
+  ${props => props.activeClass && css`
+    &:hover, &.active {
+      color: ${myTheme.colors.flashColor};
+      transition: color 0.4s ease;
+
+      /* (ListItem) {
+        &:active::before {
+          transform: scaleY(0);
+        }
+        &:active::after {
+          transform: scaleX(0);
+        }
+      } */
+    }
+  `}
 `
 
 

@@ -6,11 +6,12 @@ export const Menu = () => {
   return (
     <S.Menu>
       <ul>
-        {anchorObjects.map((item, index) => {
+        {anchorObjects.map((item, index) => {        
           return (
             <S.HoverBox>
-              <SL.ListItem key={index}>
+              <SL.ListItem >
                 <S.ItemLink
+                  key={index}
                   to={item.href}
                   activeClass="active"
                   spy={true}

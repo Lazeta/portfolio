@@ -14,6 +14,7 @@ export const myTheme = {
     additionary: "rgba(82, 34, 208, 1)",
     any: "#3ce0af",
     header: "#454545",
+    flashColor: 'red',
   },
 
   media: {

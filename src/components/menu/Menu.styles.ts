@@ -9,7 +9,13 @@ const ListItem = styled.li`
   color: ${myTheme.colors.secondary};
   text-decoration: none;
   white-space: nowrap;
-  font-size: 0.9rem;
+  transition: color 0.4s ease;
+
+  &:hover,
+  &:active {
+    color: ${myTheme.colors.flashColor};
+    transition: color 0.4s ease;
+  }
 
   @media ${myTheme.media.mobile} {
     font-size: 1.5rem;
@@ -26,11 +32,7 @@ const ListItem = styled.li`
     transition: 0.3s ease-in-out;
     transform: scaleY(1);
   }
-
-  &:hover::before {
-    transform: scaleY(0);
-  }
-
+  
   &::after {
     content: "";
     position: absolute;
@@ -44,9 +46,13 @@ const ListItem = styled.li`
     transition-delay: 0.5s;
   }
 
+  &:hover::before {
+    transform: scaleY(0);
+  }
   &:hover::after {
     transform: scaleX(0);
   }
+
 
   span {
     position: relative;
@@ -60,5 +66,5 @@ const ListItem = styled.li`
 
 
 export const SL = {
-    ListItem,
+  ListItem,
 }
