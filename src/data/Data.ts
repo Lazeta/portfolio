@@ -9,11 +9,26 @@ import projectPortfolioCover from "../assets/images/project_portfolio.png";
 import projectRsschoolCvCover from "../assets/images/project_rsschool-cv.png";
 
 export const headerItems = [
-  "Home",
-  "About me",
-  "Projects",
-  "Skills",
-  "Contacts",
+  {
+    title: 'Home',
+    href: 'home'
+  },
+  {
+    title: 'About me',
+    href: 'about'
+  },
+  {
+    title: 'Projects',
+    href: 'projects'
+  },
+  {
+    title: 'Skills',
+    href: 'skills'
+  },
+  {
+    title: 'Contacts',
+    href: 'contacts'
+  },
 ];
 
 export const SkillsData = [

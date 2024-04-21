@@ -5,12 +5,10 @@ import { Menu } from "../../../components/menu/Menu";
 
 type MobileMenuPopupProps = {
   isOpen: boolean;
-  // menuItems: Array<string>;
 };
 
 export const MobileMenu: React.FC<MobileMenuPopupProps> = (props: MobileMenuPopupProps) => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
-  // const { menuItems } = props;
 
   const toggleMenu = () => {
     setIsMenuOpen(!isMenuOpen);
