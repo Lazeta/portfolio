@@ -22,7 +22,7 @@ export const HeroSection: React.FC = () => {
           <S.Paragraph>
             I Develop in React, TypeScript, JavaScript
           </S.Paragraph>
-          <Button title={"Contact Me"} width={"150px"} font={"1.2rem"} />
+          <Button title="Contact Me" width={"150px"} font={"1.2rem"}/>
         </S.Container>
         <Logo />
       </S.CustomFlexWrapper>

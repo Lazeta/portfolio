@@ -224,26 +224,3 @@ export const ObjectProjects = [
     code: "https://github.com/Lazeta/rsschool-cv/tree/gh-pages",
   },
 ];
-
-export const anchorObjects = [
-  {
-    title: 'Home',
-    href: 'home'
-  },
-  {
-    title: 'About me',
-    href: 'about'
-  },
-  {
-    title: 'Projects',
-    href: 'projects'
-  },
-  {
-    title: 'Skills',
-    href: 'skills'
-  },
-  {
-    title: 'Contacts',
-    href: 'contacts'
-  },
-]

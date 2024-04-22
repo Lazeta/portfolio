@@ -6,7 +6,7 @@ export const SocialLists = () => {
     <S.SocialList>
       <S.SocialItem>
         <S.SocialLink>
-          <a href="https://github.com/Lazeta">
+          <a href="https://t.me/Zam_contentos">
             <Icon
               height="40px"
               width="40px"
@@ -18,7 +18,7 @@ export const SocialLists = () => {
       </S.SocialItem>
       <S.SocialItem>
         <S.SocialLink>
-          <a href="https://github.com/Lazeta">
+          <a href="https://www.linkedin.com/in/stas-chekh-307069167/">
             <Icon
               height="40px"
               width="40px"
@@ -42,7 +42,19 @@ export const SocialLists = () => {
       </S.SocialItem>
       <S.SocialItem>
         <S.SocialLink>
-          <a href="https://github.com/Lazeta">
+          <a href="https://discord.com/channels/@zam_777">
+            <Icon
+              height="40px"
+              width="40px"
+              viewBox="0 0 40 40"
+              iconId={"discordSvg"}
+            />
+          </a>
+        </S.SocialLink>
+      </S.SocialItem>
+      <S.SocialItem>
+        <S.SocialLink>
+          <a href="fundamentalsqqq51krol@gmail.com">
             <Icon
               height="40px"
               width="40px"

@@ -29,11 +29,7 @@ const CustomFlexWrapper = styled(FlexWrapper)`
   }
 `;
 
-const Container = styled.div`
-    Button { 
-        margin-bottom: 20px;
-    }
-`;
+const Container = styled.div``;
 
 const TitleSecond = styled.h2`
   color: ${myTheme.colors.any};

@@ -11,4 +11,3 @@ export const Contacts: React.FC = () => {
     </S.Contacts>
   );
 };
-
