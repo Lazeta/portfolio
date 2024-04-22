@@ -14,17 +14,21 @@ export const MobileMenu: React.FC<MobileMenuPopupProps> = (props: MobileMenuPopu
     setIsMenuOpen(!isMenuOpen);
   };
 
+  const handleLinkClick = () => {
+    setIsMenuOpen(!isMenuOpen);
+  }
+
   useEffect(() => {
     const handleEscKey = (event: { keyCode: number }) => {
       if (event.keyCode === 27) {
-        setIsMenuOpen(false);
+        setIsMenuOpen(!isMenuOpen);
       }
     };
     document.addEventListener("keydown", handleEscKey);
     return () => {
       document.removeEventListener("keydown", handleEscKey);
     };
-  }, []);
+  }); //   }, []); в данном контексте передавать зависимость нет необходимости дабы избежать бесконечного перерендера самого себя.
 
   return (
     <S.MobileMenu>
@@ -34,7 +38,7 @@ export const MobileMenu: React.FC<MobileMenuPopupProps> = (props: MobileMenuPopu
           setIsMenuOpen(false);
         }}
       >
-        <Menu/>
+        <Menu onLinkClick={handleLinkClick}/>
       </S.MobileMenuPopup>
     </S.MobileMenu>
   );
