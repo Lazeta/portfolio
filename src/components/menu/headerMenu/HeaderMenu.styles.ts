@@ -269,23 +269,24 @@ const Menu = styled.nav`
 
 const ItemLink = styled(Link)`
   cursor: pointer;
-  transition: color 0.4s ease;
+  transition: color 0.3s ease;
 
   ${props => props.activeClass && css`
-    &:hover, &.active {
+    &.active {
       color: ${myTheme.colors.flashColor};
       transition: color 0.4s ease;
+    }
+    &:hover {
 
-      /* (ListItem) {
-        &:active::before {
-          transform: scaleY(0);
-        }
-        &:active::after {
-          transform: scaleX(0);
-        }
-      } */
     }
   `}
+
+  span {
+    padding-top: 17px;
+    padding-right: 15px;
+    padding-bottom: 15px;
+    padding-left: 15px;
+  }
 `
 
 
