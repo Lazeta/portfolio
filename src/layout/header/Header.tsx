@@ -2,6 +2,7 @@ import React from "react";
 import { S } from "../../components/menu/headerMenu/HeaderMenu.styles";
 import { DesktopMenu } from "./desktopMenu/DesktopMenu";
 import { MobileMenu } from "./mobileMenu/MobileMenu";
+import styled from "styled-components";
 
 export const Header: React.FC = () => {
   const [width, setWidth] = React.useState(window.innerWidth);
@@ -18,10 +19,21 @@ export const Header: React.FC = () => {
       {width < breakpoint ? (
         <MobileMenu isOpen={false} />
       ) : (
-        <S.DesktopContainer>
+        <Overlay>
           <DesktopMenu />
-        </S.DesktopContainer>
+        </Overlay>
       )}
     </S.Header>
   );
 };
+
+
+const Overlay = styled.div`
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 7%;
+  background-color: rgba(9, 10, 19, 0.6);
+  z-index: 6;
+`;
