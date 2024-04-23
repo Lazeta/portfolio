@@ -1,13 +1,14 @@
+import ModalContext from "../../../components/functions/ModalContext";
+import React, { useRef, useEffect, useContext } from "react";
 import { Button } from "../../../components/buttons/Button";
 import { Form } from "../../../components/forms/Form";
-import React, { useRef, useState } from "react";
 import Typewriter from "typewriter-effect";
 import { S } from "./HeroSection.styles";
 import { Logo } from "./logo/Logo";
 
 export const HeroSection: React.FC = () => {
   const sectionRef = useRef<HTMLElement | null>(null);
-  const [showForm, setShowForm] = useState(false);
+  const { modalOpen, openModal, closeModal } = useContext(ModalContext);
 
   const scrollToSection = () => {
     if (sectionRef.current) {
@@ -15,9 +16,18 @@ export const HeroSection: React.FC = () => {
     }
   };
 
-  const toggleFormVisibility = () => {
-    setShowForm(prefState => !prefState);
-  };
+  
+  useEffect(() => { // function handleEscKey now always will be closed form
+    const handleEscKey = (event: { keyCode: number }) => {
+      if (event.keyCode === 27) {
+        closeModal();
+      }
+    };
+    document.addEventListener("keydown", handleEscKey);
+    return () => {
+      document.removeEventListener("keydown", handleEscKey);
+    };
+  });
 
   return (
     <S.HeroSection id={"home"}>
@@ -25,8 +35,7 @@ export const HeroSection: React.FC = () => {
         <S.Container>
           <S.Hidden>Frontend Developer</S.Hidden>
           <S.Title>
-            <Typewriter
-              options={{
+            <Typewriter options={{
                 strings: ["Frontend Developer", "React JavaScript TypeScript"],
                 autoStart: true,
                 loop: true,
@@ -35,26 +44,17 @@ export const HeroSection: React.FC = () => {
           </S.Title>
           <S.TitleSecond>Chekh Stas</S.TitleSecond>
           <S.Paragraph>I Develop in React, TypeScript, JavaScript</S.Paragraph>
-          <Button
-            title="Contact Me"
-            width={"150px"}
-            font={"1.2rem"}
-            onClick={() => {
-              scrollToSection();
-              toggleFormVisibility();
-            }}
+          <Button title="Contact Me" width={"150px"} font={"1.2rem"}
+            onClick={() => {scrollToSection(); openModal("ContactMeFormModal")}}
           />
-          <div ref={sectionRef as React.RefObject<HTMLDivElement>}>
-            {showForm && (
-              
-              <>
-                <S.Overlay onClick={toggleFormVisibility} />
-                <S.ModalPopupForm>
-                  <Form />
-                </S.ModalPopupForm>
-              </>
-            )}
-          </div>
+          {modalOpen === "ContactMeFormModal" && (
+            <>
+              <S.Overlay onClick={closeModal} />
+              <S.ModalPopupForm>
+                <Form />
+              </S.ModalPopupForm>
+            </>
+          )} 
         </S.Container>
         <Logo />
       </S.CustomFlexWrapper>
