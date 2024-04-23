@@ -1,7 +1,7 @@
-import React from "react";
-import { Form } from "../../../components/forms/Form";
 import { SectionTitle } from "../../../components/sectiontitle/SectionTitle";
+import { Form } from "../../../components/forms/Form";
 import { S } from "./Contacts.styles";
+import React from "react";
 
 export const Contacts: React.FC = () => {
   return (
