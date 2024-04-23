@@ -46,6 +46,7 @@ export const HeroSection: React.FC = () => {
           />
           <div ref={sectionRef as React.RefObject<HTMLDivElement>}>
             {showForm && (
+              
               <>
                 <S.Overlay onClick={toggleFormVisibility} />
                 <S.ModalPopupForm>

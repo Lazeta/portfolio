@@ -14,10 +14,6 @@ export const MobileMenu: React.FC<MobileMenuPopupProps> = (props: MobileMenuPopu
     setIsMenuOpen(!isMenuOpen);
   };
 
-  const handleLinkClick = () => {
-    setIsMenuOpen(!isMenuOpen);
-  }
-
   useEffect(() => {
     const handleEscKey = (event: { keyCode: number }) => {
       if (event.keyCode === 27) {
@@ -38,7 +34,7 @@ export const MobileMenu: React.FC<MobileMenuPopupProps> = (props: MobileMenuPopu
           setIsMenuOpen(false);
         }}
       >
-        <Menu onLinkClick={handleLinkClick}/>
+        <Menu onLinkClick={toggleMenu}/>
       </S.MobileMenuPopup>
     </S.MobileMenu>
   );

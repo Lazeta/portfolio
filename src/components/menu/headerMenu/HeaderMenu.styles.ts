@@ -45,6 +45,7 @@ const Header = styled.header`
 
   @media ${myTheme.media.mobile} {
     padding: 0;
+    z-index: 101;
   }
 `;
 
@@ -64,7 +65,7 @@ const DesktopMenu = styled.div`
   left: 0;
   margin: 0 auto;
   max-width: 1300px;
-  z-index: 6;
+  z-index: 3;
   
   ul {
     display: flex;
@@ -258,7 +259,7 @@ const Menu = styled.nav`
 
       span {
         position: relative;
-        z-index: 3;
+        z-index: 101;
         opacity: 1;
         visibility: visible;
       }
