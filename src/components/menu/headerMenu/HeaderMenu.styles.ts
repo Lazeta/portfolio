@@ -80,7 +80,7 @@ const MobileMenu = styled.nav`
   margin: 0 auto;
 `;
 
-const BurgerButton = styled.div<{ isOpen: boolean }>`
+const BurgerButton = styled.div<{ open: boolean }>`
   display: flex;
   position: fixed;
   top: 30px;
@@ -96,7 +96,7 @@ const BurgerButton = styled.div<{ isOpen: boolean }>`
     position: relative;
     width: 40px;
     height: 2px;
-    background-color: ${myTheme.colors.secondary};
+    background-color: ${props => props.open ? "transparent" : props.theme.colors.secondary};
     transition: all 0.3s ease-in-out;
 
     &::before,
@@ -110,25 +110,13 @@ const BurgerButton = styled.div<{ isOpen: boolean }>`
     }
 
     &::before {
-      top: -12px;
+      top: ${props => props.open ? "0" : "-12px" };
+      transform: ${props => props.open ? "rotate(45deg)" : ""};
     }
 
     &::after {
-      bottom: -12px;
-    }
-  }
-
-  .bars.open {
-    background-color: transparent;
-
-    &::before {
-      top: 0;
-      transform: rotate(45deg);
-    }
-
-    &::after {
-      bottom: 0;
-      transform: rotate(-45deg);
+      bottom: ${props => props.open ? "0" : "-12px"};
+      transform: ${props => props.open ? "rotate(-45deg)" : ""};
     }
   }
 `;
@@ -146,7 +134,6 @@ type MobileMenuPopupProps = {
 };
 
 const MobileMenuPopup = styled.div<MobileMenuPopupProps>`
-  opacity: ${(props) => (props.isOpen ? "1" : "0")};
   position: fixed;
   width: 100vw;
   margin: 0 auto;
@@ -154,34 +141,13 @@ const MobileMenuPopup = styled.div<MobileMenuPopupProps>`
   right: 0;
   top: 0;
   bottom: 0;
-  z-index: ${(props) => (props.isOpen ? "99" : "99")};
+  z-index: 99;
   background-color: rgba(31, 38, 38, 0.98);
-  animation: ${(props) => (props.isOpen ? "animate-in" : "animate-out")} 1s
-    ease-in-out forwards;
+  opacity: ${(props) => (props.isOpen ? "1" : "0")};
+  transform: ${(props) => (props.isOpen ? "translateY(0%)" : "translateY(-100%)")};
+  transition: opacity 0.7s ease-in-out, transform 0.7s ease-in-out;
   max-height: ${(props) => (props.isOpen ? "100%" : "-100%")};
-  overflow: hidden;
-
-  @keyframes animate-in {
-    from {
-      opacity: 0;
-      transform: translateY(-100%);
-    }
-    to {
-      opacity: 1;
-      transform: translateY(0);
-    }
-  }
-
-  @keyframes animate-out {
-    from {
-      opacity: 1;
-      transform: translateY(0);
-    }
-    to {
-      opacity: 0;
-      transform: translateY(-100%);
-    }
-  }
+  /* overflow: hidden; */
 
   ul {
     display: flex;

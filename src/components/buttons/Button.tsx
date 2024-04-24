@@ -4,7 +4,7 @@ type ButtonPropsType = {
   title: string;
   width?: string;
   font?: string;
-  onClick?: () => void;
+  onClick: () => void;
 };
 
 export const Button = (props: ButtonPropsType) => {

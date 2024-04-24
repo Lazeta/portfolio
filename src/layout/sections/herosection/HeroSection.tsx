@@ -1,21 +1,16 @@
+import useCloseOnOutsideClick from "../../../components/hooks/HandleClickOutside";
 import ModalContext from "../../../components/hooks/ModalContext";
-import React, { useRef, useContext } from "react";
+import useEscClose from "../../../components/hooks/useEscClose";
 import { Button } from "../../../components/buttons/Button";
 import { Form } from "../../../components/forms/Form";
 import Typewriter from "typewriter-effect";
+import React, { useContext } from "react";
 import { S } from "./HeroSection.styles";
 import { Logo } from "./logo/Logo";
-import useEscClose from "../../../components/hooks/useEscClose";
 
 export const HeroSection: React.FC = () => {
-  const sectionRef = useRef<HTMLElement | null>(null);
-  const { modalOpen, openModal, closeModal, isClosing } = useContext(ModalContext);
-
-  const scrollToSection = () => {
-    if (sectionRef.current) {
-      sectionRef.current.scrollIntoView({ behavior: "smooth" });
-    }
-  };
+  const { modalOpen, isClosing, openModal, startCloseModal } = useContext(ModalContext);
+  const formRef = useCloseOnOutsideClick();
 
   useEscClose();
 
@@ -35,12 +30,12 @@ export const HeroSection: React.FC = () => {
           <S.TitleSecond>Chekh Stas</S.TitleSecond>
           <S.Paragraph>I Develop in React, TypeScript, JavaScript</S.Paragraph>
           <Button title="Contact Me" width={"150px"} font={"1.2rem"}
-            onClick={() => {scrollToSection(); openModal("ContactMeFormModal")}}
+            onClick={() => {openModal("ContactMeFormModal")}}
           />
           {modalOpen === "ContactMeFormModal" && (
             <>
-              <S.Overlay onClick={closeModal} isClosing={isClosing}/>
-              <S.ModalPopupForm isClosing={isClosing}>
+              <S.Overlay onClick={startCloseModal} isClosing={isClosing}/>
+              <S.ModalPopupForm isClosing={isClosing} ref={formRef}>
                 <Form />
               </S.ModalPopupForm>
             </>
@@ -51,3 +46,12 @@ export const HeroSection: React.FC = () => {
     </S.HeroSection>
   );
 };
+
+// функция скролла к секции в данном случае к рендеру новой секции в DOM по клику
+  // const scrollToSection = () => {
+  //   if (sectionRef.current) {
+  //     sectionRef.current.scrollIntoView({ behavior: "smooth" });
+  //   }
+  // };
+  // <Button title="Contact Me" width={"150px"} font={"1.2rem"}
+  // onClick={() => {scrollToSection(); openModal("ContactMeFormModal")}}
