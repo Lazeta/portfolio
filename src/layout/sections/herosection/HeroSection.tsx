@@ -9,7 +9,7 @@ import useEscClose from "../../../components/hooks/useEscClose";
 
 export const HeroSection: React.FC = () => {
   const sectionRef = useRef<HTMLElement | null>(null);
-  const { modalOpen, openModal, closeModal } = useContext(ModalContext);
+  const { modalOpen, openModal, closeModal, isClosing } = useContext(ModalContext);
 
   const scrollToSection = () => {
     if (sectionRef.current) {
@@ -39,8 +39,8 @@ export const HeroSection: React.FC = () => {
           />
           {modalOpen === "ContactMeFormModal" && (
             <>
-              <S.Overlay onClick={closeModal} />
-              <S.ModalPopupForm>
+              <S.Overlay onClick={closeModal} isClosing={isClosing}/>
+              <S.ModalPopupForm isClosing={isClosing}>
                 <Form />
               </S.ModalPopupForm>
             </>

@@ -2,6 +2,10 @@ import { FlexWrapper } from "../../../components/wrapper/FlexWrapper";
 import { myTheme } from "../../../styles/global/MyTheme.styled";
 import styled from "styled-components";
 
+type StyledProps = {
+  isClosing: boolean;
+}
+
 const HeroSection = styled.section`
   width: auto;
   min-height: 250px;
@@ -31,7 +35,7 @@ const CustomFlexWrapper = styled(FlexWrapper)`
 
 const Container = styled.div``;
 
-const Overlay = styled.div`
+const Overlay = styled.div<StyledProps>`
   position: fixed;
   top: 0;
   left: 0;
@@ -39,9 +43,31 @@ const Overlay = styled.div`
   height: 100%;
   background-color: rgba(0, 0, 0, 0.8);
   z-index: 6;
+  animation: ${props => props.isClosing ? 'disappear 0.7s forwards' : 'appear 0.7s forwards'};
+
+  @keyframes appear {
+    0% {
+      opacity: 0;
+      visibility: hidden;
+    }
+    100% {
+      opacity: 1;
+      visibility: visible;
+    }
+  }
+  @keyframes disappear {
+    0% {
+      opacity: 1;
+      visibility: visible;
+    }
+    100% {
+      opacity: 0;
+      visibility: hidden;
+    }
+  }
 `;
 
-const ModalPopupForm = styled.div`
+const ModalPopupForm = styled.div<StyledProps>`
   position: fixed;
   top: 50%;
   left: 50%;
@@ -52,6 +78,28 @@ const ModalPopupForm = styled.div`
   border-radius: 8px;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
   z-index: 99;
+  animation: ${props => props.isClosing ? 'disappear 0.7s forwards' : 'appear 0.7s forwards'};
+
+  @keyframes appear {
+    0% {
+      opacity: 0;
+      visibility: hidden;
+    }
+    100% {
+      opacity: 1;
+      visibility: visible;
+    }
+  }
+  @keyframes disappear {
+    0% {
+      opacity: 1;
+      visibility: visible;
+    }
+    100% {
+      opacity: 0;
+      visibility: hidden;
+    }
+  }
 `
 
 const TitleSecond = styled.h2`
