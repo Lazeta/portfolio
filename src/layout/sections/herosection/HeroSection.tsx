@@ -1,10 +1,11 @@
-import ModalContext from "../../../components/functions/ModalContext";
-import React, { useRef, useEffect, useContext } from "react";
+import ModalContext from "../../../components/hooks/ModalContext";
+import React, { useRef, useContext } from "react";
 import { Button } from "../../../components/buttons/Button";
 import { Form } from "../../../components/forms/Form";
 import Typewriter from "typewriter-effect";
 import { S } from "./HeroSection.styles";
 import { Logo } from "./logo/Logo";
+import useEscClose from "../../../components/hooks/useEscClose";
 
 export const HeroSection: React.FC = () => {
   const sectionRef = useRef<HTMLElement | null>(null);
@@ -16,18 +17,7 @@ export const HeroSection: React.FC = () => {
     }
   };
 
-  
-  useEffect(() => { // function handleEscKey now always will be closed form
-    const handleEscKey = (event: { keyCode: number }) => {
-      if (event.keyCode === 27) {
-        closeModal();
-      }
-    };
-    document.addEventListener("keydown", handleEscKey);
-    return () => {
-      document.removeEventListener("keydown", handleEscKey);
-    };
-  });
+  useEscClose();
 
   return (
     <S.HeroSection id={"home"}>

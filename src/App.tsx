@@ -1,4 +1,4 @@
-import ModalContext from "./components/functions/ModalContext";
+import ModalContext from "./components/hooks/ModalContext";
 import { Particle } from "./components/particle/Particle";
 import { myTheme } from "./styles/global/MyTheme.styled";
 import { ThemeProvider } from "styled-components";
