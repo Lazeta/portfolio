@@ -130,37 +130,16 @@ const HoverBox = styled.button`
 // Mobile Menu Popup
 const MobileMenuPopup = styled.div<StyledLinkPropsType>`
   position: fixed;
-  top: 50%;
-  left: 50%;
-  width: 100%;
+  top: ${(props) => props.isClosing ? '-100%' : '0'};
+  left: 0;
+  bottom: 0;
+  right: 0;
+  width: 100vw;
   height: 100%;
-  opacity: 1;
-  z-index: 99;
-
-  display: ${props => props.isClosing ? "none" : "block" };
   background-color: rgba(31, 38, 38, 0.90);
-  animation: ${props => props.isClosing ? 'disappear' : 'appear'} 1s forwards;
-
-  @keyframes appear {
-    0% {
-      opacity: 0;
-      transform: translate(-50%, -150%);
-    }
-    100% {
-      opacity: 1;
-      transform: translate(-50%, -50%);
-    }
-  }
-  @keyframes disappear {
-    0% {
-      opacity: 1;
-      transform: translate(-50%, -50%);
-    }
-    100% {
-      opacity: 0;
-      transform: translate(-50%, -150%);
-    }
-  }
+  z-index: 99;
+  opacity: ${(props) => props.isClosing ? '0' : '1'};
+  transition: all 1s ease-in-out; 
 
   ul {
     display: flex;
@@ -169,11 +148,6 @@ const MobileMenuPopup = styled.div<StyledLinkPropsType>`
     align-items: center;
     gap: 5rem;
     margin: 20%;
-
-    li > {
-      border: 1px solid #bdebea;
-      padding: 5px;
-    }
   }
 `;
 
