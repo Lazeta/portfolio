@@ -127,33 +127,40 @@ const HoverBox = styled.button`
 `;
 
 
-const Overlay = styled.div<StyledLinkPropsType>`
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-color: rgba(0, 0, 0, 0.8);
-  z-index: 98;
-  opacity: ${(props) => (props.isClosing ? '0' : '1')};
-  visibility: ${(props) => (props.isClosing ? 'visible' : 'hidden')};
-  transition: all 0.5s ease;
-`;
-
-
 // Mobile Menu Popup
 const MobileMenuPopup = styled.div<StyledLinkPropsType>`
   position: fixed;
-  width: 100vw;
-  margin: 0 auto;
-  left: 0;
-  right: 0;
-  top: 0;
-  bottom: 0;
+  top: 50%;
+  left: 50%;
+  width: 100%;
+  height: 100%;
+  opacity: 1;
   z-index: 99;
-  background-color: rgba(31, 38, 38, 0.98);
-  transform: ${(props) => (props.isClosing ? "translateY(0%)" : "translateY(-100%)")};
-  transition: all 0.7s ease-in-out;
+
+  display: ${props => props.isClosing ? "none" : "block" };
+  background-color: rgba(31, 38, 38, 0.90);
+  animation: ${props => props.isClosing ? 'disappear' : 'appear'} 1s forwards;
+
+  @keyframes appear {
+    0% {
+      opacity: 0;
+      transform: translate(-50%, -150%);
+    }
+    100% {
+      opacity: 1;
+      transform: translate(-50%, -50%);
+    }
+  }
+  @keyframes disappear {
+    0% {
+      opacity: 1;
+      transform: translate(-50%, -50%);
+    }
+    100% {
+      opacity: 0;
+      transform: translate(-50%, -150%);
+    }
+  }
 
   ul {
     display: flex;
@@ -162,6 +169,11 @@ const MobileMenuPopup = styled.div<StyledLinkPropsType>`
     align-items: center;
     gap: 5rem;
     margin: 20%;
+
+    li > {
+      border: 1px solid #bdebea;
+      padding: 5px;
+    }
   }
 `;
 
@@ -266,7 +278,6 @@ export const S = {
   Menu,
   Header,
   NavLink,
-  Overlay,
   ItemLink,
   HoverBox,
   MobileMenu,

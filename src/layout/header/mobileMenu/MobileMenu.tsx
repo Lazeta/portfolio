@@ -22,9 +22,8 @@ export const MobileMenu: React.FC = () => {
       <BurgerButton onClick={toggleMenu} isOpen={isMenuOpen}/>
       {isMenuOpen && (
         <>
-          <S.Overlay onClick={closeMenu} isClosing={isMenuOpen}/>
-          <S.MobileMenuPopup isClosing={isMenuOpen} onClick={() => closeMenu()}>
-            <Menu/>
+          <S.MobileMenuPopup isClosing={!isMenuOpen} onClick={() => toggleMenu()}>
+            <Menu onLinkClick={() => toggleMenu()}/>
           </S.MobileMenuPopup>
         </>
       )}
