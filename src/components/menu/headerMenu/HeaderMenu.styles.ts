@@ -1,5 +1,5 @@
-import styled, { css } from "styled-components";
 import { myTheme } from "../../../styles/global/MyTheme.styled";
+import styled, { css } from "styled-components";
 import { Link } from "react-scroll";
 
 type StyledLinkPropsType = {
@@ -8,6 +8,8 @@ type StyledLinkPropsType = {
   font?: string;
   color?: string;
   active?: boolean;
+  isClosing?: boolean;
+  isOpen?: boolean;
 };
 
 // NavLink
@@ -33,7 +35,6 @@ const NavLink = styled.a<StyledLinkPropsType>`
   `}
 `;
 
-
 // Header
 const Header = styled.header`
   position: relative;
@@ -48,7 +49,6 @@ const Header = styled.header`
     z-index: 101;
   }
 `;
-
 
 // Desktop Menu
 const DesktopContainer = styled.div`
@@ -74,13 +74,12 @@ const DesktopMenu = styled.div`
   }
 `;
 
-
 // Mobile Menu
 const MobileMenu = styled.nav`
   margin: 0 auto;
 `;
 
-const BurgerButton = styled.div<{ open: boolean }>`
+const BurgerButton = styled.div<StyledLinkPropsType>`
   display: flex;
   position: fixed;
   top: 30px;
@@ -96,7 +95,7 @@ const BurgerButton = styled.div<{ open: boolean }>`
     position: relative;
     width: 40px;
     height: 2px;
-    background-color: ${props => props.open ? "transparent" : props.theme.colors.secondary};
+    background-color: ${props => props.isOpen ? "transparent" : props.theme.colors.secondary};
     transition: all 0.3s ease-in-out;
 
     &::before,
@@ -110,13 +109,13 @@ const BurgerButton = styled.div<{ open: boolean }>`
     }
 
     &::before {
-      top: ${props => props.open ? "0" : "-12px" };
-      transform: ${props => props.open ? "rotate(45deg)" : ""};
+      top: ${props => props.isOpen ? "0px" : "-12px"};
+      transform: ${props => props.isOpen ? "rotate(45deg)" : "rotate(0deg)"};
     }
 
     &::after {
-      bottom: ${props => props.open ? "0" : "-12px"};
-      transform: ${props => props.open ? "rotate(-45deg)" : ""};
+      bottom: ${props => props.isOpen ? "0px" : "-12px"};
+      transform: ${props => props.isOpen ? "rotate(-45deg)" : "rotate(0deg)"};
     }
   }
 `;
@@ -128,12 +127,22 @@ const HoverBox = styled.button`
 `;
 
 
-// Mobile Menu Popup
-type MobileMenuPopupProps = {
-  isOpen: boolean;
-};
+const Overlay = styled.div<StyledLinkPropsType>`
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.8);
+  z-index: 98;
+  opacity: ${(props) => (props.isClosing ? '0' : '1')};
+  visibility: ${(props) => (props.isClosing ? 'visible' : 'hidden')};
+  transition: all 0.5s ease;
+`;
 
-const MobileMenuPopup = styled.div<MobileMenuPopupProps>`
+
+// Mobile Menu Popup
+const MobileMenuPopup = styled.div<StyledLinkPropsType>`
   position: fixed;
   width: 100vw;
   margin: 0 auto;
@@ -143,11 +152,8 @@ const MobileMenuPopup = styled.div<MobileMenuPopupProps>`
   bottom: 0;
   z-index: 99;
   background-color: rgba(31, 38, 38, 0.98);
-  opacity: ${(props) => (props.isOpen ? "1" : "0")};
-  transform: ${(props) => (props.isOpen ? "translateY(0%)" : "translateY(-100%)")};
-  transition: opacity 0.7s ease-in-out, transform 0.7s ease-in-out;
-  max-height: ${(props) => (props.isOpen ? "100%" : "-100%")};
-  /* overflow: hidden; */
+  transform: ${(props) => (props.isClosing ? "translateY(0%)" : "translateY(-100%)")};
+  transition: all 0.7s ease-in-out;
 
   ul {
     display: flex;
@@ -260,6 +266,7 @@ export const S = {
   Menu,
   Header,
   NavLink,
+  Overlay,
   ItemLink,
   HoverBox,
   MobileMenu,

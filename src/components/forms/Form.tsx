@@ -7,7 +7,7 @@ export const Form = () => {
       <S.Field placeholder="name" />
       <S.Field placeholder="subject" />
       <S.Field placeholder="message" as="textarea" height="120px" />
-      <Button title="Submit" />
+      <Button title="Submit" onClick={() => console.log('Button will be clicked!')}/>
     </S.Form>
   );
 };

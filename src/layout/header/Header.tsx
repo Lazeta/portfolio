@@ -17,7 +17,7 @@ export const Header: React.FC = () => {
   return (
     <S.Header>
       {width < breakpoint ? (
-        <MobileMenu isOpen={false} />
+        <MobileMenu />
       ) : (
         <Overlay>
           <DesktopMenu />
