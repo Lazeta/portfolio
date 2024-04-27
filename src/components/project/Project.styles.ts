@@ -1,15 +1,16 @@
 import { myTheme } from "../../styles/global/MyTheme.styled";
 import styled from "styled-components";
 import { Button } from '@mui/material';
-import { Fade } from "react-awesome-reveal";
-import { FlexWrapper } from "../wrapper/FlexWrapper";
 
 
 const Projects = styled.section`
+  position: relative;
   max-width: 100%;
   max-height: 100%;
   padding: 20px 0;
   margin: 100px auto;
+  display: flex;
+  flex-wrap: wrap;
 `;
 
 const Sort = styled.div`
@@ -19,19 +20,16 @@ const Sort = styled.div`
   flex-wrap: wrap;
 `;
 
-
-const Project = styled.div<{ visible: boolean }>`
-  display: flex;
-  max-width: 100%;
+const Project = styled.div`
   width: 48%;
   background-color: ${myTheme.colors.lightFont};
-  flex-direction: column;
-  gap: 20px;
-  opacity: 1;
+  border: 1px solid black;
+  margin: 0 auto;
+
   
   @media ${myTheme.media.mobile} {
     width: 100%;
-    gap: 0px;
+    gap: 0;
   }
   
   a {
@@ -61,9 +59,8 @@ const ImageWrapper = styled.a`
 `;
 
 const Image = styled.img`
-  max-width: 100%;
   width: 100%;
-  height: 400px;
+  min-height: 450px;
   object-fit: cover;
   
     
@@ -111,11 +108,6 @@ const Paragraph = styled.p`
   color: ${myTheme.colors.secondary};
 `;
 
-// const StyledFade = styled(Fade)`
-//     display: flex;
-//     flex-direction: row;
-//     flex-wrap: wrap;
-// `
 
 const ProjectContainer = styled.div`
   display: flex;
@@ -125,8 +117,13 @@ const ProjectContainer = styled.div`
   align-content: center;
   gap: 20px;
   width: 100%;
-`
+  `
 
+// const StyledFade = styled(Fade)`
+//     display: flex;
+//     flex-direction: row;
+//     flex-wrap: wrap;
+// `
 export const S = {
   UseTechnologysItem,
   ProjectDescription,

@@ -1,14 +1,12 @@
-import {
-  TabMenu,
-  TabsStatusType,
-} from "../../../components/menu/tabMenu/TabMenu";
+import { TabMenu,TabsStatusType, } from "../../../components/menu/tabMenu/TabMenu";
 import { SectionTitle } from "../../../components/sectiontitle/SectionTitle";
 import { FlexWrapper } from "../../../components/wrapper/FlexWrapper";
 import { tabsItems, ObjectProjects } from "../../../data/Data";
 import { S } from "../../../components/project/Project.styles";
 import { Project } from "../../../components/project/Project";
-import { Fade } from "react-awesome-reveal";
 import React, { useState } from "react";
+import { motion } from "framer-motion";
+
 
 export const Projects: React.FC = () => {
   const [currentFilterStatus, setCurrentFilterStatus] = useState("all");
@@ -61,8 +59,8 @@ export const Projects: React.FC = () => {
         content="center"
         gapItem="20px"
       >
-        {/* <Fade> */}
-          {filteredProjects.map((project) => (
+        {filteredProjects.map((project) => {
+          return (
             <Project
               key={project.title}
               href={project.href}
@@ -71,8 +69,8 @@ export const Projects: React.FC = () => {
               skills={project.skills}
               text={project.text}
             />
-          ))}
-        {/* </Fade> */}
+          );
+        })}
       </FlexWrapper>
     </S.Projects>
   );
