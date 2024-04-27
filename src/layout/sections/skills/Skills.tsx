@@ -5,12 +5,11 @@ import { SkillsData } from "../../../data/Data";
 import { S } from "./Skills.styles";
 import React from "react";
 import { FilterMenu } from "../../../components/menu/FilterMenu";
-
-
+import { Fade } from "react-awesome-reveal";
 
 export const Skills: React.FC = () => {
   return (
-    <S.Skills id={'skills'}>
+    <S.Skills id={"skills"}>
       <SectionTitle title="Skills" />
       <S.SkillsMenu>
         <FilterMenu />
@@ -22,9 +21,13 @@ export const Skills: React.FC = () => {
         content="center"
         gapItem="20px"
       >
-        {SkillsData.map((item, index) => {
-          return <Skill key={index} iconId={item.iconId} title={item.title} />;
-        })}
+        <Fade cascade damping={0.2}>
+          {SkillsData.map((item, index) => {
+            return (
+              <Skill key={index} iconId={item.iconId} title={item.title} />
+            );
+          })}
+        </Fade>
       </FlexWrapper>
     </S.Skills>
   );

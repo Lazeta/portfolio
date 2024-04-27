@@ -1,11 +1,11 @@
-import { links } from "../../data/Data";
+import { myTheme } from "../../styles/global/MyTheme.styled";
 import { SectionTitle } from "../sectiontitle/SectionTitle";
 import { FlexWrapper } from "../wrapper/FlexWrapper";
-import { myTheme } from "../../styles/global/MyTheme.styled";
-import { NavLink } from "../link/Link";
-import { S } from "./Project.styles";
 import Button from '@mui/material/Button';
 import Stack from '@mui/material/Stack';
+import { links } from "../../data/Data";
+import { NavLink } from "../link/Link";
+import { S } from "./Project.styles";
 import React from "react";
 
 type ProjectPropsType = {
@@ -15,18 +15,18 @@ type ProjectPropsType = {
   text?: string;
   skills?: string[];
   values?: () => void;
+  initialVisible?: boolean;
 };
 
-export const Project: React.FC<ProjectPropsType> = (
-  props: ProjectPropsType
-) => {
-  const { title, text, src, href, skills } = props;
+export const Project: React.FC<ProjectPropsType> = (props: ProjectPropsType) => {
+  const { title, text, src, href, skills, initialVisible = true } = props;
 
   return (
-    <S.Project>
-      <a href={href}>
+    <S.Project visible={initialVisible}>
+      <S.ImageWrapper href={href}>
         <S.Image src={src} alt="bad way" />
-      </a>
+        {/* <S.StyledButton>View project</S.StyledButton> */}
+      </S.ImageWrapper>
       <S.ProjectDescription>
         <FlexWrapper
           justify="space-between"

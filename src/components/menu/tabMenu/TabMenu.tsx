@@ -15,7 +15,7 @@ export const TabMenu = (props: TabMenuPropsType) => {
     <S.TabMenuList>
       {tabsItems.map((item, index) => {
         return ( 
-        <div>
+        <>
           <TabButton key={index}
             isActive={item.status === currentFilterStatus}
             onClick={() => { changeFilterStatus(item.status); } }
@@ -23,7 +23,7 @@ export const TabMenu = (props: TabMenuPropsType) => {
             >
             {item.title}
           </TabButton>
-        </div>
+        </>
         );
       })}
     </S.TabMenuList>

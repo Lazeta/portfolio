@@ -22,5 +22,10 @@ export const myTheme = {
     tablet: "screen and (max-width: 1280px)",
     mobile: "screen and (max-width: 768px)",
     mobileSlide: "screen and (max-width: 621px)",
+  },
+
+  animations: {
+    default: "all 0.5s ease-in-out",
+    long: "all 1s ease-in-out"
   }
 };

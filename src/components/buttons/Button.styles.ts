@@ -53,10 +53,12 @@ const TabButton = styled.button<StyledButtonPropsType>`
   border: none;
   border-radius: 8px;
   background: ${myTheme.colors.primary};
-  transition: all 0.3s ease-in-out;
+  transition: ${myTheme.animations.default};
+  font-weight: 400;
+
   &:hover {
     cursor: pointer;
-    opacity: 0.8;
+    opacity: 0.6;
   }
   ${(props) =>
     props.active &&
@@ -64,8 +66,9 @@ const TabButton = styled.button<StyledButtonPropsType>`
       font-weight: 700;
       background-position: right center;
       background-size: 200% auto;
-      -webkit-animation: pulse 2s infinite;
-      animation: pulse512 2s infinite;
+      -webkit-animation: pulse 1.5s infinite;
+      animation: pulse512 1.5s infinite;
+      transition: ${myTheme.animations.default};
     `}
   @keyframes pulse512 {
     0% {
@@ -74,10 +77,12 @@ const TabButton = styled.button<StyledButtonPropsType>`
 
     70% {
       box-shadow: 0 0 0 10px rgb(218 103 68 / 0%);
+      
     }
 
     100% {
       box-shadow: 0 0 0 0 rgb(218 103 68 / 0%);
+
     }
   }
 `;

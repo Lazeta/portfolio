@@ -1,5 +1,8 @@
 import { myTheme } from "../../styles/global/MyTheme.styled";
 import styled from "styled-components";
+import { Button } from '@mui/material';
+import { Fade } from "react-awesome-reveal";
+import { FlexWrapper } from "../wrapper/FlexWrapper";
 
 
 const Projects = styled.section`
@@ -17,18 +20,57 @@ const Sort = styled.div`
 `;
 
 
-const Project = styled.div`
+const Project = styled.div<{ visible: boolean }>`
+  display: flex;
   max-width: 100%;
   width: 48%;
   background-color: ${myTheme.colors.lightFont};
-  display: flex;
   flex-direction: column;
   gap: 20px;
-
+  opacity: 1;
+  
   @media ${myTheme.media.mobile} {
     width: 100%;
     gap: 0px;
   }
+  
+  a {
+    position: relative;
+    opacity: 1;
+    transition: ${myTheme.animations.default};
+  }
+  a:hover {
+    opacity: 0.6;
+      transition: ${myTheme.animations.default};
+  }
+`;
+
+const StyledButton = styled(Button)`
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  opacity: 0;
+  transition: opacity .3s, filter .3s;
+`
+
+const ImageWrapper = styled.a`
+  position: relative;
+  display: inline-block;
+  overflow: visible; 
+`;
+
+const Image = styled.img`
+  max-width: 100%;
+  width: 100%;
+  height: 400px;
+  object-fit: cover;
+  
+    
+  /* + ${StyledButton} {
+    opacity: 1;
+    filter: blur(0);
+  } */
 `;
 
 const UseTechnologys = styled.ul`
@@ -64,18 +106,26 @@ const ProjectDescription = styled.div`
 
 const DescriptionLinks = styled.div``
 
-const Image = styled.img`
-  max-width: 100%;
-  width: 100%;
-  height: 400px;
-  object-fit: cover;
-`;
-
 
 const Paragraph = styled.p`
   color: ${myTheme.colors.secondary};
 `;
 
+// const StyledFade = styled(Fade)`
+//     display: flex;
+//     flex-direction: row;
+//     flex-wrap: wrap;
+// `
+
+const ProjectContainer = styled.div`
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-content: center;
+  gap: 20px;
+  width: 100%;
+`
 
 export const S = {
   UseTechnologysItem,
@@ -87,4 +137,8 @@ export const S = {
   Project,
   Image,
   Sort,
+  StyledButton,
+  ImageWrapper,
+  // StyledFade,
+  ProjectContainer,
 }
