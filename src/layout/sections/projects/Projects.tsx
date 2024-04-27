@@ -1,12 +1,14 @@
-import { TabMenu,TabsStatusType, } from "../../../components/menu/tabMenu/TabMenu";
+import {
+  TabMenu,
+  TabsStatusType,
+} from "../../../components/menu/tabMenu/TabMenu";
 import { SectionTitle } from "../../../components/sectiontitle/SectionTitle";
 import { FlexWrapper } from "../../../components/wrapper/FlexWrapper";
 import { tabsItems, ObjectProjects } from "../../../data/Data";
 import { S } from "../../../components/project/Project.styles";
 import { Project } from "../../../components/project/Project";
 import React, { useState } from "react";
-import { motion } from "framer-motion";
-
+import { AnimatePresence, motion } from "framer-motion";
 
 export const Projects: React.FC = () => {
   const [currentFilterStatus, setCurrentFilterStatus] = useState("all");
@@ -55,22 +57,32 @@ export const Projects: React.FC = () => {
       <FlexWrapper
         direction="row"
         wrap="wrap"
-        justify="center"
+        justify="speca-between"
         content="center"
         gapItem="20px"
       >
-        {filteredProjects.map((project) => {
-          return (
-            <Project
-              key={project.title}
-              href={project.href}
-              title={project.title}
-              src={project.src}
-              skills={project.skills}
-              text={project.text}
-            />
-          );
-        })}
+        <AnimatePresence>
+          {filteredProjects.map((project) => {
+            return (
+              // <motion.div style={{width: "375px", flexGrow: 1, maxWidth: "640px", minWidth: "375px"}}
+              //   key={project.id}
+              //   initial={{ opacity: 0 }}
+              //   animate={{ opacity: 1 }}
+              //   exit={{ opacity: 0 }}
+              //   layout
+              // >
+                <Project
+                  key={project.id}
+                  href={project.href}
+                  title={project.title}
+                  src={project.src}
+                  skills={project.skills}
+                  text={project.text}
+                />
+              // </motion.div>
+            );
+          })}
+        </AnimatePresence>
       </FlexWrapper>
     </S.Projects>
   );

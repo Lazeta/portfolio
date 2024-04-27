@@ -1,35 +1,47 @@
 import { myTheme } from "../../styles/global/MyTheme.styled";
 import styled from "styled-components";
 import { Button } from '@mui/material';
+import { motion } from "framer-motion";
 
 
 const Projects = styled.section`
   position: relative;
   max-width: 100%;
   max-height: 100%;
-  padding: 20px 0;
   margin: 100px auto;
   display: flex;
+  flex-direction: row;
   flex-wrap: wrap;
-`;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+  
+  @media ${myTheme.media.mobile} {
+    justify-content: center;
+  }
+  `;
 
 const Sort = styled.div`
   width: 100%;
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
-`;
+  `;
 
-const Project = styled.div`
-  width: 48%;
+const Project = styled(motion.div)`
   background-color: ${myTheme.colors.lightFont};
   border: 1px solid black;
-  margin: 0 auto;
+  width: 43%;
+  max-width: 650px;
+  flex-grow: 1;
+  
 
   
   @media ${myTheme.media.mobile} {
     width: 100%;
+    max-width: 100%;
     gap: 0;
+    flex-grow: 1;
   }
   
   a {
@@ -54,8 +66,15 @@ const StyledButton = styled(Button)`
 
 const ImageWrapper = styled.a`
   position: relative;
-  display: inline-block;
-  overflow: visible; 
+
+  ${StyledButton} {
+    opacity: 0;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -40%);
+
+  }
 `;
 
 const Image = styled.img`
@@ -96,9 +115,9 @@ const UseTechnologysItem = styled.li`
 const ProjectDescription = styled.div`
   display: flex;
   flex-direction: column;
-  gap: 5px;
   padding: 0 15px;
   flex-wrap: wrap;
+  justify-content: space-between;
 `;
 
 const DescriptionLinks = styled.div``

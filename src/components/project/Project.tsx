@@ -1,8 +1,8 @@
 import { myTheme } from "../../styles/global/MyTheme.styled";
 import { SectionTitle } from "../sectiontitle/SectionTitle";
 import { FlexWrapper } from "../wrapper/FlexWrapper";
-import Button from '@mui/material/Button';
-import Stack from '@mui/material/Stack';
+import Button from "@mui/material/Button";
+import Stack from "@mui/material/Stack";
 import { links } from "../../data/Data";
 import { NavLink } from "../link/Link";
 import { S } from "./Project.styles";
@@ -15,23 +15,32 @@ type ProjectPropsType = {
   text?: string;
   skills?: string[];
   values?: () => void;
+  id?: number;
 };
 
-export const Project: React.FC<ProjectPropsType> = (props: ProjectPropsType) => {
-  const { title, ...rest} = props;
+export const Project: React.FC<ProjectPropsType> = (
+  props: ProjectPropsType
+) => {
+  const { title, ...rest } = props;
 
   return (
-    <S.Project>
+    <S.Project
+      key={rest.id}
+      initial={{ opacity: 0 }}
+      animate={{ opacity: 1 }}
+      exit={{ opacity: 0 }}
+      layout
+    >
       <S.ImageWrapper href={rest.href}>
         <S.Image src={rest.src} alt="bad way" />
-        {/* <S.StyledButton>View project</S.StyledButton> */}
+        <S.StyledButton>View project</S.StyledButton>
       </S.ImageWrapper>
       <S.ProjectDescription>
         <FlexWrapper
           justify="space-between"
           wrap="wrap"
           align="center"
-          gapItem={myTheme.media.mobile ? '0' : '40px'}
+          gapItem={myTheme.media.mobile ? "0" : "40px"}
         >
           <SectionTitle title={title} />
           <S.DescriptionLinks>
@@ -50,7 +59,9 @@ export const Project: React.FC<ProjectPropsType> = (props: ProjectPropsType) => 
             {rest.skills &&
               rest.skills.map((skill) => (
                 <Stack spacing={2} direction="row">
-                  <Button key={skill} variant="outlined">{skill}</Button>
+                  <Button key={skill} variant="outlined">
+                    {skill}
+                  </Button>
                 </Stack>
               ))}
           </S.UseTechnologysItem>
