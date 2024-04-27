@@ -8,7 +8,7 @@ import { tabsItems, ObjectProjects } from "../../../data/Data";
 import { S } from "../../../components/project/Project.styles";
 import { Project } from "../../../components/project/Project";
 import React, { useState } from "react";
-import { AnimatePresence, motion } from "framer-motion";
+import { AnimatePresence } from "framer-motion";
 
 export const Projects: React.FC = () => {
   const [currentFilterStatus, setCurrentFilterStatus] = useState("all");
