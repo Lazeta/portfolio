@@ -21,7 +21,7 @@ export const Skills: React.FC = () => {
         content="center"
         gapItem="20px"
       >
-        <Fade cascade damping={0.2}>
+        <Fade cascade damping={0.2} triggerOnce>
           {SkillsData.map((item, index) => {
             return (
               <Skill key={index} iconId={item.iconId} title={item.title} />
