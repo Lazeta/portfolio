@@ -26,7 +26,7 @@ const Sort = styled.div`
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
-  `;
+`;
 
 const Project = styled(motion.div)`
   background-color: ${myTheme.colors.lightFont};
