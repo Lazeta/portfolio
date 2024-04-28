@@ -112,17 +112,6 @@ export const SkillsFilter = [
   "Metodology",
 ];
 
-export const links = [
-  {
-    href: "/demo",
-    title: "demo",
-  },
-  {
-    href: "https://github.com/Lazeta?tab=repositories",
-    title: "code",
-  },
-];
-
 export const tabsItems: Array<{ status: TabsStatusType; title: string }> = [
   {
     title: "All",
@@ -149,6 +138,11 @@ export const tabsItems: Array<{ status: TabsStatusType; title: string }> = [
     status: "ts",
   },
 ]
+
+export const linksData = [
+  { name: 'demo', urlKey: 'href' },
+  { name: 'code', urlKey: 'code' },
+];
 
 export const ObjectProjects = [
   {

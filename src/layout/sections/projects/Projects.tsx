@@ -59,12 +59,13 @@ const Projects: React.FC = () => {
           {filteredProjects.map((project) => 
             (
               <Project key={project.id}
-              href={project.href}
-              title={project.title}
-              src={project.src}
-              skills={project.skills}
-              text={project.text}
-              />
+            href={project.href}
+            code={project.code} // передаём свойство code из объекта ObjectProjects в компонент Project
+            title={project.title}
+            src={project.src}
+            skills={project.skills}
+            text={project.text} 
+            />
             )
           )}
         </AnimatePresence>
