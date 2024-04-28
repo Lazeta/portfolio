@@ -1,5 +1,6 @@
 import React from "react";
-import { S } from "../menu/headerMenu/HeaderMenu.styles";
+import S from "../menu/headerMenu/HeaderMenu.styles";
+
 
 type LinkPropsType = {
   href: string;
@@ -8,10 +9,11 @@ type LinkPropsType = {
   shouldUnderline?: boolean;
 };
 
-export const NavLink = (props: LinkPropsType) => {
+const NavLink = (props: LinkPropsType) => {
   const {title, href, shouldUnderline} = props
+
   return (
-    <S.NavLink 
+    <S.NavLink
       title={title}
       href={href}
       className={shouldUnderline ? "underlined-text" : ""}
@@ -20,3 +22,6 @@ export const NavLink = (props: LinkPropsType) => {
     </S.NavLink>
   )
 };
+
+
+export default NavLink

@@ -1,17 +1,22 @@
-import { S } from "./Button.styles";
+import S from "./Button.styles";
+
 
 type ButtonPropsType = {
   title: string;
   width?: string;
   font?: string;
-  onClick: () => void;
+  onClick?: () => void;
 };
 
-export const Button = (props: ButtonPropsType) => {
-  const { title, width, font } = props; // Деструктуризация объекта из пропсов
+const Button = (props: ButtonPropsType) => {
+  const { title, width, font, onClick } = props;
+
   return (
-    <S.Button width={width} font={font} onClick={props.onClick}>
+    <S.Button width={width} font={font} onClick={onClick}>
       {title}
     </S.Button>
   );
 };
+
+
+export default Button

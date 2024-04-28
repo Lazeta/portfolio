@@ -1,6 +1,7 @@
-import { myTheme } from "../../../styles/global/MyTheme.styled";
-import styled, { css } from "styled-components";
 import { Link } from "react-scroll";
+import styled, { css } from "styled-components";
+import myTheme from "../../../styles/global/MyTheme.styled";
+
 
 type StyledLinkPropsType = {
   height?: string;
@@ -240,15 +241,12 @@ const ItemLink = styled(Link)`
   `}
 
   span {
-    padding-top: 17px;
-    padding-right: 15px;
-    padding-bottom: 15px;
-    padding-left: 15px;
+    padding: 17px 15px 15px 15px;
   }
 `
 
 
-export const S = {
+const S = {
   Menu,
   Header,
   NavLink,
@@ -260,3 +258,6 @@ export const S = {
   MobileMenuPopup,
   DesktopContainer,
 } 
+
+
+export default S

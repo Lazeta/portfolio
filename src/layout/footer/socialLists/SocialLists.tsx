@@ -1,7 +1,7 @@
-import { S } from "../Footer.styles";
-import { Icon } from "../../../components/icon/Icon";
+import S from "../Footer.styles";
+import Icon from "../../../components/icon/Icon";
 
-export const SocialLists = () => {
+const SocialLists = () => {
   return (
     <S.SocialList>
       <S.SocialItem>
@@ -67,3 +67,6 @@ export const SocialLists = () => {
     </S.SocialList>
   );
 };
+
+
+export default SocialLists

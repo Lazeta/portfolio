@@ -1,13 +1,12 @@
-import { BurgerButton } from "../../../components/menu/burger/BurgerButton";
-import { S } from "../../../components/menu/headerMenu/HeaderMenu.styles";
 import useMobileMenu from "../../../components/hooks/MobileMenuContext";
 import useEscClose from "../../../components/hooks/useEscClose";
-import { Menu } from "../../../components/menu/Menu";
-// import { useEffect, useState } from 'react';
+import Menu from "../../../components/menu/Menu";
+import BurgerButton from "../../../components/menu/burger/BurgerButton";
+import S from "../../../components/menu/headerMenu/HeaderMenu.styles";
 
-export const MobileMenu: React.FC = () => {
+
+const MobileMenu: React.FC = () => {
   const { isMenuOpen, openMenu, closeMenu } = useMobileMenu();
-  // const [isRendered, setIsRendered] = useState(isMenuOpen);
   
   const toggleMenu = () => {
     if (isMenuOpen) {
@@ -34,3 +33,6 @@ export const MobileMenu: React.FC = () => {
     </S.MobileMenu>
   );
 };
+
+
+export default MobileMenu

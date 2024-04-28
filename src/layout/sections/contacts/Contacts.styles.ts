@@ -5,6 +5,9 @@ const Contacts = styled.section`
   margin: 100px auto;
 `;
 
-export const S = {
+const S = {
     Contacts,
 };
+
+
+export default S

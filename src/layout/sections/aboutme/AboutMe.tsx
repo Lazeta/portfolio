@@ -1,8 +1,9 @@
 import React from "react";
-import { SectionTitle } from "../../../components/sectiontitle/SectionTitle";
-import { S } from "./AboutMe.styles";
+import SectionTitle from "../../../components/sectiontitle/SectionTitle";
+import S from "./AboutMe.styles";
 
-export const AboutMe: React.FC = () => {
+
+const AboutMe: React.FC = () => {
   return (
     <S.AboutMe id={"about"}>
       <SectionTitle title="About me" />
@@ -20,3 +21,6 @@ export const AboutMe: React.FC = () => {
     </S.AboutMe>
   );
 };
+
+
+export default AboutMe

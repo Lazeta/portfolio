@@ -1,5 +1,6 @@
 import styled from "styled-components";
 
+
 const TabMenuList = styled.ul`
     display: flex;
     flex-direction: row;
@@ -7,6 +8,9 @@ const TabMenuList = styled.ul`
     gap: 1.5rem;
 `
 
-export const S = {
+const S = {
     TabMenuList,
 } 
+
+
+export default S

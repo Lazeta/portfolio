@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import { myTheme } from "../../styles/global/MyTheme.styled";
+import myTheme from "../../styles/global/MyTheme.styled";
 
 
 const Copyright = styled.small`
@@ -37,10 +37,13 @@ const Footer = styled.footer`
 `;
 
 
-export const S = {
+const S = {
   Footer,
   Copyright,
   SocialItem,
   SocialLink,
   SocialList,
 } 
+
+
+export default S

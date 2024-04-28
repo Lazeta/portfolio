@@ -1,7 +1,7 @@
-import { myTheme } from "../../styles/global/MyTheme.styled";
-import styled from "styled-components";
-import { Button } from '@mui/material';
 import { motion } from "framer-motion";
+import { Button } from '@mui/material';
+import styled from "styled-components";
+import myTheme from "../../styles/global/MyTheme.styled";
 
 
 const Projects = styled.section`
@@ -19,7 +19,7 @@ const Projects = styled.section`
   @media ${myTheme.media.mobile} {
     justify-content: center;
   }
-  `;
+`;
 
 const Sort = styled.div`
   width: 100%;
@@ -72,8 +72,7 @@ const ImageWrapper = styled.a`
     position: absolute;
     left: 50%;
     top: 50%;
-    transform: translate(-50%, -40%);
-
+    transform: translate(-50%, -50%);
   }
 `;
 
@@ -93,23 +92,18 @@ const UseTechnologys = styled.ul`
   padding: 0 10px;
   display: flex;
   list-style-type: none;
-  align-items: center;
-  justify-content: space-evenly;
-  flex-direction: column;
-  
-  @media screen and (max-width: 379px) {
-    padding: 0px;
-    
-    button {
-      width: 7.3rem;
-    }
-  }
-`;
-
-const UseTechnologysItem = styled.li`
-  display: flex;
+  justify-content: flex-start;
+  flex-direction: row;
   flex-wrap: wrap;
-  gap: 15px;
+  gap: 10px;
+
+  button { 
+    cursor: initial;
+  }
+
+  @media ${myTheme.media.mobile} {
+    justify-content: center;
+  }
 `;
 
 const ProjectDescription = styled.div`
@@ -136,15 +130,9 @@ const ProjectContainer = styled.div`
   align-content: center;
   gap: 20px;
   width: 100%;
-  `
+`
 
-// const StyledFade = styled(Fade)`
-//     display: flex;
-//     flex-direction: row;
-//     flex-wrap: wrap;
-// `
-export const S = {
-  UseTechnologysItem,
+const S = {
   ProjectDescription,
   DescriptionLinks,
   UseTechnologys,
@@ -155,6 +143,8 @@ export const S = {
   Sort,
   StyledButton,
   ImageWrapper,
-  // StyledFade,
   ProjectContainer,
 }
+
+
+export default S

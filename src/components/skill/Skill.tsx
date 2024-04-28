@@ -1,7 +1,8 @@
-import styled from "styled-components";
-import { myTheme } from "../../styles/global/MyTheme.styled";
-import { Icon } from "../icon/Icon";
 import React from "react";
+import styled from "styled-components";
+import myTheme from "../../styles/global/MyTheme.styled";
+import Icon from "../icon/Icon";
+
 
 type SkillPropsType = {
   iconId: string;
@@ -9,11 +10,13 @@ type SkillPropsType = {
   index?: number;
 };
 
-export const Skill:React.FC<SkillPropsType> = (props: SkillPropsType) => {
+const Skill:React.FC<SkillPropsType> = (props: SkillPropsType) => {
+  const {iconId, title, index} = props;
+
   return (
-    <div key={props.index}>
-      <Icon iconId={props.iconId} width="100px" height="100px" />
-      <SkillTitle>{props.title}</SkillTitle>
+    <div key={index}>
+      <Icon iconId={iconId} width="100px" height="100px" />
+      <SkillTitle>{title}</SkillTitle>
     </div>
   );
 };
@@ -25,3 +28,6 @@ const SkillTitle = styled.div`
   color: ${myTheme.colors.secondary};
   padding: 10px 0 0 0;
 `;
+
+
+export default Skill

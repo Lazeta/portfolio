@@ -1,13 +1,13 @@
+import React, { useState } from "react";
+import {ThemeProvider} from "styled-components";
+import Particle from "./components/particle/Particle";
 import ModalContext from "./components/hooks/ModalContext";
-import { Particle } from "./components/particle/Particle";
-import { myTheme } from "./styles/global/MyTheme.styled";
-import { ThemeProvider } from "styled-components";
-import { Wrapper } from "./layout/Wrapper.styled";
-import { Header } from "./layout/header/Header";
-import { Footer } from "./layout/footer/Footer";
-import { Main } from "./layout/sections/Main";
-import { useState } from "react";
-import React from "react";
+import Header from "./layout/header/Header";
+import Footer from "./layout/footer/Footer";
+import Main from "./layout/sections/Main";
+import myTheme from "./styles/global/MyTheme.styled";
+import Wrapper from "./layout/Wrapper.styled";
+
 
 const App = () => {
   const [modalOpen, setModalOpen] = useState<string | null>(null);
@@ -47,5 +47,6 @@ const App = () => {
     </div>
   );
 };
+
 
 export default App;

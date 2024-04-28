@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import { myTheme } from "../../../styles/global/MyTheme.styled";
+import myTheme from "../../../styles/global/MyTheme.styled";
 
 
 const AboutMe = styled.section`
@@ -14,8 +14,11 @@ const Paragraph = styled.p`
     color: ${myTheme.colors.secondary};
 `
 
-export const S = {
+const S = {
     AboutMe,
     VerticalLine,
     Paragraph,
 }
+
+
+export default S

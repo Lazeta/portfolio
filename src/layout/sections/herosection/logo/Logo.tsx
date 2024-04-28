@@ -1,9 +1,9 @@
 import styled from "styled-components";
 import logo from "../../../../assets/images/logo.jpg";
-import { myTheme } from "../../../../styles/global/MyTheme.styled";
+import myTheme from "../../../../styles/global/MyTheme.styled";
 // import { Icon } from "../icon/Icon";
 
-export const Logo = () => {
+const Logo = () => {
   return (
     <StyledLogo>
         {/* <Icon iconId={"css3SvgrepoCom"} /> */}
@@ -27,3 +27,6 @@ const StyledLogo = styled.div`
     box-shadow: 5px 5px 10px 2px;
   }
 `;
+
+
+export default Logo

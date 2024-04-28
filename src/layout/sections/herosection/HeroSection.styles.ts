@@ -1,6 +1,7 @@
-import { FlexWrapper } from "../../../components/wrapper/FlexWrapper";
-import { myTheme } from "../../../styles/global/MyTheme.styled";
 import styled from "styled-components";
+import FlexWrapper from "../../../components/wrapper/FlexWrapper";
+import myTheme from "../../../styles/global/MyTheme.styled";
+
 
 type StyledProps = {
   isClosing: boolean;
@@ -26,14 +27,11 @@ const Paragraph = styled.p`
   }
 `;
 
-
 const CustomFlexWrapper = styled(FlexWrapper)`
   @media ${myTheme.media.mobile} {
     gap: 0;
   }
 `;
-
-const Container = styled.div``;
 
 const Overlay = styled.div<StyledProps>`
   position: fixed;
@@ -112,14 +110,16 @@ const Hidden = styled.h1`
   display: none;
 `
 
-export const S = {
+const S = {
   CustomFlexWrapper,
   ModalPopupForm,
   HeroSection,
   TitleSecond,
   Paragraph,
-  Container,
   Overlay,
   Hidden,
   Title,
 };
+
+
+export default S

@@ -1,5 +1,6 @@
-import { myTheme } from "../../styles/global/MyTheme.styled";
 import styled, { css } from "styled-components";
+import myTheme from "../../styles/global/MyTheme.styled";
+
 
 type StyledButtonPropsType = {
   height?: string;
@@ -9,7 +10,7 @@ type StyledButtonPropsType = {
   active?: boolean;
 };
 
-export const Button = styled.button<StyledButtonPropsType>`
+const Button = styled.button<StyledButtonPropsType>`
   ${(props) => props.active && css`
     font-size: 1.5rem;
  `}
@@ -87,7 +88,10 @@ const TabButton = styled.button<StyledButtonPropsType>`
   }
 `;
 
-export const S = {
+const S = {
   Button,
   TabButton,
 }
+
+
+export default S

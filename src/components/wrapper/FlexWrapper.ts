@@ -1,6 +1,6 @@
 import styled from "styled-components";
+import myTheme from "../../styles/global/MyTheme.styled";
 import '../../styles/css/font.css';
-import { myTheme } from "../../styles/global/MyTheme.styled";
 
 type FlexWrapperPropsType = {
     direction?: string
@@ -11,7 +11,7 @@ type FlexWrapperPropsType = {
     gapItem?: string
 }
 
-export const FlexWrapper = styled.div<FlexWrapperPropsType>`
+const FlexWrapper = styled.div<FlexWrapperPropsType>`
     display: flex;
     flex-direction: ${(props) => props.direction || "row"};
     justify-content: ${(props) => props.justify || "flex-start"};
@@ -24,3 +24,6 @@ export const FlexWrapper = styled.div<FlexWrapperPropsType>`
         flex-direction: ${(props) => props.direction || "column"};
     }
 `
+
+
+export default FlexWrapper

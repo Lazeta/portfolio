@@ -1,12 +1,13 @@
-import { ElementRef, useRef } from "react";
-import { Button } from "../buttons/Button";
-import { S } from "./Form.styles";
+import React, { ElementRef, useRef } from "react";
 import emailjs from "@emailjs/browser";
+import Button from "../buttons/Button";
+import S from "./Form.styles";
 
-export const Form = () => {
+
+const Form = () => {
   const form = useRef<ElementRef<"form">>(null);
 
-  const sendEmail = (e: any) => {
+  const sendEmail = (e: React.FormEvent<HTMLFormElement>) => { 
     e.preventDefault();
 
     if (!form.current) return;
@@ -19,24 +20,24 @@ export const Form = () => {
       }, (error) => {
           console.log("FAILED...", error.text);
       });
-    e.target.reset();
+    (e.target as HTMLFormElement).reset(); // Using as in TypeScript is called a "type assertion" and serves as a hint to the compiler that you are sure that the value is of a certain type.
   };
+
   return (
     <S.Form ref={form} onSubmit={sendEmail}>
-      <S.Field required placeholder="name" name={"user_name"} />
-      <S.Field required placeholder="email" name={"email"} />
-      <S.Field required placeholder="theme" name={"subject"} />
-      <S.Field
-        required
+      <S.Field name={"user_name"} placeholder="name" required/>
+      <S.Field name={"email"} placeholder="email" required/>
+      <S.Field name={"subject"} placeholder="theme" required/>
+      <S.Field name={"message"}
         placeholder="message"
         as="textarea"
         height="120px"
-        name={"message"}
+        required
       />
-      <Button
-        title="Submit"
-        onClick={() => console.log("Button will be clicked!")}
-      />
+      <Button title="Submit"/>
     </S.Form>
   );
 };
+
+
+export default Form

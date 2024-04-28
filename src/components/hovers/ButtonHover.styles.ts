@@ -1,7 +1,8 @@
 import styled from 'styled-components';
-import { myTheme } from '../../styles/global/MyTheme.styled';
+import myTheme from '../../styles/global/MyTheme.styled';
 
-export const StyledButton = styled.button`
+
+const StyledButton = styled.button`
   margin: 0;
   height: auto;
   background: transparent;
@@ -40,3 +41,6 @@ export const StyledButton = styled.button`
     filter: drop-shadow(0 0 23px var(--animation-color));
   }
 `;
+
+
+export default StyledButton

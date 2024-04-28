@@ -1,5 +1,6 @@
 import styled from "styled-components";
-import { myTheme } from "../../styles/global/MyTheme.styled";
+import myTheme from "../../styles/global/MyTheme.styled";
+
 
 const ListItem = styled.li`
   position: relative;
@@ -65,6 +66,9 @@ const ListItem = styled.li`
 `;
 
 
-export const SL = {
+const SL = {
   ListItem,
 }
+
+
+export default SL

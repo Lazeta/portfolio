@@ -1,10 +1,10 @@
 import React from "react";
-import { S } from "../../components/menu/headerMenu/HeaderMenu.styles";
-import { DesktopMenu } from "./desktopMenu/DesktopMenu";
-import { MobileMenu } from "./mobileMenu/MobileMenu";
+import S from "../../components/menu/headerMenu/HeaderMenu.styles";
+import DesktopMenu from "./desktopMenu/DesktopMenu";
+import MobileMenu from "./mobileMenu/MobileMenu";
 import styled from "styled-components";
 
-export const Header: React.FC = () => {
+const Header: React.FC = () => {
   const [width, setWidth] = React.useState(window.innerWidth);
   const breakpoint = 768;
 
@@ -37,3 +37,6 @@ const Overlay = styled.div`
   background-color: rgba(9, 10, 19, 0.6);
   z-index: 6;
 `;
+
+
+export default Header

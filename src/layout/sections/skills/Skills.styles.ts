@@ -1,5 +1,6 @@
 import styled from "styled-components";
 
+
 const Skills = styled.section`
   max-width: 100%;
   max-height: 100%;
@@ -21,7 +22,10 @@ const SkillsMenu = styled.div`
   }
 `;
 
-export const S = {
+const S = {
   Skills,
   SkillsMenu,
 };
+
+
+export default S

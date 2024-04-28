@@ -6,7 +6,6 @@ const useMobileMenu = () => {
   const openMenu = () => setMenuOpen(true);
   const closeMenu = () => setMenuOpen(false);
 
-  // Effect to close menu when 'Esc' key is pressed
   useEffect(() => {
     const handleEsc = (event: KeyboardEvent) => {
       if (event.key === 'Escape') closeMenu();
@@ -15,9 +14,7 @@ const useMobileMenu = () => {
     window.addEventListener('keydown', handleEsc);
 
     // Cleanup event listener on component unmount
-    return () => {
-      window.removeEventListener('keydown', handleEsc);
-    };
+    return () => window.removeEventListener('keydown', handleEsc);
   }, []);
 
   return {

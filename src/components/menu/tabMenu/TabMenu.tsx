@@ -1,9 +1,10 @@
-import { TabButton } from "../../buttons/TabButton";
-import { S } from "./TabMenu.styles";
+import TabButton from "../../buttons/TabButton";
+import S from "./TabMenu.styles";
+
 
 export type TabsStatusType = "all" | "landing" | "react" | "spa" | "js" | "ts";
 
-export type TabMenuPropsType = {
+type TabMenuPropsType = {
   tabsItems: Array<{ status: TabsStatusType; title: string }>;
   changeFilterStatus: (value: TabsStatusType) => void;
   currentFilterStatus: string;
@@ -11,21 +12,18 @@ export type TabMenuPropsType = {
 
 export const TabMenu = (props: TabMenuPropsType) => {
   const {tabsItems, currentFilterStatus, changeFilterStatus} = props
+
   return (
     <S.TabMenuList>
-      {tabsItems.map((item, index) => {
-        return ( 
-        <>
-          <TabButton key={index}
-            isActive={item.status === currentFilterStatus}
-            onClick={() => { changeFilterStatus(item.status); } }
-            title={item.title}
-            >
-            {item.title}
-          </TabButton>
-        </>
-        );
-      })}
+      {tabsItems.map((item, index) => (
+        <TabButton key={index}
+          isActive={item.status === currentFilterStatus}
+          onClick={() => {changeFilterStatus(item.status)} }
+          title={item.title}
+          >
+          {item.title}
+        </TabButton>
+      ))}
     </S.TabMenuList>
   );
 };

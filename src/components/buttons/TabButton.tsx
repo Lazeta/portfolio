@@ -1,4 +1,5 @@
-import { S } from "./Button.styles";
+import S from "./Button.styles";
+
 
 type TabButtonPropsType = {
   title: string;
@@ -7,15 +8,19 @@ type TabButtonPropsType = {
   onClick: () => void;
 };
 
-export const TabButton = (props: TabButtonPropsType) => {
-  const {title} = props;
+const TabButton = (props: TabButtonPropsType) => {
+  const {title, isActive, onClick} = props;
+  
   return (
     <S.TabButton
-      active={props.isActive}
-      onClick={props.onClick}
+      active={isActive}
+      onClick={onClick}
       width={"100px"}
     >
       {title}
     </S.TabButton>
   );
 };
+
+
+export default TabButton

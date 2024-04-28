@@ -1,5 +1,6 @@
 import React from "react";
 
+
 type ModalContextType = {
   modalOpen: string | null,
   isClosing: boolean,
@@ -17,7 +18,7 @@ const defaultModalContext: ModalContextType = {
   closeModal: () => {},
 };
 
-
 const ModalContext = React.createContext<ModalContextType>(defaultModalContext);
+
 
 export default ModalContext;

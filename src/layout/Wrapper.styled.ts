@@ -1,7 +1,8 @@
 import styled from "styled-components";
-import { myTheme } from "../styles/global/MyTheme.styled";
+import myTheme from "../styles/global/MyTheme.styled";
 
-export const Wrapper = styled.div`
+
+const Wrapper = styled.div`
   max-width: 100%;
   display: flex;
   flex-direction: column;
@@ -13,3 +14,6 @@ export const Wrapper = styled.div`
     padding: 0 20px;
   }
 `;
+
+
+export default Wrapper

@@ -1,12 +1,13 @@
-import { myTheme } from "../../styles/global/MyTheme.styled";
-import { SectionTitle } from "../sectiontitle/SectionTitle";
-import { FlexWrapper } from "../wrapper/FlexWrapper";
+import React from "react";
+import { links } from "../../data/Data";
+import myTheme from "../../styles/global/MyTheme.styled";
+import SectionTitle from "../sectiontitle/SectionTitle";
+import FlexWrapper from "../wrapper/FlexWrapper";
 import Button from "@mui/material/Button";
 import Stack from "@mui/material/Stack";
-import { links } from "../../data/Data";
-import { NavLink } from "../link/Link";
-import { S } from "./Project.styles";
-import React from "react";
+import NavLink from "../link/Link";
+import S from "./Project.styles";
+
 
 type ProjectPropsType = {
   src: string;
@@ -18,35 +19,25 @@ type ProjectPropsType = {
   id?: number;
 };
 
-export const Project: React.FC<ProjectPropsType> = (
-  props: ProjectPropsType
-) => {
-  const { title, ...rest } = props;
-
+const Project: React.FC<ProjectPropsType> = (props: ProjectPropsType) => {
   return (
-    <S.Project
-      key={rest.id}
+    <S.Project key={props.id}
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
       exit={{ opacity: 0 }}
       layout
     >
-      <S.ImageWrapper href={rest.href}>
-        <S.Image src={rest.src} alt="bad way" />
+      <S.ImageWrapper href={props.href}>
+        <S.Image src={props.src} alt="bad way" />
         <S.StyledButton>View project</S.StyledButton>
       </S.ImageWrapper>
+      
       <S.ProjectDescription>
-        <FlexWrapper
-          justify="space-between"
-          wrap="wrap"
-          align="center"
-          gapItem={myTheme.media.mobile ? "0" : "40px"}
-        >
-          <SectionTitle title={title} />
+        <FlexWrapper justify="space-between" wrap="wrap" align="center" gapItem={myTheme.media.mobile ? "0" : "40px"}>
+          <SectionTitle title={props.title} />
           <S.DescriptionLinks>
             {links.map((link) => (
-              <NavLink
-                key={link.title}
+              <NavLink key={link.title}
                 title={link.title}
                 href={link.href}
                 shouldUnderline={link.title === "demo"}
@@ -55,19 +46,21 @@ export const Project: React.FC<ProjectPropsType> = (
           </S.DescriptionLinks>
         </FlexWrapper>
         <S.UseTechnologys>
-          <S.UseTechnologysItem>
-            {rest.skills &&
-              rest.skills.map((skill) => (
-                <Stack spacing={2} direction="row">
-                  <Button key={skill} variant="outlined">
-                    {skill}
-                  </Button>
-                </Stack>
-              ))}
-          </S.UseTechnologysItem>
+          {props.skills && props.skills.map((skill) => (
+            <li>
+              <Stack>
+                <Button key={skill} variant="outlined">
+                  {skill}
+                </Button>
+              </Stack>
+            </li>
+          ))}
         </S.UseTechnologys>
-        <S.Paragraph>{rest.text}</S.Paragraph>
+        <S.Paragraph>{props.text}</S.Paragraph>
       </S.ProjectDescription>
     </S.Project>
   );
 };
+
+
+export default Project

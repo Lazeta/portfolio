@@ -1,5 +1,6 @@
 import styled from "styled-components";
-import { myTheme } from "../../styles/global/MyTheme.styled";
+import myTheme from "../../styles/global/MyTheme.styled";
+
 
 const Form = styled.form`
   max-width: 500px;
@@ -43,7 +44,10 @@ const Field = styled.input<FieldPropsType>`
 `;
 
 
-export const S = {
+const S = {
     Form,
     Field,
 }
+
+
+export default S
