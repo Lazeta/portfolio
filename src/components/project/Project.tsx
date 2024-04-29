@@ -29,7 +29,7 @@ const Project: React.FC<ProjectPropsType> = (props: ProjectPropsType) => {
     >
       <S.ImageWrapper href={props.href}>
         <S.Image src={props.src} alt="bad way" />
-        <S.StyledButton>View project</S.StyledButton>
+        {/* <S.StyledButton>View project</S.StyledButton> */}
       </S.ImageWrapper>
       
       <S.ProjectDescription>

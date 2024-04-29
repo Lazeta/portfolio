@@ -1,5 +1,4 @@
 import { motion } from "framer-motion";
-import { Button } from '@mui/material';
 import styled from "styled-components";
 import myTheme from "../../styles/global/MyTheme.styled";
 
@@ -55,24 +54,41 @@ const Project = styled(motion.div)`
   }
 `;
 
-const StyledButton = styled(Button)`
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  opacity: 0;
-  transition: opacity .3s, filter .3s;
-`
+const StyledButton = styled.span`
+//   position: absolute;
+//   max-width: 200px;
+//   width: 100%;
+//   height: 50px;
+//   top: -50%;
+//   left: 50%;
+//   transform: translate(-50%, -500%);
+//   transition: all .3s ease, filter 0.3s;
+//   opacity: 0;
+//   border: 2px solid red;
+//   z-index: 100;
+
+//   &:active {
+//     animation: clickAnimation 0.2s ease-in-out;
+//   }
+
+//   @keyframes clickAnimation {
+//     0% {
+//       transform: translate(-50%, -50%) scale(1);
+//     }
+//     50% {
+//       transform: translate(-50%, -50%) scale(0.9);
+//     }
+//     100% {
+//       transform: translate(-50%, -50%) scale(1);
+//     }
+//   }
+`;
 
 const ImageWrapper = styled.a`
   position: relative;
 
-  ${StyledButton} {
-    opacity: 0;
-    position: absolute;
-    left: 50%;
-    top: 50%;
-    transform: translate(-50%, -50%);
+  &:hover ${StyledButton} {
+    opacity: 1;
   }
 `;
 
@@ -80,12 +96,6 @@ const Image = styled.img`
   width: 100%;
   min-height: 450px;
   object-fit: cover;
-  
-    
-  /* + ${StyledButton} {
-    opacity: 1;
-    filter: blur(0);
-  } */
 `;
 
 const UseTechnologys = styled.ul`
