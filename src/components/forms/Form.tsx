@@ -2,6 +2,7 @@ import React, { ElementRef, useRef } from "react";
 import emailjs from "@emailjs/browser";
 import Button from "../buttons/Button";
 import S from "./Form.styles";
+import Swal from 'sweetalert2';
 
 
 const Form = () => {
@@ -16,9 +17,18 @@ const Form = () => {
         publicKey: "ZN57ZD5ce-2f4bMsu",
       })
       .then(() => {
-          console.log("SUCCESS!");
+        Swal.fire({
+          icon: 'success',
+          title: 'Success!',
+          text: 'Letter sent successfully',
+        })
       }, (error) => {
-          console.log("FAILED...", error.text);
+        Swal.fire({
+          icon: 'error',
+          title: 'Oops...',
+          text: 'Something went wrong!',
+        });
+        console.log("FAILED...", error.text);
       });
     (e.target as HTMLFormElement).reset(); // Using as in TypeScript is called a "type assertion" and serves as a hint to the compiler that you are sure that the value is of a certain type.
   };
