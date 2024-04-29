@@ -1,4 +1,4 @@
-import React, { useContext } from "react";
+import React, { useContext, useEffect } from "react";
 import Typewriter from "typewriter-effect";
 import useCloseOnOutsideClick from "../../../components/hooks/HandleClickOutside";
 import ModalContext from "../../../components/hooks/ModalContext";
@@ -14,6 +14,11 @@ const HeroSection: React.FC = () => {
   const formRef = useCloseOnOutsideClick();
 
   useEscClose();
+
+  useEffect(() => {
+    if (modalOpen === "ContactMeFormModal") document.body.style.overflow = 'hidden';
+    else document.body.style.overflow = 'auto';
+  }, [modalOpen])
 
   return (
     <S.HeroSection id={"home"}>
