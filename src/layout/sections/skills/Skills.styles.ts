@@ -8,8 +8,14 @@ const Skills = styled.section`
   margin: 100px auto;
 `;
 
-const SkillsMenu = styled.div`
-  ul {
+const Sort = styled.div`
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+
+
+  /* ul {
     display: flex;
     gap: 30px;
     padding: 20px 0;
@@ -19,12 +25,12 @@ const SkillsMenu = styled.div`
     text-align: center;
     z-index: 1;
     position: relative;
-  }
+  } */
 `;
 
 const S = {
   Skills,
-  SkillsMenu,
+  Sort,
 };
 
 

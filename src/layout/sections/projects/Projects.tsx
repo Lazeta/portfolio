@@ -1,15 +1,15 @@
 import React, { useState } from "react";
 import { AnimatePresence } from "framer-motion";
-import { tabsItems, ObjectProjects } from "../../../data/Data";
-import { TabMenu, TabsStatusType } from "../../../components/menu/tabMenu/TabMenu";
+import { tabsFilterProject, ObjectProjects } from "../../../data/Data";
+import { TabMenu, TabsStatusTypeProject } from "../../../components/menu/tabMenu/TabMenu";
 import SectionTitle from "../../../components/sectiontitle/SectionTitle";
 import MarginCenter from "../../../components/wrapper/MarginCenter";
 import FlexWrapper from "../../../components/wrapper/FlexWrapper";
 import Project from "../../../components/project/Project";
 import S from "../../../components/project/Project.styles";
 
-
 const Projects: React.FC = () => {
+  // tams menu filter projects
   const [currentFilterStatus, setCurrentFilterStatus] = useState("all");
   let filteredProjects = ObjectProjects;
 
@@ -38,8 +38,7 @@ const Projects: React.FC = () => {
       project.type.includes("ts")
     );
   }
-
-  const changeFilterStatus = (value: TabsStatusType) => {
+  const changeFilterStatus = (value: TabsStatusTypeProject) => {
     setCurrentFilterStatus(value);
   };
 
@@ -49,7 +48,7 @@ const Projects: React.FC = () => {
         <SectionTitle title={"Projects"}/>
       </MarginCenter>
       <S.Sort>
-        <TabMenu tabsItems={tabsItems}
+        <TabMenu tabsItems={tabsFilterProject}
           changeFilterStatus={changeFilterStatus}
           currentFilterStatus={currentFilterStatus}
         />
@@ -59,7 +58,7 @@ const Projects: React.FC = () => {
           {filteredProjects.map((project) => 
             (
               <Project key={project.id}
-            href={project.href}
+            href={project.href} 
             code={project.code} // передаём свойство code из объекта ObjectProjects в компонент Project
             title={project.title}
             src={project.src}

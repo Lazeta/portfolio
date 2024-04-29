@@ -15,7 +15,7 @@ const TabButton = (props: TabButtonPropsType) => {
     <S.TabButton
       active={isActive}
       onClick={onClick}
-      width={"100px"}
+      width={"120px"}
     >
       {title}
     </S.TabButton>

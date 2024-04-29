@@ -1,25 +1,29 @@
-import { SkillsFilter } from "../../data/Data";
-import S from "./headerMenu/HeaderMenu.styles";
-import SL from "./Menu.styles";
+import TabButton from "../buttons/TabButton";
+import S from "./tabMenu/TabMenu.styles";
 
 
-const FilterMenu = () => {
+export type TabsStatusTypeSkills = "all" | "languages" | "bundlers" | "development_environment" | "framework" | "styles" | "methodology" | "libraries";
+
+type FilterMenuSkillsPropsType = {
+  tabsItems: Array<{ status: TabsStatusTypeSkills; title: string; }>;
+  currentFilterStatus: string;
+  changeFilterStatus: (value: TabsStatusTypeSkills) => void;
+}
+
+export const FilterMenu = (props: FilterMenuSkillsPropsType) => {
+  const {tabsItems, currentFilterStatus, changeFilterStatus} = props;
+
   return (
-    <S.Menu>
-      <ul>
-        {SkillsFilter.map((item, index) => (
-          <S.HoverBox>
-            <SL.ListItem key={index}>
-              <S.NavLink href={item}>
-                <span>{item}</span>
-              </S.NavLink>
-            </SL.ListItem>
-          </S.HoverBox>
-        ))}
-      </ul>
-    </S.Menu>
-  );
+    <S.TabMenuList>
+      {tabsItems.map((item, index) => (
+        <TabButton key={index}
+          isActive={item.status === currentFilterStatus}
+          onClick={() => {changeFilterStatus(item.status)}}
+          title={item.title}
+        >
+          {item.title}
+        </TabButton>
+      ))}
+    </S.TabMenuList>
+  )
 };
-
-
-export default FilterMenu;
