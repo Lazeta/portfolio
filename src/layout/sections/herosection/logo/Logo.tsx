@@ -1,19 +1,23 @@
+import { motion } from "framer-motion";
 import styled from "styled-components";
 import logo from "../../../../assets/images/logo.jpg";
 import myTheme from "../../../../styles/global/MyTheme.styled";
-// import { Icon } from "../icon/Icon";
 
 const Logo = () => {
   return (
     <StyledLogo>
-        {/* <Icon iconId={"css3SvgrepoCom"} /> */}
-
-        <img src={logo} alt="#" />
+        <motion.div
+          whileHover={{ scale: 1.1 }}
+          // whileTap={{ scale: 0.9 }}
+        >
+          <img src={logo} alt="bad way logo" />
+        </motion.div>
     </StyledLogo>
   );
 };
 
 const StyledLogo = styled.div`
+  padding-top: 30px;
   max-width: 30%;
   width: 100%;
 
