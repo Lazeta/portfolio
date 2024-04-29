@@ -15,10 +15,10 @@ const HeroSection: React.FC = () => {
 
   useEscClose();
 
-  useEffect(() => {
+  useEffect(() => { // используется для контроля когда сделать скролл в открытой модалке возможным, а когда нет.
     if (modalOpen === "ContactMeFormModal") document.body.style.overflow = 'hidden';
     else document.body.style.overflow = 'auto';
-  }, [modalOpen])
+  }, [modalOpen]) // использует глобальную зависимость modalOpen
 
   return (
     <S.HeroSection id={"home"}>
