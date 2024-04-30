@@ -15,7 +15,7 @@ const ListItem = styled.li`
   &:hover,
   &:active {
     color: ${myTheme.colors.flashColor};
-    transition: color 0.4s ease;
+    transition: all 0.4s ease;
   }
 
   @media ${myTheme.media.mobile} {
