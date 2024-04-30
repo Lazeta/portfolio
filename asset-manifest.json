@@ -1,0 +1,25 @@
+{
+  "files": {
+    "main.css": "/static/css/main.910c2c1d.css",
+    "main.js": "/static/js/main.91ebb139.js",
+    "static/js/453.ace21015.chunk.js": "/static/js/453.ace21015.chunk.js",
+    "static/media/project_travel.png": "/static/media/project_travel.05570ede688678835e3f.png",
+    "static/media/project_rsschool-cv.png": "/static/media/project_rsschool-cv.20c349d0ccaf3b380d9f.png",
+    "static/media/project_css-meme-slider.png": "/static/media/project_css-meme-slider.ba0fb2a1b18ef9f5b5dc.png",
+    "static/media/project_audio-player.png": "/static/media/project_audio-player.1f238bbde610333da090.png",
+    "static/media/project_library.png": "/static/media/project_library.ba09847ace395a81553c.png",
+    "static/media/project_plants.png": "/static/media/project_plants.4e8f1a7912c7968cb3b4.png",
+    "static/media/project_portfolio.png": "/static/media/project_portfolio.6126ca77fd70214148fd.png",
+    "static/media/project_friday-live-coding.png": "/static/media/project_friday-live-coding.7e3b156896bc1485b25f.png",
+    "static/media/icons-sprite.svg": "/static/media/icons-sprite.e0a4b53151d6863edb8c3748b0643d32.svg",
+    "static/media/logo.jpg": "/static/media/logo.7b7d3cbe8326c647805c.jpg",
+    "index.html": "/index.html",
+    "main.910c2c1d.css.map": "/static/css/main.910c2c1d.css.map",
+    "main.91ebb139.js.map": "/static/js/main.91ebb139.js.map",
+    "453.ace21015.chunk.js.map": "/static/js/453.ace21015.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.910c2c1d.css",
+    "static/js/main.91ebb139.js"
+  ]
+}
