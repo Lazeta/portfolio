@@ -4,18 +4,15 @@ import { headerItems } from "../../data/Data";
 import S from "./headerMenu/HeaderMenu.styles";
 import SL from "./Menu.styles";
 
-type onLinkClickPropsType = {
-  onLinkClick?: () => void; 
-}
 
 const Menu = ({onLinkClick}: {onLinkClick?: () => void}) => {
   const isMobile = useMediaQuery({ query: '(max-width: 768px)' }); // replace 768px with your mobile breakpoint
-  // const [activeIndex, setActiveIndex] = useState<number | null>() // храним индекс активного элемента
+  const [activeIndex, setActiveIndex] = useState<number | null>() // храним индекс активного элемента
   
-  const handleLinkClick = () => { // обработчик клика по span элементу.
-    // if (!isMobile) {
-    //   setActiveIndex();   // обновляем состояние активного элемента только если не мобильная версия
-    // }
+  const handleLinkClick = (index: number) => { // обработчик клика по span элементу.
+    if (!isMobile) {
+      setActiveIndex(index);  // обновляем состояние активного элемента только если не мобильная версия
+    }
     if (onLinkClick) {
       onLinkClick();
     }
@@ -27,20 +24,16 @@ const Menu = ({onLinkClick}: {onLinkClick?: () => void}) => {
       <ul>
         {headerItems.map((item, index) => (
           <S.HoverBox>
-            <SL.ListItem // className={isMobile ? "" : index === activeIndex ? 'active' : ''} **}
-              // onClick={(event) => {
-              //   event.stopPropagation();
-              //   handleLinkClick(index);
-              // }}  
-            > {/* не применяем класс active в мобильной версии*/}
+            <SL.ListItem className={isMobile ? "" : index === activeIndex ? 'active' : ''}> {/* не применяем класс active в мобильной версии*/}
               <S.ItemLink key={index}
                 to={item.href}
                 activeClass="active"
                 spy={true}
                 smooth={true}
                 offset={-150}
-                // onSetActive={isMobile ? null : () => handleLinkClick(index)} // set state on section active
-                onClick={handleLinkClick}       // clear state on section inactive
+                onSetActive={() => isMobile ? () => {} : handleLinkClick(index)}
+                onSetInactive={() => isMobile ? () => {} : setActiveIndex(null)}
+                onClick={() => handleLinkClick(index)}
                 >
                 <span>{item.title}</span>
               </S.ItemLink>
