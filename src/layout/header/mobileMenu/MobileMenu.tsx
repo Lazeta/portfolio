@@ -7,14 +7,12 @@ import S from "../../../components/menu/headerMenu/HeaderMenu.styles";
 
 const MobileMenu: React.FC = () => {
   const { isMenuOpen, openMenu, closeMenu } = useMobileMenu();
-  
+
   const toggleMenu = () => {
     if (isMenuOpen) {
       closeMenu();
-      console.log('close modal!');
     } else {
       openMenu();
-      console.log('open modal!');
     }
   };
 
@@ -22,15 +20,12 @@ const MobileMenu: React.FC = () => {
 
   return (
     <S.MobileMenu>
-      <BurgerButton onClick={toggleMenu} isOpen={isMenuOpen}/>
-        <>
-          <S.MobileMenuPopup isClosing={!isMenuOpen} onClick={() => toggleMenu()}>
-            <Menu onLinkClick={toggleMenu}/>
-          </S.MobileMenuPopup>
-        </>
+      <BurgerButton onClick={toggleMenu} isOpen={isMenuOpen} />
+      <S.MobileMenuPopup isClosing={!isMenuOpen} onClick={() => toggleMenu()}>
+        <Menu onLinkClick={toggleMenu} />
+      </S.MobileMenuPopup>
     </S.MobileMenu>
   );
 };
 
-
-export default MobileMenu
+export default MobileMenu;
