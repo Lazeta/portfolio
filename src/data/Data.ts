@@ -1,5 +1,5 @@
 import {TabsStatusTypeProject} from "../components/menu/tabMenu/TabMenu";
-import { TabsStatusTypeSkills } from "../components/menu/FilterMenu";
+import { TabsStatusTypeSkills } from "../components/menu/tabMenu/FilterMenu";
 import projectTravelCover from "../assets/images/project_travel.png";
 import projectFridayLiveCodingCover from "../assets/images/project_friday-live-coding.png";
 import projectPlantsCover from "../assets/images/project_plants.png";

@@ -5,7 +5,7 @@ import Menu from "../../../components/menu/Menu";
 const DesktopMenu = () => {
   return (
     <S.DesktopMenu>
-      <Menu />
+      <Menu/>
     </S.DesktopMenu>
   );
 };

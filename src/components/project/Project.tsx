@@ -15,7 +15,7 @@ type ProjectPropsType = {
   code: string; // типизация пропса code который отвечает за рендер элементов ссылок 
   href: string; // типизация пропса href который отвечает за рендер элементов ссылок
   text?: string;
-  skills?: string[];
+  skills?: Array<string>;
   id?: number;
 };
 

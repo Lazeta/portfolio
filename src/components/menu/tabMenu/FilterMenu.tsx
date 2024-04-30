@@ -1,5 +1,5 @@
-import TabButton from "../buttons/TabButton";
-import S from "./tabMenu/TabMenu.styles";
+import TabButton from "../../buttons/TabButton";
+import S from "./TabMenu.styles";
 
 
 export type TabsStatusTypeSkills = "all" | "languages" | "bundlers" | "development_environment" | "framework" | "styles" | "methodology" | "libraries";

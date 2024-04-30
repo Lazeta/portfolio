@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { Fade } from "react-awesome-reveal";
 import { SkillsData, tabsFilterSkills } from "../../../data/Data";
-import { FilterMenu, TabsStatusTypeSkills } from "../../../components/menu/FilterMenu";
+import { FilterMenu, TabsStatusTypeSkills } from "../../../components/menu/tabMenu/FilterMenu";
 import SectionTitle from "../../../components/sectiontitle/SectionTitle";
 import FlexWrapper from "../../../components/wrapper/FlexWrapper";
 import Skill from "../../../components/skill/Skill";

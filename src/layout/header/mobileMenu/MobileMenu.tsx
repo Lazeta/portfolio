@@ -11,9 +11,7 @@ const MobileMenu: React.FC = () => {
   const toggleMenu = () => {
     if (isMenuOpen) {
       closeMenu();
-      // setTimeout(() => setIsRendered(false), 1000); // здесь 1000 — это время анимации в миллисекундах
     } else {
-      // setIsRendered(true);
       openMenu();
     }
   };
@@ -23,13 +21,11 @@ const MobileMenu: React.FC = () => {
   return (
     <S.MobileMenu>
       <BurgerButton onClick={toggleMenu} isOpen={isMenuOpen}/>
-      {/* {isRendered && ( */}
         <>
           <S.MobileMenuPopup isClosing={!isMenuOpen} onClick={() => toggleMenu()}>
             <Menu onLinkClick={() => toggleMenu()}/>
           </S.MobileMenuPopup>
         </>
-      {/* )} */}
     </S.MobileMenu>
   );
 };

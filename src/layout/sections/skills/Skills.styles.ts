@@ -13,19 +13,7 @@ const Sort = styled.div`
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
-
-
-  /* ul {
-    display: flex;
-    gap: 30px;
-    padding: 20px 0;
-    max-width: 100%;
-    justify-content: center;
-    flex-wrap: wrap;
-    text-align: center;
-    z-index: 1;
-    position: relative;
-  } */
+  padding-bottom: 20px;
 `;
 
 const S = {

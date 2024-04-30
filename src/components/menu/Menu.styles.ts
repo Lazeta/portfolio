@@ -47,10 +47,10 @@ const ListItem = styled.li`
     transition-delay: 0.5s;
   }
 
-  &:hover::before {
+  &:hover::before, &.active::before {
     transform: scaleY(0);
   }
-  &:hover::after {
+  &:hover::after, &.active::after {
     transform: scaleX(0);
   }
 

@@ -241,7 +241,8 @@ const ItemLink = styled(Link)`
   `}
 
   span {
-    padding: 17px 15px 15px 15px;
+    padding: 17px 25px 15px 25px;
+    margin: 0 -20px;
   }
 `
 
