@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/portfolio/static/css/main.910c2c1d.css",
-    "main.js": "/portfolio/static/js/main.d464ab1c.js",
+    "main.js": "/portfolio/static/js/main.3081f0d1.js",
     "static/js/453.ace21015.chunk.js": "/portfolio/static/js/453.ace21015.chunk.js",
     "static/media/project_travel.png": "/portfolio/static/media/project_travel.05570ede688678835e3f.png",
     "static/media/project_rsschool-cv.png": "/portfolio/static/media/project_rsschool-cv.20c349d0ccaf3b380d9f.png",
@@ -13,13 +13,14 @@
     "static/media/project_friday-live-coding.png": "/portfolio/static/media/project_friday-live-coding.7e3b156896bc1485b25f.png",
     "static/media/icons-sprite.svg": "/portfolio/static/media/icons-sprite.e0a4b53151d6863edb8c3748b0643d32.svg",
     "static/media/logo.jpg": "/portfolio/static/media/logo.7b7d3cbe8326c647805c.jpg",
+    "static/media/project_tic-tac-toe.png": "/portfolio/static/media/project_tic-tac-toe.f3647dd36fc484549d80.png",
     "index.html": "/portfolio/index.html",
     "main.910c2c1d.css.map": "/portfolio/static/css/main.910c2c1d.css.map",
-    "main.d464ab1c.js.map": "/portfolio/static/js/main.d464ab1c.js.map",
+    "main.3081f0d1.js.map": "/portfolio/static/js/main.3081f0d1.js.map",
     "453.ace21015.chunk.js.map": "/portfolio/static/js/453.ace21015.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.910c2c1d.css",
-    "static/js/main.d464ab1c.js"
+    "static/js/main.3081f0d1.js"
   ]
 }
