@@ -315,7 +315,7 @@ export const socialIcons = [
     iconId: "discordSvg"
   },
   {
-    href: "fundamentalsqqq51krol@gmail.com",
+    href: "mailto:fundamentalsqqq51krol@gmail.com",
     iconId: "gmailSvg"
   }
 ]
