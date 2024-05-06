@@ -297,6 +297,29 @@ export const ObjectProjects = [
   },
 ];
 
+export const socialIcons = [
+  {
+    href: "https://t.me/Zam_contentos",
+    iconId: "telegram"
+  },
+  {
+    href: "https://www.linkedin.com/in/stas-chekh-307069167/",
+    iconId: "linkedinSvg"
+  },
+  {
+    href: "https://github.com/Lazeta",
+    iconId: "githubSvg"
+  },
+  {
+    href: "https://discord.com/channels/@zam_777",
+    iconId: "discordSvg"
+  },
+  {
+    href: "fundamentalsqqq51krol@gmail.com",
+    iconId: "gmailSvg"
+  }
+]
+
 export const linksData = [
   { name: 'demo', urlKey: 'href' },
   { name: 'code', urlKey: 'code' },
