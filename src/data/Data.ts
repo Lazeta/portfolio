@@ -8,6 +8,7 @@ import projectAudioPlayerCover from "../assets/images/project_audio-player.png";
 import projectCssMemeSliderCover from "../assets/images/project_css-meme-slider.png";
 import projectPortfolioCover from "../assets/images/project_portfolio.png";
 import projectRsschoolCvCover from "../assets/images/project_rsschool-cv.png";
+import projectTicTacToeCover from "../assets/images/project_tic-tac-toe.png";
 
 export const headerItems = [
   {
@@ -203,11 +204,6 @@ export const tabsFilterProject: Array<{ status: TabsStatusTypeProject; title: st
   },
 ]
 
-export const linksData = [
-  { name: 'demo', urlKey: 'href' },
-  { name: 'code', urlKey: 'code' },
-];
-
 export const ObjectProjects = [
   {
     title: "Travel",
@@ -273,9 +269,9 @@ export const ObjectProjects = [
     title: "Portfolio",
     src: projectPortfolioCover,
     type: ["all", "spa", "react", "ts"],
-    skills: ["WEBPACK", "REACT", "JavaScript", "TYPESCRIPT", "REDUX", "styled components"],
+    skills: ["WEBPACK", "REACT", "JavaScript", "TYPESCRIPT", "styled components"],
     text: `The main project 'portfolio' contains all significant projects. Implemented a tab menu with a category filter. Fields for contacting me. Sections with navigation throughout the application. Acquired skills over time, filtering menu for skill categories. Uses reusable components.`,
-    href: "https://main--gilded-salamander-518e59.netlify.app/",
+    href: "https://lazeta.github.io/portfolio/",
     code: "https://github.com/Lazeta/portfolio/tree/gh-pages",
     id: 7,
   },
@@ -291,12 +287,17 @@ export const ObjectProjects = [
   },
   {
     title: "Tic tac toe",
-    src: projectRsschoolCvCover,
+    src: projectTicTacToeCover,
     type: ["all", "ts", "react", "game",],
-    skills: ["HTML", "CSS", "SCSS", "JavaScript"],
-    text: `CV is a landing page, business card website, resume, which contains details about the details about the author of the project, training resources, courses, skills and sample code.`,
-    href: "https://lazeta.github.io/rsschool-cv/",
-    code: "https://github.com/Lazeta/rsschool-cv/tree/gh-pages",
+    skills: ["REACT", "WEBPACK", "TYPESCRIPT", "JavaScript", "CSS"],
+    text: `A simple and wellknown game of tic-tac-toe. Implemented step-by-step steps and return through the history of steps to the desired move. Announcement of the winner or restart of the game.`,
+    href: "https://lazeta.github.io/tic_tac_toe/",
+    code: "https://github.com/Lazeta/tic_tac_toe",
     id: 9,
   },
+];
+
+export const linksData = [
+  { name: 'demo', urlKey: 'href' },
+  { name: 'code', urlKey: 'code' },
 ];
