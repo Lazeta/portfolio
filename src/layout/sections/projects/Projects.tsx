@@ -11,33 +11,11 @@ import S from "../../../components/project/Project.styles";
 const Projects: React.FC = () => {
   // tams menu filter projects
   const [currentFilterStatus, setCurrentFilterStatus] = useState("all");
-  let filteredProjects = ObjectProjects;
+  
+  const filteredProjects = ObjectProjects.filter((project) => 
+    currentFilterStatus === "all" ? true : project.type.includes(currentFilterStatus)
+  );
 
-  if (currentFilterStatus === "landing") {
-    filteredProjects = ObjectProjects.filter((project) =>
-      project.type.includes("landing")
-    );
-  }
-  if (currentFilterStatus === "react") {
-    filteredProjects = ObjectProjects.filter((project) =>
-      project.type.includes("react")
-    );
-  }
-  if (currentFilterStatus === "spa") {
-    filteredProjects = ObjectProjects.filter((project) =>
-      project.type.includes("spa")
-    );
-  }
-  if (currentFilterStatus === "js") {
-    filteredProjects = ObjectProjects.filter((project) =>
-      project.type.includes("js")
-    );
-  }
-  if (currentFilterStatus === "ts") {
-    filteredProjects = ObjectProjects.filter((project) =>
-      project.type.includes("ts")
-    );
-  }
   const changeFilterStatus = (value: TabsStatusTypeProject) => {
     setCurrentFilterStatus(value);
   };

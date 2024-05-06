@@ -197,6 +197,10 @@ export const tabsFilterProject: Array<{ status: TabsStatusTypeProject; title: st
     title: "Type Script",
     status: "ts",
   },
+  {
+    title: "Games",
+    status: "game",
+  },
 ]
 
 export const linksData = [
@@ -284,5 +288,15 @@ export const ObjectProjects = [
     href: "https://lazeta.github.io/rsschool-cv/",
     code: "https://github.com/Lazeta/rsschool-cv/tree/gh-pages",
     id: 8,
+  },
+  {
+    title: "Tic tac toe",
+    src: projectRsschoolCvCover,
+    type: ["all", "ts", "react", "game",],
+    skills: ["HTML", "CSS", "SCSS", "JavaScript"],
+    text: `CV is a landing page, business card website, resume, which contains details about the details about the author of the project, training resources, courses, skills and sample code.`,
+    href: "https://lazeta.github.io/rsschool-cv/",
+    code: "https://github.com/Lazeta/rsschool-cv/tree/gh-pages",
+    id: 9,
   },
 ];

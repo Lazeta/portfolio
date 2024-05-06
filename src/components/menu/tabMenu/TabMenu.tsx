@@ -2,20 +2,14 @@ import TabButton from "../../buttons/TabButton";
 import S from "./TabMenu.styles";
 
 
-export type TabsStatusTypeProject = "all" | "landing" | "react" | "spa" | "js" | "ts";
-// export type TabsStatusTypeSkills = "all" | "languages" | "bundlers" | "development_environment" | "framework" | "styles" | "methodology" | "libraries";
+export type TabsStatusTypeProject = "all" | "landing" | "react" | "spa" | "js" | "ts" | "game";
+
 
 type TabMenuPropsType = {
   tabsItems: Array<{ status: TabsStatusTypeProject; title: string }>;
   currentFilterStatus: string;
   changeFilterStatus: (value: TabsStatusTypeProject) => void;
 };
-
-// type TabMenuPropsType = {
-//   tabsItems: Array<{ status: TabsStatusTypeProject | TabsStatusTypeSkills; title: string }>;
-//   changeFilterStatus: (value: TabsStatusTypeProject | TabsStatusTypeSkills) => void;
-//   currentFilterStatus: string;
-// };
 
 export const TabMenu = (props: TabMenuPropsType) => {
   const {tabsItems, currentFilterStatus, changeFilterStatus} = props;
